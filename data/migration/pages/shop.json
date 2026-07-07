@@ -1,0 +1,466 @@
+{
+  "title": "Shop – Khanatural Shop",
+  "metaDescription": "",
+  "blocks": [
+    {
+      "type": "p",
+      "text": "Khanatural Shop"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/12/Khanatural-logo.png",
+      "alt": "",
+      "localSrc": "/images/content/why-seamoss-3-2969e3.png"
+    },
+    {
+      "type": "li",
+      "text": "KHASHOP"
+    },
+    {
+      "type": "li",
+      "text": "WHY SEAMOSS"
+    },
+    {
+      "type": "li",
+      "text": "OUR BRAND"
+    },
+    {
+      "type": "li",
+      "text": "MEDIA"
+    },
+    {
+      "type": "li",
+      "text": "CONTACT US"
+    },
+    {
+      "type": "p",
+      "text": "Showing all 25 resultsSorted by price: high to low"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Oil_2-300x300.jpg",
+      "alt": "KhaNatural Beard Oil & Wash Combo set – 50 g Beard Balm, 500 ml Beard Oil, and 100 g Beard Shave/Wash for complete men’s grooming",
+      "localSrc": "/images/products/beard-oil-wash-combo-1-7b7ea3.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Beard Oil & Wash Combo"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/WhatsApp-Image-2025-06-18-at-15.08.39-300x300.jpeg",
+      "alt": "SEAMOSS GEL COMBO",
+      "localSrc": "/images/products/seamoss-gel-combo-1-ed612a.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "SEAMOSS GEL COMBO"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_-300x300.jpg",
+      "alt": "Nurture vaginal wellness with Khanatural Yoni Magic Steaming Herbs. Supports healthy odor, tightness, and relief from chronic yeast infections & dryness.",
+      "localSrc": "/images/products/raw-seamoss-superfood-4-570d7c.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Yoni Magic Steaming Herbs"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48-1-e1778528409333-300x300.jpeg",
+      "alt": "Khanatural Wildcrafted Sea Moss Capsules bottle showing 100g and 500g options on a clean background.",
+      "localSrc": "/images/products/wildcrafted-seamoss-1-b63ebf.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Wildcrafted Sea Moss Capsules (92 Essential Minerals)"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-23.08.09-1-300x300.webp",
+      "alt": "KhaNatural Avo & Sea Moss Cream 250 ml – nourishing cream that clears clogged pores, fades dark spots, and leaves skin hydrated and brighter",
+      "localSrc": "/images/products/avo-seamoss-cream-2-1-280b74.webp"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Avo & Sea Moss Cream"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2025/05/nwve8unisewdbrvki59n-300x300.webp",
+      "alt": "HANDCRAFTED BEARD OIL",
+      "localSrc": "/images/products/beard-oil-1-23b2d4.webp"
+    },
+    {
+      "type": "h2",
+      "text": "HANDCRAFTED BEARD OIL"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/DS222-300x300.jpg",
+      "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+      "localSrc": "/images/products/black-elderberry-capsules-1-f08ad0.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "BLACK ELDERBERRY SUPPLEMENTS"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.45-1-e1778531461728-300x300.jpeg",
+      "alt": "KhaNatural Raw Shea Butter jar on a minimalist bathroom shelf with natural skincare products",
+      "localSrc": "/images/products/raw-shea-butter-1-2a5ac8.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Raw Shea Butter"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/xgg-300x300.jpg",
+      "alt": "SEAMOSS LOTION",
+      "localSrc": "/images/products/seamoss-lotion-1-f91532.jpg"
+    },
+    {
+      "type": "li",
+      "text": "Out of stock"
+    },
+    {
+      "type": "h2",
+      "text": "SEAMOSS LOTION"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Shave_3-300x300.jpg",
+      "alt": "BEARD SHAVE & WASH CREAM",
+      "localSrc": "/images/products/beard-shave-and-wash-cream-1-4762ca.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "BEARD SHAVE & WASH CREAM"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm-300x300.webp",
+      "alt": "KhaNatural Sea Moss Gel bottle – organic, non-GMO, vegan alkaline superfood rich in 92 minerals for energy, thyroid health, and immunity",
+      "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Sea Moss Gel"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1-300x300.jpeg",
+      "alt": "KhaNatural Black Soap",
+      "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Black Soap Liquid Body Wash – For Women"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55-300x300.jpeg",
+      "alt": "KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)",
+      "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-1-33a453.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Black Soap Liquid Body Wash – For Men"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.39-300x300.jpeg",
+      "alt": "Coco Avocado Butter by KhaNatural.",
+      "localSrc": "/images/products/coco-avocado-butter-1-5410a7.jpeg"
+    },
+    {
+      "type": "li",
+      "text": "Sale!"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Coco Avocado Butter"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_2-300x300.jpg",
+      "alt": "KhaNatural Raw Sea Moss Super Food 100 g jar – nutrient-dense raw sea moss for gut health, immunity, feminine wellness, and radiant glow",
+      "localSrc": "/images/products/raw-seamoss-superfood-1-70a0da.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Raw Sea Moss Super Food"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC92-300x300.jpg",
+      "alt": "REVIVING FACIAL OIL",
+      "localSrc": "/images/products/reviving-facial-oil-1-a5e1f0.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "REVIVING FACIAL OIL"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/05/beardbalm-e1778531249571-300x300.jpeg",
+      "alt": "KhaNatural Beard Balm – 100 g. Keep your beard looking its best with this nourishing, non-greasy balm that’s easily absorbed into beard hair and skin.",
+      "localSrc": "/images/products/beard-balm-1-f47af5.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Beard Balm"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/D22-300x300.jpg",
+      "alt": "ALL NATURAL SCRUB",
+      "localSrc": "/images/products/all-natural-scrub-1-ed2c7f.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "ALL NATURAL SCRUB"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.48-300x300.jpeg",
+      "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+      "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-1-41e38b.jpeg"
+    },
+    {
+      "type": "li",
+      "text": "Out of stock"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48-300x300.jpeg",
+      "alt": "KhaNatural Honey – Super Food from South Africa",
+      "localSrc": "/images/products/khanatural-honey-super-food-1-511ed4.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Honey – Super Food"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.50-1-e1767436915646-300x300.jpeg",
+      "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+      "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-1-f19257.jpeg"
+    },
+    {
+      "type": "li",
+      "text": "Out of stock"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Sea Moss & Aloe Vera Lip Therapy"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Soap_-300x300.jpg",
+      "alt": "Brighten and hydrate with Khanatural Sea Moss & Turmeric Coconut Soap. Infused with raw sea moss, turmeric, and glycerine for glowing, soft skin.",
+      "localSrc": "/images/products/seamoss-rooibos-coconut-soap-1-4eb970.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Raw Sea Moss & Turmeric Coconut Soap"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Afrikan-Black-Soap_1-300x300.jpg",
+      "alt": "AFRICAN BLACK SOAP",
+      "localSrc": "/images/products/african-black-soap-1-364d85.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "AFRICAN BLACK SOAP"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_2-300x300.jpg",
+      "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+      "localSrc": "/images/products/white-flower-infused-tumeric-soap-1-e452ba.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "WHITE FLOWER INFUSED TUMERIC SOAP"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Rooiboss-Infused-Seamoss-Soap-e1737992232960-300x300.jpeg",
+      "alt": "SEAMOSS ROOIBOSS COCONUT SOAP",
+      "localSrc": "/images/products/seamoss-infused-rooibos-coconut-soap-1-72c1f5.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "SEAMOSS ROOIBOSS COCONUT SOAP"
+    },
+    {
+      "type": "h2",
+      "text": "Subscribe to our newsletter"
+    },
+    {
+      "type": "p",
+      "text": "Get Exclusive Content by submitting your email address to us. We also offer great health tips for your wellbeing as well as the latest from the natural lifestyle scene."
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/12/Khanatural-logo.png",
+      "alt": "",
+      "localSrc": "/images/content/why-seamoss-3-2969e3.png"
+    },
+    {
+      "type": "p",
+      "text": "Our mission is to help you achieve a healthier, more radiant appearance and feel more confident and vibrant. Our seamoss products are must haves. Packed with an impressive 92 out of 102 essential minerals and vitamins that your body needs daily. Experience the transformative power of Seamoss and discover a healthier you."
+    },
+    {
+      "type": "h2",
+      "text": "Shop"
+    },
+    {
+      "type": "li",
+      "text": "Ladies' Range"
+    },
+    {
+      "type": "li",
+      "text": "Men's Range"
+    },
+    {
+      "type": "li",
+      "text": "Unisex"
+    },
+    {
+      "type": "li",
+      "text": "Monthly eMag"
+    },
+    {
+      "type": "li",
+      "text": "Testimonials"
+    },
+    {
+      "type": "h2",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural Quality"
+    },
+    {
+      "type": "li",
+      "text": "How to Use Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Make Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Our Brand"
+    },
+    {
+      "type": "li",
+      "text": "Our Founder"
+    },
+    {
+      "type": "li",
+      "text": "Our Story"
+    },
+    {
+      "type": "li",
+      "text": "Unlock Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Media"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural eMag"
+    },
+    {
+      "type": "li",
+      "text": "In the News"
+    },
+    {
+      "type": "li",
+      "text": "Our Gallery"
+    },
+    {
+      "type": "h2",
+      "text": "contact us"
+    },
+    {
+      "type": "li",
+      "text": "A: 02 Francis Road,\nJeffrey’s Bay,\nEastern Cape,\nSouth Africa, 6330"
+    },
+    {
+      "type": "li",
+      "text": "T: (+27) 79 695 8848"
+    },
+    {
+      "type": "li",
+      "text": "E: sales@khanatural.com"
+    },
+    {
+      "type": "li",
+      "text": "W: www.khanatural.com"
+    },
+    {
+      "type": "h2",
+      "text": "Legal Notice"
+    },
+    {
+      "type": "li",
+      "text": "Terms & Conditions"
+    },
+    {
+      "type": "li",
+      "text": "Privacy Policy"
+    },
+    {
+      "type": "li",
+      "text": "Cookie Policy"
+    },
+    {
+      "type": "li",
+      "text": "Paia Manual"
+    },
+    {
+      "type": "li",
+      "text": "Popi Act"
+    },
+    {
+      "type": "h2",
+      "text": "The Company"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural Pty (Ltd) Company Reg. No.2021/483700/07\nDirector/s: Ms. K Qubeka"
+    },
+    {
+      "type": "h2",
+      "text": "the website"
+    },
+    {
+      "type": "p",
+      "text": "Copyrights © 2022 – 2025\nKhanatural.com / All Rights Reserved Designed by Crayonsky"
+    },
+    {
+      "type": "h2",
+      "text": "the social"
+    }
+  ],
+  "slug": "shop",
+  "sourceUrl": "https://khanatural.com/shop/"
+}

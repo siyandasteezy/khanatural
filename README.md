@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Khanatural — khanatural.com rebuilt
 
-## Getting Started
+Custom-coded rebuild of [khanatural.com](https://khanatural.com), migrated off WordPress/WooCommerce/Elementor with **all original content, products, categories, images and copy preserved**. eCommerce + digital magazine for a South African wellness brand.
 
-First, run the development server:
+**Stack:** Next.js (App Router) · TypeScript · Tailwind CSS v4 · PostgreSQL · Prisma · custom admin CMS.
+
+## Getting started
+
+Requires Node 24 (see `.nvmrc`) and PostgreSQL.
 
 ```bash
+nvm use
+npm install
+cp .env.example .env        # fill in DATABASE_URL, AUTH_SECRET, ADMIN_PASSWORD
+createdb khanatural
+npx prisma migrate dev      # create schema
+npm run db:seed             # import migrated WordPress content + create admin user
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What's inside
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Area | Where |
+| --- | --- |
+| Storefront (home, shop, categories, products) | `src/app/(site)/` |
+| Content pages (why-seamoss, our-brand, media, contact, legal) | `src/app/(site)/…` — rendered from migrated content blocks in the DB |
+| Cart & guest checkout (EFT, R120 flat SA delivery) | `src/components/cart/`, `/api/orders` |
+| Admin dashboard (products, orders, articles/e-Mag, media, SEO, subscribers) | `src/app/admin/` — sign in at `/admin/login/` |
+| Design system (kelp/sand/gold tokens, UI components) | `src/app/globals.css`, `src/components/ui/` |
+| Database schema & seed | `prisma/` |
+| WordPress migration snapshot (source of truth for the seed) | `data/migration/` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## SEO / migration notes
 
-## Learn More
+- **URLs are preserved 1:1** with the WordPress site, including trailing slashes (`trailingSlash: true`): `/product/<slug>/`, `/product-category/<slug>/`, `/shop/`, `/why-seamoss/`, `/our-brand/`, `/media/`, `/contact-us/`, `/privacy-policy/`, `/legal-notice/`.
+- Retired WordPress paths (`/khashop/`, `/login/`, `/coming-soon/`, …) 308-redirect to their replacements (`next.config.ts`).
+- Canonical tags, Open Graph, Twitter cards and per-page metadata via the Metadata API; original `<title>` patterns kept (`Page – Khanatural Shop`).
+- JSON-LD: `Organization` + `WebSite` site-wide, `Product` (price, availability, ratings) and `BreadcrumbList` on product pages.
+- `sitemap.xml` and `robots.txt` generated from the database (`src/app/sitemap.ts`, `src/app/robots.ts`).
+- All 104 migrated images served locally via `next/image` (AVIF/WebP, responsive sizes).
+- Product/category/content pages are statically generated with 5-minute ISR; admin edits go live without a rebuild.
 
-To learn more about Next.js, take a look at the following resources:
+## Auth
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Admin sessions are JWT cookies (`jose`, HS256, httpOnly, 8 h TTL) with bcrypt-hashed credentials. `src/proxy.ts` gates `/admin` at the edge and every server action re-verifies with `requireAdmin()`.

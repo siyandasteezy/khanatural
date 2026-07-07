@@ -1,0 +1,514 @@
+{
+  "title": "Khanatural Shop – Rooted in Realness",
+  "metaDescription": "",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "welcome to\nKhanatural Shop"
+    },
+    {
+      "type": "p",
+      "text": "Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean, our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your health."
+    },
+    {
+      "type": "h2",
+      "text": "LOCAL ORDERS"
+    },
+    {
+      "type": "p",
+      "text": "R120 for delivery in S.A."
+    },
+    {
+      "type": "h2",
+      "text": "WhatsApp"
+    },
+    {
+      "type": "p",
+      "text": "Chat to us"
+    },
+    {
+      "type": "h2",
+      "text": "eft payments"
+    },
+    {
+      "type": "p",
+      "text": "We’ve teamed up with Peach Payments. Explore options."
+    },
+    {
+      "type": "h2",
+      "text": "Shop Our Best Sellers"
+    },
+    {
+      "type": "p",
+      "text": "Your trusted source for naturally made products. Nurture your body, mind and soul; khaNaturally."
+    },
+    {
+      "type": "li",
+      "text": "LADIES"
+    },
+    {
+      "type": "li",
+      "text": "MEN"
+    },
+    {
+      "type": "li",
+      "text": "UNISEX"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/D22-273x300.jpg",
+      "alt": "ALL NATURAL SCRUB",
+      "localSrc": "/images/products/all-natural-scrub-1-ed2c7f.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "ALL NATURAL SCRUB"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-23.08.09-1-225x300.webp",
+      "alt": "KhaNatural Avo & Sea Moss Cream",
+      "localSrc": "/images/products/avo-seamoss-cream-2-1-280b74.webp"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Avo & Sea Moss Cream"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1-225x300.jpeg",
+      "alt": "KhaNatural Black Soap Liquid Body Wash - For Women",
+      "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Black Soap Liquid Body Wash - For Women"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.48-225x300.jpeg",
+      "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+      "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-1-41e38b.jpeg"
+    },
+    {
+      "type": "li",
+      "text": "Stock \n Out"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Soap_-300x300.jpg",
+      "alt": "KhaNatural Raw Sea Moss & Turmeric Coconut Soap",
+      "localSrc": "/images/products/seamoss-rooibos-coconut-soap-1-4eb970.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Raw Sea Moss & Turmeric Coconut Soap"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_2-300x300.jpg",
+      "alt": "KhaNatural Raw Sea Moss Super Food",
+      "localSrc": "/images/products/raw-seamoss-superfood-1-70a0da.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Raw Sea Moss Super Food"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.50-1-e1767436915646-294x300.jpeg",
+      "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+      "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-1-f19257.jpeg"
+    },
+    {
+      "type": "li",
+      "text": "Stock \n Out"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Sea Moss & Aloe Vera Lip Therapy"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm-225x300.webp",
+      "alt": "KhaNatural Sea Moss Gel",
+      "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Sea Moss Gel"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_-300x300.jpg",
+      "alt": "KhaNatural Yoni Magic Steaming Herbs",
+      "localSrc": "/images/products/raw-seamoss-superfood-4-570d7c.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "KhaNatural Yoni Magic Steaming Herbs"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC92-194x300.jpg",
+      "alt": "REVIVING FACIAL OIL",
+      "localSrc": "/images/products/reviving-facial-oil-1-a5e1f0.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "REVIVING FACIAL OIL"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/xgg-240x300.jpg",
+      "alt": "SEAMOSS LOTION",
+      "localSrc": "/images/products/seamoss-lotion-1-f91532.jpg"
+    },
+    {
+      "type": "li",
+      "text": "Stock \n Out"
+    },
+    {
+      "type": "h2",
+      "text": "SEAMOSS LOTION"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_2-300x300.jpg",
+      "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+      "localSrc": "/images/products/white-flower-infused-tumeric-soap-1-e452ba.jpg"
+    },
+    {
+      "type": "h2",
+      "text": "WHITE FLOWER INFUSED TUMERIC SOAP"
+    },
+    {
+      "type": "h2",
+      "text": "PROMO products"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural e-Mag. Afro-Fusion Dace Movement."
+    },
+    {
+      "type": "p",
+      "text": "SCROLL DOWN!"
+    },
+    {
+      "type": "h2",
+      "text": "khanatural e-mag"
+    },
+    {
+      "type": "h2",
+      "text": "July 2026 issue"
+    },
+    {
+      "type": "p",
+      "text": "Inside This isuue, we get to know our cover star, Mokgadi Shogole’s beauty from within, while Jamie oliver inspires your palate with hearty winter meals."
+    },
+    {
+      "type": "p",
+      "text": "Radio and TV host, Tyrone Willard is our One To Watch this month. He has a voice and he is using it to highlight what’s happening in South Africa.\n\nStretching has become as important as working out and we ask you if have you ever been told a beautiful lie?"
+    },
+    {
+      "type": "p",
+      "text": "We also have our usual features from Mokwadi and Dambisa. Mokwadi reminisces on the boys who once were, while Dambisa educates us in the beauty of presence."
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2026/07/WhatsApp-Image-2026-06-30-at-15.56.26-723x1024.jpeg",
+      "alt": "",
+      "localSrc": "/images/content/media-2-0352ee.jpeg"
+    },
+    {
+      "type": "h2",
+      "text": "afro-fusion dance\nmovement"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural Moves your body, mind & soul. Book your ‘online or in-person’ session via our WhatsApp line or drop us an email."
+    },
+    {
+      "type": "p",
+      "text": "Khanatural Moves sessions are tailor made to suit your lifestyle."
+    },
+    {
+      "type": "h2",
+      "text": "What Our Clients Say"
+    },
+    {
+      "type": "p",
+      "text": "Seamoss has brought balance to my menstrual cycle, alleviating irregularities and discomfort. Additionally, it has significantly reduced my anxiety levels, promoting a sense of calm and well-being."
+    },
+    {
+      "type": "p",
+      "text": "My skin is now radiant and glowing, and I’m bursting with energy throughout the day. Even my memory has become sharper and more focused."
+    },
+    {
+      "type": "p",
+      "text": "But what’s truly remarkable is Seamoss’s impact on my gut health. As a superfood, it has healed my digestive issues, eliminating constipation and discomfort. I no longer struggle with bloating.”"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Magidla-Customer.jpg",
+      "alt": "",
+      "localSrc": "/images/content/home-14-6d72cc.jpg"
+    },
+    {
+      "type": "h5",
+      "text": "S. Magidla-Matiwana"
+    },
+    {
+      "type": "p",
+      "text": "Mtata (Eastern Cape)"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural’s seamoss gel, all natural scrub, and reviving oil serum have become essentials in my daily routine. My skin feels more hydrated, smoother, and I’ve noticed a real difference in reducing fine lines. These products are gentle enough for sensitive skin but powerful enough to soothe any irritation I’ve had, especially after shaving. The natural ingredients work wonders, and even my hair has benefited—feeling stronger and healthier. The facial scrub leaves my skin feeling fresh after a long week, and adding a spoonful of seamoss gel to my smoothies after the gym is a great boost inside and out. Skincare isn’t just for women; men need to look after themselves too!”"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Lakay-Customer.jpg",
+      "alt": "",
+      "localSrc": "/images/content/home-15-8173e6.jpg"
+    },
+    {
+      "type": "h5",
+      "text": "Randall LaKay"
+    },
+    {
+      "type": "p",
+      "text": "Cape Town (Western Cape)"
+    },
+    {
+      "type": "p",
+      "text": "I decided to give the Khanatural Seamoss Lotion & Coconut Avo Butter a try and I wasn’t disappointed."
+    },
+    {
+      "type": "p",
+      "text": "I usually have to apply moisturiser on my skin twice to avoid having cracks which is such a tedious task, but the body butter only required one application to keep my skin moisturised and hydrated the entire day."
+    },
+    {
+      "type": "p",
+      "text": "The bonus is that it doesn’t make me sweat either which is a win! I highly recommend it.”"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/11/Kutloano-e1733737545556.jpg",
+      "alt": "",
+      "localSrc": "/images/content/home-16-a3bf7d.jpg"
+    },
+    {
+      "type": "h5",
+      "text": "Kutloano Buthelezi"
+    },
+    {
+      "type": "p",
+      "text": "Johannesburg (Gauteng)"
+    },
+    {
+      "type": "p",
+      "text": "I’m thrilled with the ‘Reviving facial oil’ from @KHANATURAL impact on my skin! As someone who battles acne, rashes and makeup-induced irritation in the film industry, I’ve seen remarkable improvement. This oil has kept my skin hydrated without clogging pores or feeling oily. My complexion appears brighter, breakouts have decreased significantly and it performed beautifully during winter shoots… Thank you so much for introducing me to her (her briny Revival oil) Really really love her!”"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Seome-Customer.jpg",
+      "alt": "",
+      "localSrc": "/images/content/home-17-cedc73.jpg"
+    },
+    {
+      "type": "h5",
+      "text": "Amanda Seomo"
+    },
+    {
+      "type": "p",
+      "text": "Durban (Kwa-Zulu Natal)"
+    },
+    {
+      "type": "p",
+      "text": "The Khanatural seamoss lotion is absolutely marvelous! I love the aloe in it and the way it feels on my skin. I got a few of my friends to try it too and we all feel the same way. That aloe vera and seamoss combo is a fantastic idea."
+    },
+    {
+      "type": "p",
+      "text": "Also, the smell of the seamoss soaps in particular the white flour infused turmeric soap is wonderful. The all natural scrub provides the much needed aromatherapy with every bath and shower taken”"
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/10/Tullock-Customer.jpg",
+      "alt": "",
+      "localSrc": "/images/content/home-18-81bf1b.jpg"
+    },
+    {
+      "type": "h5",
+      "text": "Ailsa Tulloch"
+    },
+    {
+      "type": "p",
+      "text": "Craighall Park (Gauteng)"
+    },
+    {
+      "type": "h2",
+      "text": "Subscribe to our newsletter"
+    },
+    {
+      "type": "p",
+      "text": "Get Exclusive Content by submitting your email address to us. We also offer great health tips for your wellbeing as well as the latest from the natural lifestyle scene."
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/12/Khanatural-logo.png",
+      "alt": "",
+      "localSrc": "/images/content/why-seamoss-3-2969e3.png"
+    },
+    {
+      "type": "p",
+      "text": "Our mission is to help you achieve a healthier, more radiant appearance and feel more confident and vibrant. Our seamoss products are must haves. Packed with an impressive 92 out of 102 essential minerals and vitamins that your body needs daily. Experience the transformative power of Seamoss and discover a healthier you."
+    },
+    {
+      "type": "h2",
+      "text": "Shop"
+    },
+    {
+      "type": "li",
+      "text": "Ladies' Range"
+    },
+    {
+      "type": "li",
+      "text": "Men's Range"
+    },
+    {
+      "type": "li",
+      "text": "Unisex"
+    },
+    {
+      "type": "li",
+      "text": "Monthly eMag"
+    },
+    {
+      "type": "li",
+      "text": "Testimonials"
+    },
+    {
+      "type": "h2",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural Quality"
+    },
+    {
+      "type": "li",
+      "text": "How to Use Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Make Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Our Brand"
+    },
+    {
+      "type": "li",
+      "text": "Our Founder"
+    },
+    {
+      "type": "li",
+      "text": "Our Story"
+    },
+    {
+      "type": "li",
+      "text": "Unlock Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Media"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural eMag"
+    },
+    {
+      "type": "li",
+      "text": "In the News"
+    },
+    {
+      "type": "li",
+      "text": "Our Gallery"
+    },
+    {
+      "type": "h2",
+      "text": "contact us"
+    },
+    {
+      "type": "li",
+      "text": "A: 02 Francis Road,\nJeffrey’s Bay,\nEastern Cape,\nSouth Africa, 6330"
+    },
+    {
+      "type": "li",
+      "text": "T: (+27) 79 695 8848"
+    },
+    {
+      "type": "li",
+      "text": "E: sales@khanatural.com"
+    },
+    {
+      "type": "li",
+      "text": "W: www.khanatural.com"
+    },
+    {
+      "type": "h2",
+      "text": "Legal Notice"
+    },
+    {
+      "type": "li",
+      "text": "Terms & Conditions"
+    },
+    {
+      "type": "li",
+      "text": "Privacy Policy"
+    },
+    {
+      "type": "li",
+      "text": "Cookie Policy"
+    },
+    {
+      "type": "li",
+      "text": "Paia Manual"
+    },
+    {
+      "type": "li",
+      "text": "Popi Act"
+    },
+    {
+      "type": "h2",
+      "text": "The Company"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural Pty (Ltd) Company Reg. No.2021/483700/07\nDirector/s: Ms. K Qubeka"
+    },
+    {
+      "type": "h2",
+      "text": "the website"
+    },
+    {
+      "type": "p",
+      "text": "Copyrights © 2022 – 2025\nKhanatural.com / All Rights Reserved Designed by Crayonsky"
+    },
+    {
+      "type": "h2",
+      "text": "the social"
+    }
+  ],
+  "slug": "",
+  "sourceUrl": "https://khanatural.com/"
+}

@@ -1,0 +1,262 @@
+{
+  "title": "Privacy Policy – Khanatural Shop",
+  "metaDescription": "",
+  "blocks": [
+    {
+      "type": "h2",
+      "text": "Who we are"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: Our website address is: https://khanatural.com."
+    },
+    {
+      "type": "h2",
+      "text": "Comments"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection."
+    },
+    {
+      "type": "p",
+      "text": "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment."
+    },
+    {
+      "type": "h2",
+      "text": "Media"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website."
+    },
+    {
+      "type": "h2",
+      "text": "Cookies"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year."
+    },
+    {
+      "type": "p",
+      "text": "If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser."
+    },
+    {
+      "type": "p",
+      "text": "When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select “Remember Me”, your login will persist for two weeks. If you log out of your account, the login cookies will be removed."
+    },
+    {
+      "type": "p",
+      "text": "If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day."
+    },
+    {
+      "type": "h2",
+      "text": "Embedded content from other websites"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website."
+    },
+    {
+      "type": "p",
+      "text": "These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website."
+    },
+    {
+      "type": "h2",
+      "text": "Who we share your data with"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: If you request a password reset, your IP address will be included in the reset email."
+    },
+    {
+      "type": "h2",
+      "text": "How long we retain your data"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue."
+    },
+    {
+      "type": "p",
+      "text": "For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information."
+    },
+    {
+      "type": "h2",
+      "text": "What rights you have over your data"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+    },
+    {
+      "type": "h2",
+      "text": "Where your data is sent"
+    },
+    {
+      "type": "p",
+      "text": "Suggested text: Visitor comments may be checked through an automated spam detection service."
+    },
+    {
+      "type": "h2",
+      "text": "Subscribe to our newsletter"
+    },
+    {
+      "type": "p",
+      "text": "Get Exclusive Content by submitting your email address to us. We also offer great health tips for your wellbeing as well as the latest from the natural lifestyle scene."
+    },
+    {
+      "type": "img",
+      "src": "https://khanatural.com/wp-content/uploads/2024/12/Khanatural-logo.png",
+      "alt": "",
+      "localSrc": "/images/content/why-seamoss-3-2969e3.png"
+    },
+    {
+      "type": "p",
+      "text": "Our mission is to help you achieve a healthier, more radiant appearance and feel more confident and vibrant. Our seamoss products are must haves. Packed with an impressive 92 out of 102 essential minerals and vitamins that your body needs daily. Experience the transformative power of Seamoss and discover a healthier you."
+    },
+    {
+      "type": "h2",
+      "text": "Shop"
+    },
+    {
+      "type": "li",
+      "text": "Ladies' Range"
+    },
+    {
+      "type": "li",
+      "text": "Men's Range"
+    },
+    {
+      "type": "li",
+      "text": "Unisex"
+    },
+    {
+      "type": "li",
+      "text": "Monthly eMag"
+    },
+    {
+      "type": "li",
+      "text": "Testimonials"
+    },
+    {
+      "type": "h2",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Why Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural Quality"
+    },
+    {
+      "type": "li",
+      "text": "How to Use Seamoss"
+    },
+    {
+      "type": "li",
+      "text": "Make Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Our Brand"
+    },
+    {
+      "type": "li",
+      "text": "Our Founder"
+    },
+    {
+      "type": "li",
+      "text": "Our Story"
+    },
+    {
+      "type": "li",
+      "text": "Unlock Seamoss"
+    },
+    {
+      "type": "h2",
+      "text": "Media"
+    },
+    {
+      "type": "li",
+      "text": "Khanatural eMag"
+    },
+    {
+      "type": "li",
+      "text": "In the News"
+    },
+    {
+      "type": "li",
+      "text": "Our Gallery"
+    },
+    {
+      "type": "h2",
+      "text": "contact us"
+    },
+    {
+      "type": "li",
+      "text": "A: 02 Francis Road,\nJeffrey’s Bay,\nEastern Cape,\nSouth Africa, 6330"
+    },
+    {
+      "type": "li",
+      "text": "T: (+27) 79 695 8848"
+    },
+    {
+      "type": "li",
+      "text": "E: sales@khanatural.com"
+    },
+    {
+      "type": "li",
+      "text": "W: www.khanatural.com"
+    },
+    {
+      "type": "h2",
+      "text": "Legal Notice"
+    },
+    {
+      "type": "li",
+      "text": "Terms & Conditions"
+    },
+    {
+      "type": "li",
+      "text": "Privacy Policy"
+    },
+    {
+      "type": "li",
+      "text": "Cookie Policy"
+    },
+    {
+      "type": "li",
+      "text": "Paia Manual"
+    },
+    {
+      "type": "li",
+      "text": "Popi Act"
+    },
+    {
+      "type": "h2",
+      "text": "The Company"
+    },
+    {
+      "type": "p",
+      "text": "Khanatural Pty (Ltd) Company Reg. No.2021/483700/07\nDirector/s: Ms. K Qubeka"
+    },
+    {
+      "type": "h2",
+      "text": "the website"
+    },
+    {
+      "type": "p",
+      "text": "Copyrights © 2022 – 2025\nKhanatural.com / All Rights Reserved Designed by Crayonsky"
+    },
+    {
+      "type": "h2",
+      "text": "the social"
+    }
+  ],
+  "slug": "privacy-policy",
+  "sourceUrl": "https://khanatural.com/privacy-policy/"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "wpId": 77,
+    "name": "LADIES",
+    "slug": "ladies",
+    "description": "",
+    "count": 12
+  },
+  {
+    "wpId": 76,
+    "name": "MEN",
+    "slug": "mens-range",
+    "description": "",
+    "count": 9
+  },
+  {
+    "wpId": 17,
+    "name": "Uncategorised",
+    "slug": "uncategorised",
+    "description": "",
+    "count": 2
+  },
+  {
+    "wpId": 78,
+    "name": "UNISEX",
+    "slug": "unisex",
+    "description": "",
+    "count": 15
+  }
+]

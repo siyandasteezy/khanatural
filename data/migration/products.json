@@ -1,0 +1,1528 @@
+[
+  {
+    "wpId": 12449,
+    "name": "KhaNatural Raw Shea Butter",
+    "slug": "raw-shea-butter",
+    "sku": null,
+    "shortDescription": "<p><strong>KhaNatural Raw Shea Butter</strong></p>\n<p>Our single-ingredient, unrefined shea butter that is cold-pressed and minimally processed to preserve its vitamins, fatty acids, and healing compounds.</p>\n<p>This rich, creamy balm melts on contact to deeply moisturise dry, cracked skin and support skin repair.</p>\n<p>Regular use can help reduce the appearance of stretch marks and scars while improving skin elasticity.</p>\n<p>As a hair treatment, it nourishes and strengthens strands, reducing breakage and frizz.</p>\n<p>Packed with vitamins A, E, and F for long-lasting hydration and skin repair.</p>\n<p>Free from fragrances, parabens, and additives — sustainably sourced for gentle, effective care.</p>",
+    "description": "<p><strong>KhaNatural Raw Shea Butter</strong></p>\n<p>Our single-ingredient, unrefined shea butter is cold-pressed and kept as close to nature as possible to preserve its vitamins, fatty acids, and healing compounds. This rich, creamy balm melts on contact to deeply moisturise dry, cracked skin and support skin repair.</p>\n<p>Regular use can help reduce the appearance of stretch marks and scars while improving skin elasticity. As a hair treatment, it nourishes and strengthens strands, reducing breakage and frizz. Vitamins A, E, and F provide antioxidant support and mild anti-inflammatory benefits, making this butter ideal for sensitive skin and natural beauty routines.</p>\n<p>Free from fragrances, parabens, and additives — sustainably sourced and multi-use for gentle, effective care. Use as an everyday body balm, intensive dry-skin treatment, face moisturiser, lip salve, or hair mask for soft, strong, healthy skin and hair.</p>\n<p><strong>Key benefits:</strong></p>\n<ul>\n<li>\n<p>Deeply moisturises dry and cracked skin</p>\n</li>\n<li>\n<p>Reduces the appearance of stretch marks and scars</p>\n</li>\n<li>\n<p>Strengthens hair</p>\n</li>\n<li>\n<p>Multipurpose: face, body, lips, and hair</p>\n</li>\n<li>\n<p>Pure, unrefined, cold-pressed shea butter packed with vitamins A, E, and F</p>\n</li>\n<li>\n<p>Fragrance-free and minimally processed to preserve natural potency</p>\n</li>\n</ul>",
+    "priceCents": 30000,
+    "regularPriceCents": 30000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "KhaNatural Raw Shea Butter",
+        "slug": "khanatural-raw-shea-butter"
+      },
+      {
+        "name": "Raw Shea Butter",
+        "slug": "raw-shea-butter"
+      },
+      {
+        "name": "Shea Butter",
+        "slug": "shea-butter"
+      },
+      {
+        "name": "South African skin care",
+        "slug": "south-african-skin-care"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12426,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.45-1-e1778531461728.jpeg",
+        "alt": "KhaNatural Raw Shea Butter jar on a minimalist bathroom shelf with natural skincare products",
+        "localSrc": "/images/products/raw-shea-butter-1-2a5ac8.jpeg"
+      },
+      {
+        "wpId": 12437,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.50-1-e1778531207631.jpeg",
+        "alt": "KhaNatural Raw Shea Butter",
+        "localSrc": "/images/products/raw-shea-butter-2-4c3d48.jpeg"
+      },
+      {
+        "wpId": 12445,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.38.jpeg",
+        "alt": "KhaNatural Raw Shea Butter",
+        "localSrc": "/images/products/raw-shea-butter-3-563486.jpeg"
+      },
+      {
+        "wpId": 12438,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.50-e1778531309481.jpeg",
+        "alt": "KhaNatural Raw Shea Butter",
+        "localSrc": "/images/products/raw-shea-butter-4-5665cb.jpeg"
+      },
+      {
+        "wpId": 12434,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.49-1.jpeg",
+        "alt": "KhaNatural Raw Shea Butter",
+        "localSrc": "/images/products/raw-shea-butter-5-15d536.jpeg"
+      },
+      {
+        "wpId": 12426,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.45-1-e1778531461728.jpeg",
+        "alt": "KhaNatural Raw Shea Butter jar on a minimalist bathroom shelf with natural skincare products",
+        "localSrc": "/images/products/raw-shea-butter-1-2a5ac8.jpeg"
+      },
+      {
+        "wpId": 12423,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/sheabutterHS-e1778531342797.jpeg",
+        "alt": "KhaNatural Raw Shea Butter",
+        "localSrc": "/images/products/raw-shea-butter-7-36cf5f.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12441,
+    "name": "KhaNatural Coco Avocado Butter",
+    "slug": "coco-avocado-butter",
+    "sku": null,
+    "shortDescription": "<p>Deeply moisturises and hydrates dry or cracked skin, improves skin elasticity, and provides intense, long-lasting moisture for dry or mature skin. Rich in vitamins A, D, E and oleic acid, it boosts collagen production and calms inflammation from eczema or sunburn.</p>\n<p>For hair: strengthens hair strands and promotes hair growth. Pure, nutrient-packed butter that melts on contact for soft, supple skin and stronger, healthier hair.</p>\n<p>Multipurpose: face, body, lips, and hair.</p>\n<p>Fragrance-free and minimally processed.</p>",
+    "description": "<p>A deeply nourishing, nutrient-rich butter that delivers intense, long-lasting hydration for dry, cracked, or mature skin. Crafted from a blend of coconut and avocado, this luxurious butter is rich in vitamins A, D, E and oleic acid to support skin repair, improve elasticity, and boost collagen production. It melts on contact to lock in moisture, leaving skin soft, smooth, and supple.</p>\n<p>Coco Avocado Butter deeply moisturises and hydrates dry or cracked skin, helping to restore comfort and flexibility. It improves skin elasticity over time, supporting a more resilient, youthful-looking barrier. Its antioxidant-rich formula helps calm inflammation and soothe irritation from eczema, sunburn, or environmental stress.</p>\n<p>For hair, Coco Avocado Butter strengthens hair strands and promotes hair growth by nourishing the scalp and reducing breakage.</p>\n<p>Use as an everyday body balm, intensive dry-skin treatment, face moisturiser, lip salve, or hair mask for all-day comfort and stronger, healthier hair. Free from fragrances, parabens, and synthetic additives — sustainably sourced and perfect for natural beauty routines, mature skin care, and hair growth support.</p>",
+    "priceCents": 25000,
+    "regularPriceCents": 30000,
+    "salePriceCents": 25000,
+    "onSale": true,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "Khanatural Butter",
+        "slug": "khanatural-butter"
+      },
+      {
+        "name": "KhaNatural Coco Avocado Butter",
+        "slug": "khanatural-coco-avocado-butter"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12447,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.39.jpeg",
+        "alt": "Coco Avocado Butter by KhaNatural.",
+        "localSrc": "/images/products/coco-avocado-butter-1-5410a7.jpeg"
+      },
+      {
+        "wpId": 12446,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.45.58.jpeg",
+        "alt": "KhaNatural Coco Avocado Butter",
+        "localSrc": "/images/products/coco-avocado-butter-2-9ff2d6.jpeg"
+      },
+      {
+        "wpId": 12447,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.39.jpeg",
+        "alt": "Coco Avocado Butter by KhaNatural.",
+        "localSrc": "/images/products/coco-avocado-butter-1-5410a7.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12321,
+    "name": "KhaNatural Black Soap Liquid Body Wash – For Women",
+    "slug": "black-soap-liquid-body-wash-for-women-head-to-toe",
+    "sku": null,
+    "shortDescription": "<p>A natural, traditional African black soap in convenient liquid form, made with purified water, lauryl glucoside, moringa, palm kernel oil, virgin coconut oil, cocoa pods, shea tree bark, ash, unrefined shea butter, ACV, and more.</p>\n<p>Cleanses from head to toe as a body wash, shampoo, shaving cream, and even makeup remover. Helps treat dandruff, acne, eczema, psoriasis, dry &amp; itchy skin, rashes, dark spots, bumps, and blemishes.</p>\n<p>Exfoliates, rejuvenates, keeps skin and scalp brighter, and supports hair growth while treating hair loss and alopecia.</p>\n<p>Moisturising yet effective for many skin types.</p>",
+    "description": "<p>A modern, liquid version of traditional African black soap, specially formulated for women’s skin and hair care.</p>\n<p>Made with a blend of natural ingredients including palm kernel oil, virgin coconut oil, unrefined shea butter, cocoa pods, shea tree bark, ash, moringa, and ACV (apple cider vinegar), this gentle yet powerful cleanser works from head to toe.</p>\n<p>Use as a body wash to deeply cleanse, exfoliate, and rejuvenate skin while helping to treat dandruff, acne, eczema, psoriasis, dry &amp; itchy skin, rashes, dark spots, bumps, and blemishes. The moisturising formula – enriched with shea butter and coconut oil – helps keep skin and scalp brighter and more even-toned without stripping natural oils.</p>\n<p>For hair, this black soap liquid supports hair growth, helps treat hair loss and alopecia, and can be used as a gentle shampoo. It also works as a shaving cream for a smooth, comfortable shave, and doubles as an effective makeup remover for all skin types. The liquid format is more convenient than traditional bar black soap, making it easy to dispense and use daily.</p>\n<p>While formulated to be moisturising, black soap can still be drying for some. If you have very sensitive or dry skin, use with caution and follow with a moisturiser.</p>\n<p>Ideal for those seeking a natural, multi-use cleanser for skin and hair care rooted in African tradition.</p>",
+    "priceCents": 29000,
+    "regularPriceCents": 29000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies"
+    ],
+    "tags": [
+      {
+        "name": "Feminine Hygiene",
+        "slug": "feminine-hygiene"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "KhaNatural Black Soap Liquid Body Wash",
+        "slug": "khanatural-black-soap-liquid-body-wash"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12322,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1.jpeg",
+        "alt": "KhaNatural Black Soap",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
+      },
+      {
+        "wpId": 12323,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55-1.jpeg",
+        "alt": "KhaNatural Black Soap Liquid Body Wash – For Women",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-2-b172ba.jpeg"
+      },
+      {
+        "wpId": 12322,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1.jpeg",
+        "alt": "KhaNatural Black Soap",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12318,
+    "name": "KhaNatural Black Soap Liquid Body Wash – For Men",
+    "slug": "black-soap-liquid-body-wash-for-men-head-to-toe",
+    "sku": null,
+    "shortDescription": "<p><strong>KhaNatural Black Soap Liquid Body Wash – For Men </strong></p>\n<p>A natural, traditional African black soap in convenient liquid form, made with purified water, lauryl glucoside, moringa, palm kernel oil, virgin coconut oil, cocoa pods, shea tree bark, ash, unrefined shea butter, ACV, and more.</p>\n<p>Cleanses from head to toe as a body wash, shampoo, and shaving cream.</p>\n<p>Helps treat dandruff, acne, eczema, psoriasis, dry &amp; itchy skin, rashes, dark spots, bumps, and blemishes. Exfoliates, rejuvenates, keeps skin and scalp brighter, and stimulates hair growth while treating hair loss and alopecia – specifically formulated for men’s skin and hair.</p>\n<p>Moisturising yet effective for many skin types.</p>",
+    "description": "<p><strong>KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)</strong></p>\n<p>A modern, liquid version of traditional African black soap, specially formulated for men’s skin and hair care. Made with a blend of natural ingredients including palm kernel oil, virgin coconut oil, unrefined shea butter, cocoa pods, shea tree bark, ash, moringa, and ACV (apple cider vinegar), this gentle yet powerful cleanser works from head to toe.</p>\n<p>Use as a body wash to deeply cleanse, exfoliate, and rejuvenate skin while helping to treat dandruff, acne, eczema, psoriasis, dry &amp; itchy skin, rashes, dark spots, bumps, and blemishes. The moisturising formula – enriched with shea butter and coconut oil – helps keep skin and scalp brighter and more even-toned without stripping natural oils.</p>\n<p>For men’s hair, this black soap liquid stimulates hair growth and helps treat hair loss and alopecia. It can be used as a gentle shampoo to cleanse and nourish the scalp, reducing breakage and supporting fuller-looking hair. It also works as a shaving cream for a smooth, comfortable shave, helping to minimise irritation and razor bumps.</p>\n<p>The liquid format is more convenient than traditional bar black soap, making it easy to dispense and use daily in the shower. While formulated to be moisturising, black soap can still be drying for some. If you have very sensitive or dry skin, use with caution and follow with a moisturiser.</p>\n<p>Ideal for men seeking a natural, multi-use cleanser for skin and hair care rooted in African tradition.</p>",
+    "priceCents": 29000,
+    "regularPriceCents": 29000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "black soap liquid body wash for men",
+        "slug": "black-soap-liquid-body-wash-for-men"
+      },
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "KhaNatural Black Soap Liquid Body Wash",
+        "slug": "khanatural-black-soap-liquid-body-wash"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12319,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55.jpeg",
+        "alt": "KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-1-33a453.jpeg"
+      },
+      {
+        "wpId": 12320,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56.jpeg",
+        "alt": "KhaNatural Black Soap Liquid Body Wash – For Men",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-2-be698c.jpeg"
+      },
+      {
+        "wpId": 12319,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55.jpeg",
+        "alt": "KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)",
+        "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-1-33a453.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12315,
+    "name": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+    "slug": "the-pocket-size-seamoss-lotion-with-aloe-vera",
+    "sku": null,
+    "shortDescription": "<p>A hydrating, soothing, and nourishing lotion perfect for daily care and on-the-go use. Combining pure sea moss gel with aloe vera, this “pure gold” skin blend helps reduce the appearance of visible redness caused by dryness, fine lines, and wrinkles.</p>\n<p>The sea moss gel’s cooling effect calms redness and alleviates heat from sunburn when applied directly, offering immediate relief.</p>\n<p>Lightweight, non-greasy, and ideal for sensitive or irritated skin.</p>\n<p>Carry it anywhere in its convenient pocket-size format.</p>",
+    "description": "<p>A luxurious, hydrating lotion that brings the power of sea moss gel and aloe vera together in a convenient pocket-size format. This soothing combination is “pure gold” for your skin, deeply hydrating, calming, and nourishing for daily use.</p>\n<p>The sea moss gel delivers a natural cooling effect that helps calm redness and alleviate the heat often felt with sunburn. Applying sea moss gel directly to sunburned skin offers immediate relief, making this lotion an excellent companion for sun-exposed skin. Paired with aloe vera, it helps reduce the appearance of visible redness caused by dryness, while also supporting a smoother, more refined skin texture.</p>\n<p>Over time, the lotion helps reduce the appearance of fine lines and wrinkles, supporting a more youthful-looking complexion. Its lightweight, non-greasy formula is ideal for sensitive, irritated, or dry skin, and works well as a daily moisturiser for face and body. The pocket-size design makes it perfect for travel, gym bags, work desks, or any time you need quick skin relief and hydration.</p>\n<p>Free from harsh additives, this lotion is a gentle, natural option for those seeking soothing, anti-redness, and anti-ageing benefits in one simple step.</p>",
+    "priceCents": 20000,
+    "regularPriceCents": 20000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": false,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "mens-range",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "pocket size moisturiser",
+        "slug": "pocket-size-moisturiser"
+      },
+      {
+        "name": "pocket size sea moss lotion",
+        "slug": "pocket-size-sea-moss-lotion"
+      },
+      {
+        "name": "sea moss lotion with aloe vera",
+        "slug": "sea-moss-lotion-with-aloe-vera"
+      },
+      {
+        "name": "travel size aloe vera lotion",
+        "slug": "travel-size-aloe-vera-lotion"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12314,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.48.jpeg",
+        "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+        "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-1-41e38b.jpeg"
+      },
+      {
+        "wpId": 12314,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.48.jpeg",
+        "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+        "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-1-41e38b.jpeg"
+      },
+      {
+        "wpId": 12316,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.49.jpeg",
+        "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+        "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-3-9d4844.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12308,
+    "name": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+    "slug": "khanatural-seamoss-aloe-vera-lip-therapy",
+    "sku": null,
+    "shortDescription": "<p><strong>KhaNatural Sea Moss &amp; Aloe Vera Lip Therapy </strong></p>\n<p>A nourishing lip balm formulated with aloe vera and antioxidants from sea moss to soothe chapped lips, provide intense hydration, and promote healthy lip skin.</p>\n<p>Apply liberally as often as needed, especially in dry, cold, or windy conditions.</p>\n<p>This protective lip balm keeps lips soft, smooth, and comfortable all day. Perfect for daily use and on-the-go lip care.</p>",
+    "description": "<p>A specially designed lip balm that nourishes and protects your lips with a powerful combination of aloe vera and antioxidants from sea moss. This gentle, effective lip therapy soothes chapped, dry, or irritated lips while providing intense, long-lasting hydration.</p>\n<p>The aloe vera helps calm and soften lip skin, while sea moss delivers antioxidants that support healthy lip skin and protect against environmental stress. The balm melts smoothly onto lips, leaving them soft, smooth, and comfortable without a heavy or greasy feel.</p>\n<p>Apply the balm liberally to your lips as often as needed, especially in dry, cold, or windy conditions. Use it throughout the day to maintain soft, healthy lips, before bed for overnight repair, or anytime your lips feel rough, flaky, or uncomfortable. Ideal for daily lip care, travel, and outdoor activities.</p>\n<p>Free from harsh additives, this lip therapy is a natural, protective solution for anyone seeking soothing, hydrating, and nourishing care for their lips.</p>",
+    "priceCents": 11000,
+    "regularPriceCents": 11000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": false,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "mens-range",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Aloe Vera Lip Therapy",
+        "slug": "aloe-vera-lip-therapy"
+      },
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "Khanatural Butter",
+        "slug": "khanatural-butter"
+      },
+      {
+        "name": "KhaNatural Sea Moss",
+        "slug": "khanatural-sea-moss"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12312,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.50-1-e1767436915646.jpeg",
+        "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+        "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-1-f19257.jpeg"
+      },
+      {
+        "wpId": 12311,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.09.jpeg",
+        "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+        "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-2-0a5a3e.jpeg"
+      },
+      {
+        "wpId": 12313,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.50.jpeg",
+        "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+        "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-3-25656c.jpeg"
+      },
+      {
+        "wpId": 12310,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.08.jpeg",
+        "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+        "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-4-f8b072.jpeg"
+      },
+      {
+        "wpId": 12309,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.15.07.jpeg",
+        "alt": "KhaNatural Sea Moss & Aloe Vera Lip Therapy",
+        "localSrc": "/images/products/khanatural-seamoss-aloe-vera-lip-therapy-5-a45250.jpeg"
+      },
+      {
+        "wpId": 12314,
+        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-01-at-17.26.48.jpeg",
+        "alt": "KhaNatural Pocket Size Aloe Vera & Sea Moss Lotion",
+        "localSrc": "/images/products/the-pocket-size-seamoss-lotion-with-aloe-vera-1-41e38b.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 12276,
+    "name": "KhaNatural Honey – Super Food",
+    "slug": "khanatural-honey-super-food",
+    "sku": "Khahoney",
+    "shortDescription": "<p><strong>KhaNatural Honey – Super Food</strong></p>\n<p>100% natural raw pure honey from Renosterveld Fynbos, South Africa. Non-irradiated, choice-grade honey rich in antioxidants that gives you natural energy, supports immune health, and promotes digestive wellness.</p>\n<p>Store in a sunny, dry place.</p>\n<p>Honey crystallisation is natural; if crystals appear, warm the jar in warm water (below 50°C).</p>\n<p><strong>Not suitable for babies under 12 months. </strong></p>\n<p>Perfect as a super food for tea, toast, smoothies, yoghurt, and healthy cooking.</p>",
+    "description": "<p><strong>KhaNatural Honey – Super Food</strong></p>\n<p>100% natural, raw, and pure honey harvested from the unique Renosterveld Fynbos of South Africa. This non-irradiated, choice-grade honey is unprocessed to preserve its natural antioxidants, enzymes, and flavour, making it a true super food for daily wellness.</p>\n<p>KhaNatural Honey is rich in antioxidants and provides natural energy, making it an ideal choice for a healthy, energising lifestyle. It supports your immune health and promotes digestive wellness, offering a nutrient-rich, natural alternative to refined sugars. Use it in teas, on toast, in smoothies, yoghurt, or as a natural sweetener and super food in cooking and baking.</p>\n<p>Honey crystallisation is a natural process. If crystals appear, gently warm the honey jar in warm water (below 50°C) to restore its smooth consistency. Store in a sunny, dry place to maintain quality.</p>\n<p><strong>Important:</strong> Not suitable for babies under 12 months.</p>\n<p>Origin: South Africa<br />\nGrade: Choice grade<br />\nProcessing: Non-irradiated, raw, pure<br />\nCategory: Super food</p>",
+    "priceCents": 12000,
+    "regularPriceCents": 12000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [],
+    "tags": [
+      {
+        "name": "Healthy Honey",
+        "slug": "healthy-honey"
+      },
+      {
+        "name": "KhaHoney",
+        "slug": "khahoney"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "KhaNatural Honey",
+        "slug": "khanatural-honey"
+      },
+      {
+        "name": "KhaNatural Honey – Super Food",
+        "slug": "khanatural-honey-super-food"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12439,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48.jpeg",
+        "alt": "KhaNatural Honey – Super Food from South Africa",
+        "localSrc": "/images/products/khanatural-honey-super-food-1-511ed4.jpeg"
+      },
+      {
+        "wpId": 12422,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.44-e1778531377807.jpeg",
+        "alt": "KhaNatural Honey – Super Food",
+        "localSrc": "/images/products/khanatural-honey-super-food-2-24d833.jpeg"
+      },
+      {
+        "wpId": 12277,
+        "src": "https://khanatural.com/wp-content/uploads/2025/11/khahoney1.jpeg",
+        "alt": "100% natural raw pure honey from Renosterveld Fynbos, South Africa",
+        "localSrc": "/images/products/khanatural-honey-super-food-3-3941dc.jpeg"
+      },
+      {
+        "wpId": 12439,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48.jpeg",
+        "alt": "KhaNatural Honey – Super Food from South Africa",
+        "localSrc": "/images/products/khanatural-honey-super-food-1-511ed4.jpeg"
+      },
+      {
+        "wpId": 12278,
+        "src": "https://khanatural.com/wp-content/uploads/2025/11/khahoney2.jpeg",
+        "alt": "KhaNatural Honey – Super Food",
+        "localSrc": "/images/products/khanatural-honey-super-food-5-c2d11a.jpeg"
+      },
+      {
+        "wpId": 12279,
+        "src": "https://khanatural.com/wp-content/uploads/2025/11/khahoney3.jpeg",
+        "alt": "KhaNatural Honey – Super Food",
+        "localSrc": "/images/products/khanatural-honey-super-food-6-38b8db.jpeg"
+      },
+      {
+        "wpId": 12281,
+        "src": "https://khanatural.com/wp-content/uploads/2025/11/khahoney5.jpeg",
+        "alt": "KhaNatural Honey – Super Food",
+        "localSrc": "/images/products/khanatural-honey-super-food-7-bf0e3f.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 8524,
+    "name": "KhaNatural Beard Balm",
+    "slug": "beard-balm",
+    "sku": "BeardBalm",
+    "shortDescription": "<p><strong>KhaNatural Beard Balm</strong></p>\n<p>Keep your beard looking its best with this nourishing, non-greasy balm that’s easily absorbed into beard hair and skin.</p>\n<p>Leaves your beard feeling healthy, looking shiny, and smelling great with a subtle, ruggedly refined scent. Ideal for daily use to tame stray hairs, soften coarse beard hair, and condition the skin underneath.</p>\n<p>Perfect for men who want a well-groomed, healthy-looking beard.</p>",
+    "description": "<p><strong>KhaNatural Beard Balm</strong></p>\n<p>Keep your beard looking its best with KhaNatural Beard Balm, a nourishing, non-greasy formula that’s easily absorbed into beard hair and skin. This premium beard balm tames stray hairs, softens coarse beard hair, and the skin underneath for a healthier, more comfortable beard.</p>\n<p>The balm leaves your beard feeling healthy, looking shiny, and smelling great, with a subtle scent that’s ruggedly refined – not overpowering, but distinctive enough to complement your style. Its non-greasy texture means you won’t feel heavy or oily, even with regular use.</p>\n<p>Use daily to style, soften, and condition your beard. Apply a small amount, warm it between your hands, and work it through your beard from skin to tip for a neat, polished look. Ideal for all beard types and lengths, from short stubble to full, thick beards.</p>\n<p><strong>Size: 100 g</strong><br />\nPerfect for daily grooming, travel, and on-the-go beard care.</p>",
+    "priceCents": 22500,
+    "regularPriceCents": 22500,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "Beard balm",
+        "slug": "beard-balm"
+      },
+      {
+        "name": "Cream",
+        "slug": "cream"
+      },
+      {
+        "name": "Grooming For Men",
+        "slug": "grooming-for-men"
+      },
+      {
+        "name": "KhaNatural Beard Balm",
+        "slug": "khanatural-beard-balm"
+      },
+      {
+        "name": "KhaNatural Men's Products",
+        "slug": "khanatural-mens-products"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12424,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/beardbalm-e1778531249571.jpeg",
+        "alt": "KhaNatural Beard Balm – 100 g. Keep your beard looking its best with this nourishing, non-greasy balm that’s easily absorbed into beard hair and skin.",
+        "localSrc": "/images/products/beard-balm-1-f47af5.jpeg"
+      },
+      {
+        "wpId": 6694,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Shave_1.jpg",
+        "alt": "KhaNatural Beard Balm",
+        "localSrc": "/images/products/beard-balm-2-27b409.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 8521,
+    "name": "KhaNatural Beard Oil & Wash Combo",
+    "slug": "beard-oil-wash-combo",
+    "sku": "Beardoil&#038;WashCombo",
+    "shortDescription": "<p><strong>KhaNatural Beard Oil &amp; Wash Combo </strong></p>\n<p>The ultimate multi-tasking grooming set for a smooth shave and refreshing clean.</p>\n<p>This essential combo includes 1x 50 g Beard Balm, 1x 500 ml Beard Oil, and 1x 100 g Beard Shave/Wash.</p>\n<p>Perfect for daily use to soften beard hair, condition skin, tame stray hairs, and keep your beard clean, healthy, and well-groomed.</p>\n<p>A versatile addition to any man’s grooming routine.</p>",
+    "description": "<p><strong>KhaNatural Beard Oil &amp; Wash Combo</strong></p>\n<p>Get a smooth shave and a refreshing clean with the KhaNatural Beard Oil &amp; Wash Combo – a versatile, essential addition to your grooming routine. This multi-tasking set includes everything you need to care for your beard from wash to style:</p>\n<ul>\n<li>\n<p><strong>1x 50 g Beard Balm</strong> – nourishing, non-greasy balm that softens coarse beard hair, tames stray hairs, and conditions the skin underneath for a healthier look.</p>\n</li>\n<li>\n<p><strong>1x 500 ml Beard Oil</strong> – lightweight, fast-absorbing oil that hydrates beard hair and skin, reduces itchiness and flakiness, and leaves your beard looking shiny and well-groomed.</p>\n</li>\n<li>\n<p><strong>1x 100 g Beard Shave/Wash</strong> – multi-tasking cleanser that works as a beard wash and shave wash, refreshing the skin and beard while removing dirt, oil, and buildup.</p>\n</li>\n</ul>\n<p>Use together for a complete grooming routine: wash with the Beard Shave/Wash, apply Beard Oil for hydration and shine, then seal and style with the Beard Balm. Ideal for all beard types and lengths, from short stubble to full, thick beards.</p>",
+    "priceCents": 77000,
+    "regularPriceCents": 77000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "Beard balm",
+        "slug": "beard-balm"
+      },
+      {
+        "name": "beard cream",
+        "slug": "beard-cream"
+      },
+      {
+        "name": "Beard oil",
+        "slug": "beard-oil"
+      },
+      {
+        "name": "Beard wash",
+        "slug": "beard-wash"
+      },
+      {
+        "name": "Combo",
+        "slug": "combo"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6662,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Oil_2.jpg",
+        "alt": "KhaNatural Beard Oil & Wash Combo set – 50 g Beard Balm, 500 ml Beard Oil, and 100 g Beard Shave/Wash for complete men’s grooming",
+        "localSrc": "/images/products/beard-oil-wash-combo-1-7b7ea3.jpg"
+      },
+      {
+        "wpId": 6662,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Oil_2.jpg",
+        "alt": "KhaNatural Beard Oil & Wash Combo set – 50 g Beard Balm, 500 ml Beard Oil, and 100 g Beard Shave/Wash for complete men’s grooming",
+        "localSrc": "/images/products/beard-oil-wash-combo-1-7b7ea3.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 8513,
+    "name": "KhaNatural Raw Sea Moss Super Food",
+    "slug": "raw-seamoss-superfood",
+    "sku": "RawSeamossSupperfood",
+    "shortDescription": "<p><strong>KhaNatural Raw Sea Moss Super Food </strong></p>\n<p>Unlock the power of the ocean with this nutrient-dense raw sea moss superfood that supports gut health, immunity, and healthy inflammation response.</p>\n<p>Traditionally used to support feminine wellness, including healthy feminine odour, relief from dryness and discomfort, and support for vaginal and uterine health.</p>\n<p>Gives you a radiant glow from the inside out.</p>\n<p>Perfect for adding to smoothies, teas, soups, and healthy recipes.</p>",
+    "description": "<p><strong>KhaNatural Raw Sea Moss Super Food </strong></p>\n<p>Unlock the power of the ocean with KhaNatural Raw Sea Moss Super Food – a nutrient-dense, raw superfood packed with vitamins, minerals, and antioxidants. This versatile sea moss supports gut health, immunity, and a healthy inflammation response, helping you feel and look radiant from the inside out.</p>\n<p>Sea moss has been traditionally used to support feminine wellness. It may help promote healthy feminine odour, provide relief from dryness and discomfort, and support vaginal canal tone and uterine health, including support for uterine fibroids. Many users also report relief from pain and discomfort associated with yeast infections, though these are not medical claims and individual results vary.</p>\n<p>Rich in iodine, magnesium, calcium, and other essential nutrients, raw sea moss is an excellent addition to a balanced diet. Use it in smoothies, teas, soups, stews, or healthy recipes for a nutrient boost that supports overall wellness and a natural, radiant glow.</p>\n<p><strong>Size: 100 g</strong><br />\nIdeal for daily wellness, cleansing routines, and natural health support.</p>",
+    "priceCents": 25000,
+    "regularPriceCents": 25000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "mens-range",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "KhaNatural Raw Sea Moss Super Food",
+        "slug": "khanatural-raw-sea-moss-super-food"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6703,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_2.jpg",
+        "alt": "KhaNatural Raw Sea Moss Super Food 100 g jar – nutrient-dense raw sea moss for gut health, immunity, feminine wellness, and radiant glow",
+        "localSrc": "/images/products/raw-seamoss-superfood-1-70a0da.jpg"
+      },
+      {
+        "wpId": 6702,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_1.jpg",
+        "alt": "KhaNatural Raw Sea Moss Super Food",
+        "localSrc": "/images/products/raw-seamoss-superfood-2-36b681.jpg"
+      },
+      {
+        "wpId": 6703,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_2.jpg",
+        "alt": "KhaNatural Raw Sea Moss Super Food 100 g jar – nutrient-dense raw sea moss for gut health, immunity, feminine wellness, and radiant glow",
+        "localSrc": "/images/products/raw-seamoss-superfood-1-70a0da.jpg"
+      },
+      {
+        "wpId": 6704,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_.jpg",
+        "alt": "Nurture vaginal wellness with Khanatural Yoni Magic Steaming Herbs. Supports healthy odor, tightness, and relief from chronic yeast infections & dryness.",
+        "localSrc": "/images/products/raw-seamoss-superfood-4-570d7c.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 8510,
+    "name": "KhaNatural Sea Moss Gel",
+    "slug": "seamoss-gel",
+    "sku": "SeamossGel",
+    "shortDescription": "<p><strong>KhaNatural Sea Moss Gel</strong></p>\n<p>An organic, non-GMO, vegan, alkaline superfood packed in a fully recyclable bottle. Rich in 92 of the 102 essential minerals your body is made up of, this gel supports weight loss, boosts energy levels, and promotes thyroid health.</p>\n<p>It’s an immune booster, good for digestion, joint and bone health, and may help remove excess mucus from the body. Improves skin and hair conditions, alkalises the body, and is great for sexual health and fertility.</p>\n<p>Made from purified water and raw organic wild-crafted sea moss. Add 2–3 teaspoons to water, cereal, smoothies, tea, or juice.</p>\n<p>Keep refrigerated and consume within 2 weeks of opening.</p>\n<p><strong>If you have any medical conditions, consult a doctor before use.</strong></p>",
+    "description": "<p><strong>KhaNatural Sea Moss Gel</strong></p>\n<p>Experience the power of our Organic, Non-GMO, Vegan Sea Moss Gel, packaged in a fully recyclable bottle. This alkaline superfood is rich in 92 of the 102 essential minerals your body is made up of, making it a nutrient-dense addition to your daily wellness routine.</p>\n<p>Sea Moss Gel supports weight loss, boosts energy levels, and promotes thyroid health. It’s known as an immune booster and is good for digestion, joint and bone health. Many users report that it may help remove excess mucus from the body and improve skin and hair conditions. The gel alkalises the body and is great for sexual health and fertility.</p>\n<p><strong>Ingredients:</strong></p>\n<ul>\n<li>\n<p>Purified water</p>\n</li>\n<li>\n<p>Raw organic wild-crafted sea moss</p>\n</li>\n</ul>\n<p><strong>Serving suggestion / Directions for use: </strong>Add 2–3 teaspoons of Sea Moss Gel to water, cereal, smoothies, tea, or juice.</p>\n<p><strong>Storage: </strong>Keep refrigerated and consume within 2 weeks of opening.</p>\n<p><strong>Warning: </strong>If you have any medical conditions, please consult a doctor before use.</p>",
+    "priceCents": 29500,
+    "regularPriceCents": 29500,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "KhaNatural Sea Moss Gel",
+        "slug": "khanatural-sea-moss-gel"
+      },
+      {
+        "name": "Sea Moss",
+        "slug": "sea-moss"
+      },
+      {
+        "name": "seamoss gel",
+        "slug": "seamoss-gel"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 11922,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm.webp",
+        "alt": "KhaNatural Sea Moss Gel bottle – organic, non-GMO, vegan alkaline superfood rich in 92 minerals for energy, thyroid health, and immunity",
+        "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+      },
+      {
+        "wpId": 11925,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-26-at-12.56.28.jpeg",
+        "alt": "KhaNatural Sea Moss Gel",
+        "localSrc": "/images/products/seamoss-gel-2-63b01f.jpeg"
+      },
+      {
+        "wpId": 11923,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-26-at-12.56.28-1.jpeg",
+        "alt": "KhaNatural Sea Moss Gel",
+        "localSrc": "/images/products/seamoss-gel-3-effc39.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 7113,
+    "name": "KhaNatural Avo & Sea Moss Cream",
+    "slug": "avo-seamoss-cream-2",
+    "sku": "AvoSeamossCream",
+    "shortDescription": "<p><strong>KhaNatural Avo &amp; Sea Moss Cream </strong></p>\n<p>A nourishing cream that helps clear clogged pores, fade dark spots, and smooth out fine lines while maintaining a healthy complexion and balanced oil production.</p>\n<p>Leaves skin hydrated and looking brighter, and helps protect the skin barrier.</p>\n<p>Formulated with aqua, shea butter, crude avocado, sea moss, eukyl preservative, distilled water, and glycerine.</p>\n<p>Suitable for all skin types</p>\n<p><strong>Directions for use</strong>: Pour desired amount onto your palm and massage gently into skin once or twice daily.</p>\n<p><strong>Store in a cool, dry place away from direct sunlight.</strong></p>",
+    "description": "<p><strong>KhaNatural Avo &amp; Sea Moss Cream </strong></p>\n<p>A nourishing, multi-benefit cream that helps clear clogged pores, fade dark spots, and smooth out fine lines while maintaining a healthy complexion and balanced oil production. This hydrating formula leaves skin looking brighter, more even-toned, and refreshed.</p>\n<p>Formulated with a blend of aqua, shea butter, crude avocado, sea moss, eukyl preservative, distilled water, and glycerine, Avo &amp; Sea Moss Cream helps protect the skin barrier while delivering lasting moisture. The combination of avocado and sea moss provides nutrients that support skin health and a radiant glow.</p>\n<p><strong>Benefits:</strong></p>\n<ul>\n<li>\n<p>Helps clear clogged pores</p>\n</li>\n<li>\n<p>Helps fade dark spots</p>\n</li>\n<li>\n<p>Helps smooth out fine lines</p>\n</li>\n<li>\n<p>Leaves skin hydrated and looking brighter</p>\n</li>\n<li>\n<p>Helps protect the skin barrier</p>\n</li>\n<li>\n<p>Helps maintain a healthy complexion and balance oil production</p>\n</li>\n</ul>\n<p><strong>Directions:</strong>Pour desired amount onto your palm and massage gently into skin once or twice daily.</p>\n<p><strong>Product suitability:</strong>Suitable for all skin types.</p>\n<p><strong>Storage instructions:</strong>Store in a cool, dry place away from direct sunlight.</p>",
+    "priceCents": 35000,
+    "regularPriceCents": 35000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Antioxidants",
+        "slug": "antioxidants"
+      },
+      {
+        "name": "Avocado",
+        "slug": "avocado"
+      },
+      {
+        "name": "Cream",
+        "slug": "cream"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "KhaNatural Avo & Sea Moss Cream",
+        "slug": "khanatural-avo-sea-moss-cream"
+      },
+      {
+        "name": "Seamoss",
+        "slug": "seamoss"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12091,
+        "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-23.08.09-1.webp",
+        "alt": "KhaNatural Avo & Sea Moss Cream 250 ml – nourishing cream that clears clogged pores, fades dark spots, and leaves skin hydrated and brighter",
+        "localSrc": "/images/products/avo-seamoss-cream-2-1-280b74.webp"
+      },
+      {
+        "wpId": 12091,
+        "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-23.08.09-1.webp",
+        "alt": "KhaNatural Avo & Sea Moss Cream 250 ml – nourishing cream that clears clogged pores, fades dark spots, and leaves skin hydrated and brighter",
+        "localSrc": "/images/products/avo-seamoss-cream-2-1-280b74.webp"
+      },
+      {
+        "wpId": 12090,
+        "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-10-at-23.08.09.webp",
+        "alt": "KhaNatural Avo & Sea Moss Cream",
+        "localSrc": "/images/products/avo-seamoss-cream-2-3-a01890.webp"
+      }
+    ]
+  },
+  {
+    "wpId": 7109,
+    "name": "KhaNatural Wildcrafted Sea Moss Capsules (92 Essential Minerals)",
+    "slug": "wildcrafted-seamoss",
+    "sku": "WildCraftedSeamoss",
+    "shortDescription": "<p><strong>Khanatural’s Wildcrafted Sea Moss Capsules</strong></p>\n<p>These supplements are sustainably harvested and bursting with 92 essential vitamins and minerals.</p>\n<p>Specially formulated to naturally elevate your daily wellness routine, these convenient capsules support lasting energy, immune defense, healthy digestion, and radiant skin from the inside out.</p>\n<p>No messy gels, no fishy taste—just pure, nutrient-dense vitality in every serving.</p>\n<p>Available in convenient <b>100g (Starter Pack)</b> and <b>500g (Best Value)</b> options.</p>",
+    "description": "<p><b>Unlock Total-Body Vitality with Pure, Wildcrafted Sea Moss</b></p>\n<p>Are you giving your body the foundational nutrients it needs to thrive, or are you just getting by? Modern diets often leave us depleted, resulting in afternoon fatigue, sluggish digestion, and stubborn skin issues.</p>\n<p>Khanatural Wildcrafted Sea Moss Capsules offer an all-in-one, natural solution. Ethically and sustainably harvested directly from its natural ocean environment, our sea moss retains its maximum nutritional potency, delivering at least 92 of the 102 essential vitamins and minerals your body requires daily.</p>\n<p><b>Why Choose Khanatural Sea Moss Capsules?</b></p>\n<ul>\n<li>\n<p><b>The Ultimate General Health Tonic:</b> Packed with 92 vital nutrients to support cellular health, fortify your immune system, and eliminate toxins.</p>\n</li>\n<li>\n<p><b>Natural Energy &amp; Metabolism Support:</b> Say goodbye to caffeine crashes. Sea moss promotes optimal thyroid health, which regulates your metabolism and unlocks sustained, natural energy.</p>\n</li>\n<li>\n<p><b>Gut Health &amp; Detoxification:</b> Acting as a natural mucus dissolvent and digestive aid, it helps soothe the gut lining, reduces bloating, and cools internal inflammation.</p>\n</li>\n<li>\n<p><b>Radiant Skin &amp; Hair:</b> Nourish your beauty from within. The rich mineral profile targets bad skin conditions and promotes stronger, healthier hair growth.</p>\n</li>\n<li>\n<p><b>Holistic Wellbeing:</b> Supports robust joint and bone health while naturally aiding weight management and promoting reproductive and sexual health for both men and women.</p>\n</li>\n</ul>\n<p><b>Sustainably Sourced, Effortlessly Convenient</b> Skip the hassle of prepping, washing, and blending raw sea moss gel. Our premium capsules give you the exact same high-potency benefits in a clean, shelf-stable, and travel-friendly format.</p>\n<p><b>How to Use:</b> Take daily with water as part of your morning wellness ritual.</p>\n<p>Choose our <b>100g option</b> to jumpstart your routine, or save long-term with our bulk <b>500g option</b>.</p>",
+    "priceCents": 36000,
+    "regularPriceCents": 36000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "Capsules",
+        "slug": "capsules"
+      },
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "Khanatural Wildcrafted Sea Moss Capsules (92 Essential Minerals)",
+        "slug": "khanatural-wildcrafted-sea-moss-capsules-92-essential-minerals"
+      },
+      {
+        "name": "Wildcrafted Seamoss",
+        "slug": "wildcrafted-seamoss"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12432,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48-1-e1778528409333.jpeg",
+        "alt": "Khanatural Wildcrafted Sea Moss Capsules bottle showing 100g and 500g options on a clean background.",
+        "localSrc": "/images/products/wildcrafted-seamoss-1-b63ebf.jpeg"
+      },
+      {
+        "wpId": 12429,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.46-e1778528538289.jpeg",
+        "alt": "KhaNatural Wildcrafted Sea Moss Capsules (92 Essential Minerals)",
+        "localSrc": "/images/products/wildcrafted-seamoss-2-3d0e7c.jpeg"
+      },
+      {
+        "wpId": 12432,
+        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48-1-e1778528409333.jpeg",
+        "alt": "Khanatural Wildcrafted Sea Moss Capsules bottle showing 100g and 500g options on a clean background.",
+        "localSrc": "/images/products/wildcrafted-seamoss-1-b63ebf.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 6705,
+    "name": "KhaNatural Raw Sea Moss & Turmeric Coconut Soap",
+    "slug": "seamoss-rooibos-coconut-soap",
+    "sku": "SeamossCoconutSoap",
+    "shortDescription": "<p><strong>Khanatural Raw Sea Moss &amp; Turmeric Coconut Soap (100g)</strong></p>\n<p>Indulge in a creamy, skin-brightening lather. Our soap combines the deep hydration of a rich glycerine and coconut base with the nutrient-dense power of raw sea moss and anti-inflammatory turmeric.</p>\n<p>Specially crafted to target dullness, uneven skin tone, and dryness, this luxurious 100g bar gently cleanses while leaving your skin feeling incredibly soft, supple, and deeply hydrated.</p>",
+    "description": "<p><strong>KhaNatural Raw Sea Moss &amp; Turmeric Coconut Soap</strong></p>\n<p>Give your daily shower routine a luxurious, skin-loving upgrade. If you are struggling with dry patches, uneven skin tone, or blemishes, ordinary commercial soaps can strip your skin of its natural moisture, leaving it tight and irritated.</p>\n<p>Khanatural Raw Sea Moss &amp; Turmeric Coconut Soap is formulated to do the exact opposite. Built on a ultra-hydrating glycerine base infused with rich coconut oil properties, this premium 100g bar delivers a creamy, dreamy lather that deeply moisturizes while feeding your skin foundational nutrients.</p>\n<p><b>The Power of Our Minimalist, All-Natural Ingredients:</b></p>\n<ul>\n<li>\n<p><b>Raw Sea Moss:</b> Loaded with 92 essential minerals, it acts as a natural humectant, drawing moisture deep into the skin barrier to promote a plump, youthful, and ultra-hydrated complexion.</p>\n</li>\n<li>\n<p><b>Turmeric Extract:</b> Renowned for its natural anti-inflammatory and antioxidant properties, turmeric helps calm irritated skin, soothe blemishes, and fade dark spots to reveal a bright, even tone.</p>\n</li>\n<li>\n<p><b>Pure Glycerine &amp; Coconut Hydration:</b> Provides a gentle, non-stripping cleanse that locks in moisture all day, making it perfect for dry, sensitive, or easily irritated skin types.</p>\n</li>\n</ul>\n<p><b>From Dull to Luminous</b> Free from harsh artificial chemicals, this face and body soap treats your skin to a gentle detox. It washes away impurities while restoring the vital nutrients your skin needs to stay resilient against daily environmental stressors.</p>\n<p><b>How to Use:</b> Lather between wet hands or a washcloth and massage gently over your face and body, avoiding the immediate eye area. Rinse thoroughly. For best results and a longer-lasting bar, allow the soap to dry on a draining soap dish between uses.</p>",
+    "priceCents": 11000,
+    "regularPriceCents": 11000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "coconut soap",
+        "slug": "coconut-soap"
+      },
+      {
+        "name": "Khanatural Raw Sea Moss & Turmeric Coconut Soap",
+        "slug": "khanatural-raw-sea-moss-turmeric-coconut-soap"
+      },
+      {
+        "name": "seamoss soap",
+        "slug": "seamoss-soap"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6686,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Soap_.jpg",
+        "alt": "Brighten and hydrate with Khanatural Sea Moss & Turmeric Coconut Soap. Infused with raw sea moss, turmeric, and glycerine for glowing, soft skin.",
+        "localSrc": "/images/products/seamoss-rooibos-coconut-soap-1-4eb970.jpg"
+      },
+      {
+        "wpId": 6685,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Soap.jpg",
+        "alt": "KhaNatural Raw Sea Moss & Turmeric Coconut Soap",
+        "localSrc": "/images/products/seamoss-rooibos-coconut-soap-2-644550.jpg"
+      },
+      {
+        "wpId": 6686,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Soap_.jpg",
+        "alt": "Brighten and hydrate with Khanatural Sea Moss & Turmeric Coconut Soap. Infused with raw sea moss, turmeric, and glycerine for glowing, soft skin.",
+        "localSrc": "/images/products/seamoss-rooibos-coconut-soap-1-4eb970.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 6701,
+    "name": "KhaNatural Yoni Magic Steaming Herbs",
+    "slug": "yoni-magic-steaming-herbs",
+    "sku": "YoniSteamingHerbs",
+    "shortDescription": "<p><strong>KhaNatural Yoni Magic Steaming Herbs</strong></p>\n<p>A premium, carefully selected blend of natural botanicals designed to support holistic vaginal wellness, relaxation, and rejuvenation.</p>\n<p>Specially formulated to help clear chronic infections, alleviate dryness, and tone pelvic muscles, this gentle 60g herbal steam offers an ancient self-care ritual for the modern woman seeking comfort, confidence, and balance.</p>",
+    "description": "<p><strong>KhaNatural Yoni Magic Steaming Herbs</strong></p>\n<p>Every woman deserves a self-care ritual that honors her body&#8217;s natural rhythms. Stress, hormonal shifts, and everyday synthetic products can disrupt your delicate intimate ecosystem, leading to persistent discomfort, imbalances, and a disconnect from your feminine wellness.</p>\n<p>Khanatural Yoni Magic Steaming Herbs offers a powerful, time-honored plant medicine ritual to help restore harmony. Utilizing the gentle warmth of organic herbal steam, this 60g blend allows the healing properties of nature&#8217;s finest botanicals to be directly absorbed by your most delicate tissues, promoting deep cellular rejuvenation and comfort.</p>\n<p><b>The Benefits of Yoni Magic:</b></p>\n<ul>\n<li>\n<p><b>Natural Balancing &amp; Freshness:</b> Supports a naturally healthy feminine odor by helping balance pH levels and flushing out old fluid accumulation.</p>\n</li>\n<li>\n<p><b>Toning &amp; Tightening:</b> The astringent properties of the botanicals help tone, tighten, and strengthen the vaginal canal and pelvic floor tissues.</p>\n</li>\n<li>\n<p><b>Soothing Relief:</b> Provides deep comfort and immediate relief from chronic yeast infections, bacterial imbalances, dryness, and general irritation.</p>\n</li>\n<li>\n<p><b>Uterine Support:</b> Helps soothe menstrual cramps, reduces pelvic heaviness, and assists the body in naturally managing and reducing uterine fibroids over time.</p>\n</li>\n<li>\n<p><b>A Sacred Ritual for Relaxation:</b> Beyond the physical benefits, the steaming process promotes full-body relaxation, releases stagnation, and allows you to deeply reconnect with your body.</p>\n</li>\n</ul>\n<p><b>Pure, Clean, and Mindfully Crafted</b> Our herbs are 100% natural, free from artificial fragrances, preservatives, or fillers. We believe in pure, earth-born solutions to care for your most sensitive areas safely and effectively.</p>\n<p><b>How to Use:</b> Add a small handful of the 60g blend to a pot of boiling water, allow it to steep covered for 5 minutes, and then place the basin safely beneath your steaming seat or stool. Ensure the steam is a comfortable, warm temperature before sitting. Wrap a heavy blanket around your waist to lock in the steam, and relax for 20 to 30 minutes. <i>(Note: Do not use during menstruation or pregnancy).</i></p>",
+    "priceCents": 51300,
+    "regularPriceCents": 51300,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies"
+    ],
+    "tags": [
+      {
+        "name": "Khabonina Qubeka Products",
+        "slug": "khabonina-qubeka-products"
+      },
+      {
+        "name": "KhaNatural",
+        "slug": "khanatural"
+      },
+      {
+        "name": "Khanatural Yoni Magic Steaming Herbs",
+        "slug": "khanatural-yoni-magic-steaming-herbs"
+      },
+      {
+        "name": "Yoni steaming herbs",
+        "slug": "yoni-steaming-herbs"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6704,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_.jpg",
+        "alt": "Nurture vaginal wellness with Khanatural Yoni Magic Steaming Herbs. Supports healthy odor, tightness, and relief from chronic yeast infections & dryness.",
+        "localSrc": "/images/products/raw-seamoss-superfood-4-570d7c.jpg"
+      },
+      {
+        "wpId": 6704,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Yoni-Magic-Seamoss_.jpg",
+        "alt": "Nurture vaginal wellness with Khanatural Yoni Magic Steaming Herbs. Supports healthy odor, tightness, and relief from chronic yeast infections & dryness.",
+        "localSrc": "/images/products/raw-seamoss-superfood-4-570d7c.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 6698,
+    "name": "AFRICAN BLACK SOAP",
+    "slug": "african-black-soap",
+    "sku": "AFRICANBLACKSOAP",
+    "shortDescription": "<p>Indulge in the rich, nourishing lather of our African Black Soap, infused with extra virgin coconut oil to hydrate and moisturize your skin. This gentle, handcrafted soap cleanses and exfoliates, revealing radiant, healthy-looking skin.</p>\n<p>Size: 100g</p>",
+    "description": "",
+    "priceCents": 11000,
+    "regularPriceCents": 11000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "african black soap",
+        "slug": "african-black-soap"
+      },
+      {
+        "name": "soap",
+        "slug": "soap"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6700,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Afrikan-Black-Soap_1.jpg",
+        "alt": "AFRICAN BLACK SOAP",
+        "localSrc": "/images/products/african-black-soap-1-364d85.jpg"
+      },
+      {
+        "wpId": 6699,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Afrikan-Black-Soap_2.jpg",
+        "alt": "AFRICAN BLACK SOAP",
+        "localSrc": "/images/products/african-black-soap-2-0327dc.jpg"
+      },
+      {
+        "wpId": 6700,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Afrikan-Black-Soap_1.jpg",
+        "alt": "AFRICAN BLACK SOAP",
+        "localSrc": "/images/products/african-black-soap-1-364d85.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1208,
+    "name": "HANDCRAFTED BEARD OIL",
+    "slug": "beard-oil",
+    "sku": "HandcraftedBeardOil",
+    "shortDescription": "<p>Transform your beard and skin with our nourishing formula, expertly designed to cleanse and moisturize<br />\nboth the beard and underlying skin. In addition, enjoy enhanced beard growth, for a fuller and more majestic<br />\nappearance.</p>\n<p>Size: 100g</p>",
+    "description": "<p>Ingredients:<br />\nSweet Almond Oil, Jojoba Oil, Hemp Seed Oil, Jamaican Black Oil (Ricinus), Organic Extra Virgin Olive Oil, Tea Tree Leaf Oil And Peppermint Oil.</p>\n<p>Serving Suggestion/Directions For Use:<br />\nShake Well Before Use, Apply A Generous Amount Of The Hand Crafted Beard Oil, On The Beard Or On The Shaved Area If Using As An Aftershave.</p>",
+    "priceCents": 35000,
+    "regularPriceCents": 35000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "Beard oil",
+        "slug": "beard-oil"
+      },
+      {
+        "name": "Spray",
+        "slug": "spray"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 11921,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/nwve8unisewdbrvki59n.webp",
+        "alt": "HANDCRAFTED BEARD OIL",
+        "localSrc": "/images/products/beard-oil-1-23b2d4.webp"
+      },
+      {
+        "wpId": 6661,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Oil_1.jpg",
+        "alt": "HANDCRAFTED BEARD OIL",
+        "localSrc": "/images/products/beard-oil-2-d51225.jpg"
+      },
+      {
+        "wpId": 6663,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Oil_3.jpg",
+        "alt": "HANDCRAFTED BEARD OIL",
+        "localSrc": "/images/products/beard-oil-3-b940f6.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1206,
+    "name": "WHITE FLOWER INFUSED TUMERIC SOAP",
+    "slug": "white-flower-infused-tumeric-soap",
+    "sku": "WhiteFlowerInfusedTumericSoap",
+    "shortDescription": "<p>Revitalize your skin with our Turmeric Infused Sea Moss Soap, a powerful blend of anti-inflammatory turmeric and nutrient-rich sea moss. This invigorating soap deeply cleanses and nourishes your skin, reducing redness and irritation.</p>\n<p>Size: 100g</p>",
+    "description": "<p>Ingredients:</p>\n<p>Water, Raw Seamoss, Tumeric &amp; Glycerin</p>\n<p>Packed By: Khanatural (Pty) Ltd</p>",
+    "priceCents": 11000,
+    "regularPriceCents": 11000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "facial",
+        "slug": "facial"
+      },
+      {
+        "name": "tumeric soap",
+        "slug": "tumeric-soap"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6667,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_2.jpg",
+        "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+        "localSrc": "/images/products/white-flower-infused-tumeric-soap-1-e452ba.jpg"
+      },
+      {
+        "wpId": 6665,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_3.jpg",
+        "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+        "localSrc": "/images/products/white-flower-infused-tumeric-soap-2-583616.jpg"
+      },
+      {
+        "wpId": 6666,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_1.jpg",
+        "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+        "localSrc": "/images/products/white-flower-infused-tumeric-soap-3-afa184.jpg"
+      },
+      {
+        "wpId": 6667,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_2.jpg",
+        "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
+        "localSrc": "/images/products/white-flower-infused-tumeric-soap-1-e452ba.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1200,
+    "name": "ALL NATURAL SCRUB",
+    "slug": "all-natural-scrub",
+    "sku": "AllNaturalScrub",
+    "shortDescription": "<p>Exfoliate and nourish your skin with our All Natural Scrub, infused with natural ingredients to reveal radiant, healthy looking skin. Perfect for all skin types, our All Natural Scrub is a natural way to glow from head to toe.</p>\n<p>Size: 250g</p>",
+    "description": "<p>This blend of salt, fibres and oils will leave the skin feeling soft and well nourished.</p>\n<p>Benefits:</p>\n<p>&#8211; A Blend Of Salt, Fibres &amp; Oils That Will Leave Skin Feeling Soft &amp; Well Nourished</p>\n<p>&#8211; Ingredients: Base: Fine Salt, Coconut, Baobab Fibre | Essential Oils: Lemon Grass, Orange, Plant Glycerin, Shea Vitamin Butter</p>\n<p>&#8211; Application: Once A Week, As A Full Body Exfoliation</p>\n<p>Packed By: Khanatural (Pty) Ltd</p>",
+    "priceCents": 22000,
+    "regularPriceCents": 22000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [],
+    "images": [
+      {
+        "wpId": 12002,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/D22.jpg",
+        "alt": "ALL NATURAL SCRUB",
+        "localSrc": "/images/products/all-natural-scrub-1-ed2c7f.jpg"
+      },
+      {
+        "wpId": 11975,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08116-scaled.webp",
+        "alt": "ALL NATURAL SCRUB",
+        "localSrc": "/images/products/all-natural-scrub-2-0b7c2a.webp"
+      },
+      {
+        "wpId": 11977,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08730-scaled.webp",
+        "alt": "ALL NATURAL SCRUB",
+        "localSrc": "/images/products/all-natural-scrub-3-005135.webp"
+      },
+      {
+        "wpId": 11911,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08057_compressed-scaled.webp",
+        "alt": "ALL NATURAL SCRUB",
+        "localSrc": "/images/products/all-natural-scrub-4-13f6eb.webp"
+      }
+    ]
+  },
+  {
+    "wpId": 1199,
+    "name": "SEAMOSS ROOIBOSS COCONUT SOAP",
+    "slug": "seamoss-infused-rooibos-coconut-soap",
+    "sku": "RooibossSoap",
+    "shortDescription": "<p>Seamoss Rooibos Coconut Soap is smooth and gentle on the one side and the other side is rough! It’s due to the visible Rooibos leaves Offering you that scrub effect!</p>\n<p>Size: 100g</p>",
+    "description": "<p>Benefits:</p>\n<p>Smooth And Gentle On The One Side And The Other Side Is Rough.</p>\n<p>It’s Due To The Visible Rooibos Leaves Offering You That Scrub Effect.</p>",
+    "priceCents": 11000,
+    "regularPriceCents": 11000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [],
+    "images": [
+      {
+        "wpId": 6246,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Rooiboss-Infused-Seamoss-Soap-e1737992232960.jpeg",
+        "alt": "SEAMOSS ROOIBOSS COCONUT SOAP",
+        "localSrc": "/images/products/seamoss-infused-rooibos-coconut-soap-1-72c1f5.jpeg"
+      },
+      {
+        "wpId": 6246,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Rooiboss-Infused-Seamoss-Soap-e1737992232960.jpeg",
+        "alt": "SEAMOSS ROOIBOSS COCONUT SOAP",
+        "localSrc": "/images/products/seamoss-infused-rooibos-coconut-soap-1-72c1f5.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 1198,
+    "name": "SEAMOSS LOTION",
+    "slug": "seamoss-lotion",
+    "sku": "SeamossLotion",
+    "shortDescription": "<p>Hydrate and nourish your skin with our Sea Moss Lotion, rich in the ocean’s most potent ingredients to lock in moisture and promote healthy, glowing skin. This lightweight, non-greasy lotion absorbs quickly, soothing dryness and irritation.</p>\n<p>Size: 250g</p>",
+    "description": "<p>It moisturises your entire body including your face from within. The aloe vera in our balm contains natural depigmenting compound that has been shown to lighten skin and work effectively as a non-toxic hyperpigmentation treatment.</p>\n<p><strong>Benefits:</strong></p>\n<p>&#8211; Keeps Skin Hydrated, Moisturised And Smelling Great</p>\n<p>&#8211; The Aloe Vera In Our Balm Contains Natural Depigmenting Compound.</p>\n<p>&#8211; Lighten Skin And Work Effectively As A Non-Toxic Hyperpigmentation Treatment.</p>\n<p>&#8211; Moisturises Your Entire Body Including Your Face From Within.</p>",
+    "priceCents": 30000,
+    "regularPriceCents": 30000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": false,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies",
+      "unisex"
+    ],
+    "tags": [],
+    "images": [
+      {
+        "wpId": 11985,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/xgg.jpg",
+        "alt": "SEAMOSS LOTION",
+        "localSrc": "/images/products/seamoss-lotion-1-f91532.jpg"
+      },
+      {
+        "wpId": 11980,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08142-scaled.jpg",
+        "alt": "SEAMOSS LOTION",
+        "localSrc": "/images/products/seamoss-lotion-2-15ca8d.jpg"
+      },
+      {
+        "wpId": 11981,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08176-scaled.jpg",
+        "alt": "SEAMOSS LOTION",
+        "localSrc": "/images/products/seamoss-lotion-3-ac0333.jpg"
+      },
+      {
+        "wpId": 11979,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08137-scaled.jpg",
+        "alt": "SEAMOSS LOTION",
+        "localSrc": "/images/products/seamoss-lotion-4-01666a.jpg"
+      },
+      {
+        "wpId": 11982,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08205-scaled.jpg",
+        "alt": "SEAMOSS LOTION",
+        "localSrc": "/images/products/seamoss-lotion-5-2d1cf3.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1197,
+    "name": "REVIVING FACIAL OIL",
+    "slug": "reviving-facial-oil",
+    "sku": "RevivingFacialOil",
+    "shortDescription": "<p>Transform your skin with our Reviving Facial Oil, a potent blend of natural ingredients that deeply nourishes and revitalizes your complexion, leaving it glowing with health and vitality.</p>\n<p>Size: 100ml</p>",
+    "description": "<p><strong>Benefits:</strong></p>\n<p>High in antioxidants (Vitamin A,C, E) and Omega 6. It slows down the ageing process and reduces fine wrinkles on the face. The oil leaves the skin hydrated and looking brighter. The product helps to restore and moisturise dry and dull looking skin. The serum helps control bumps and ingrown hairs. It promotes beard and hair growth.</p>\n<p><strong>Warning:</strong></p>\n<p>If you have a medical condition, consult your doctor before use. Keep out of reach of children. Suitable for sensitive skin types.</p>\n<p>Packaged by Khanatural (Pty) Ltd.</p>",
+    "priceCents": 25000,
+    "regularPriceCents": 25000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "ladies"
+    ],
+    "tags": [
+      {
+        "name": "facial",
+        "slug": "facial"
+      },
+      {
+        "name": "moisturiser",
+        "slug": "moisturiser"
+      },
+      {
+        "name": "oil",
+        "slug": "oil"
+      },
+      {
+        "name": "Reviving Facial Oil",
+        "slug": "reviving-facial-oil"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12003,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC92.jpg",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-1-a5e1f0.jpg"
+      },
+      {
+        "wpId": 11918,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08105_compressed-scaled.webp",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-2-74c1d7.webp"
+      },
+      {
+        "wpId": 11900,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC07705_compressed-scaled.webp",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-3-2a3b29.webp"
+      },
+      {
+        "wpId": 11986,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08105_compressed-scaled.webp",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-4-0dc115.webp"
+      },
+      {
+        "wpId": 11914,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08072_compressed-scaled.webp",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-5-c81765.webp"
+      },
+      {
+        "wpId": 12251,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC09265-1-scaled.jpg",
+        "alt": "REVIVING FACIAL OIL",
+        "localSrc": "/images/products/reviving-facial-oil-6-2ddc90.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1194,
+    "name": "BLACK ELDERBERRY SUPPLEMENTS",
+    "slug": "black-elderberry-capsules",
+    "sku": "BlackElderberryCapsules",
+    "shortDescription": "<p>Boost your immune system and defend against free radicals with our Black Elderberry Supplement, packed with anthocyanins and other powerful antioxidants to support overall wellness.</p>\n<p>Sizes: 100g and 500g options.</p>",
+    "description": "<p><strong>Benefits:</strong></p>\n<p>An immune booster. It alleviates sinus pain, cold and is a flue fighter. Our capsules are high in vitamins A,B,C and potassium. They assist in managing and fighting cancer. They help fight inflammation, reduce the risk of cardiovascular disease. The product assists with kidney problems, promotes brain health. It boosts mental focus and improves memory. Supports the fight against harmful viruses. These capsules relieve nasal congestion. It&#8217;s a general tonic for overall health.</p>",
+    "priceCents": 33000,
+    "regularPriceCents": 33000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "black edlerberry",
+        "slug": "black-edlerberry"
+      },
+      {
+        "name": "Capsules",
+        "slug": "capsules"
+      },
+      {
+        "name": "seamoss capsules",
+        "slug": "seamoss-capsules"
+      },
+      {
+        "name": "supplements",
+        "slug": "supplements"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 11997,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DS222.jpg",
+        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+        "localSrc": "/images/products/black-elderberry-capsules-1-f08ad0.jpg"
+      },
+      {
+        "wpId": 11999,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08782-1-scaled.jpg",
+        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+        "localSrc": "/images/products/black-elderberry-capsules-2-7f87a8.jpg"
+      },
+      {
+        "wpId": 11998,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08996222.jpg",
+        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+        "localSrc": "/images/products/black-elderberry-capsules-3-cedbd0.jpg"
+      },
+      {
+        "wpId": 11994,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08782-scaled.jpg",
+        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+        "localSrc": "/images/products/black-elderberry-capsules-4-507e3e.jpg"
+      },
+      {
+        "wpId": 11995,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08796-scaled.jpg",
+        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
+        "localSrc": "/images/products/black-elderberry-capsules-5-1fc038.jpg"
+      }
+    ]
+  },
+  {
+    "wpId": 1193,
+    "name": "SEAMOSS GEL COMBO",
+    "slug": "seamoss-gel-combo",
+    "sku": "SeamossGelCombo",
+    "shortDescription": "<p>Experience the power of our Organic, Non-GMO, Vegan Sea Moss Gel, packaged in a fully recyclable bottle. Rich in 92 of the 102 essential body minerals, this gel supports weight loss, boosts energy levels, and promotes thyroid health.</p>\n<p>750ml + 500ml</p>",
+    "description": "<p><strong>Benefits:</strong></p>\n<p>Organic, Non Gmo, Vegan, Bottle Recyclable. It Contains 92 Out of the 102 body minerals. It supports weight loss and is a source of energy. It&#8217;s good for thyroid health and an immune booster. The gel can help remove excess mucus from the body. Seamoss helps body joints and bone health. It improves skin and hair conditions and alkalises the body. The gel is good for digestion. Our seamoss is great for sexual health and fertility. Our product is organic and wildcrafted. It&#8217;s alkaline superfood.</p>\n<p><strong>Ingredients: </strong>Purified Water. Raw Organic Wild Crafted Irish Sea Moss.</p>\n<p><strong>Serving Suggestion/Directions For Use:</strong></p>\n<p>Add 2-3 Teaspoons Of Seamoss To Water, Cereal, Smoothies, Tea Or Juice</p>\n<p><strong>Storage: </strong></p>\n<p>Keep Refrigerated And Consume Within 2 Weeks Of Opening</p>\n<p><strong>Warning: </strong></p>\n<p>If You Have Any Medical Conditions Please Consult A Doctor Before Use</p>\n<p>Packed By: Khanatural (Pty) Ltd</p>",
+    "priceCents": 64000,
+    "regularPriceCents": 64000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "unisex"
+    ],
+    "tags": [
+      {
+        "name": "seamoss gel",
+        "slug": "seamoss-gel"
+      },
+      {
+        "name": "seamoss gel combo",
+        "slug": "seamoss-gel-combo"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 12005,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/WhatsApp-Image-2025-06-18-at-15.08.39.jpeg",
+        "alt": "SEAMOSS GEL COMBO",
+        "localSrc": "/images/products/seamoss-gel-combo-1-ed612a.jpeg"
+      },
+      {
+        "wpId": 11922,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm.webp",
+        "alt": "KhaNatural Sea Moss Gel bottle – organic, non-GMO, vegan alkaline superfood rich in 92 minerals for energy, thyroid health, and immunity",
+        "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+      },
+      {
+        "wpId": 11920,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/mrbeuc5uty0evsgkfhxe.webp",
+        "alt": "SEAMOSS GEL COMBO",
+        "localSrc": "/images/products/seamoss-gel-combo-3-f944a3.webp"
+      },
+      {
+        "wpId": 11927,
+        "src": "https://khanatural.com/wp-content/uploads/2025/05/z8dpbnpmdyxrse7bprjd.webp",
+        "alt": "SEAMOSS GEL COMBO",
+        "localSrc": "/images/products/seamoss-gel-combo-4-607dd7.webp"
+      },
+      {
+        "wpId": 12006,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/W.38.jpeg",
+        "alt": "SEAMOSS GEL COMBO",
+        "localSrc": "/images/products/seamoss-gel-combo-5-186e0c.jpeg"
+      }
+    ]
+  },
+  {
+    "wpId": 1192,
+    "name": "BEARD SHAVE & WASH CREAM",
+    "slug": "beard-shave-and-wash-cream",
+    "sku": "BeardBalm&#038;ShaveWash",
+    "shortDescription": "<p>Get a smooth shave and a refreshing clean with our Beard Shave and Wash Cream. This multi-tasking cream can be used as a shave cream, face wash, and beard wash, making it a versatile and essential addition to your grooming routine.</p>\n<p>Size: 100g</p>",
+    "description": "<p>The Beard Balm is very nourishing and softens the beard hair and prevents irritation. Although a firm consistency, it will melt easily, it will melt easily when applied. It will give a shine but &#8220;sticky&#8221; enough to shape the beard.</p>\n<p>Ingredients:</p>\n<p>Carrier oils &#8211; cocoa butter. Shear butter. Beeswarx. Almond. Jojoba. Vitamin E acetate. Essential Oils &#8211; Bergamot. Cedarwood atlas.</p>\n<p>Apllication: once to twice per day.</p>",
+    "priceCents": 30000,
+    "regularPriceCents": 30000,
+    "salePriceCents": null,
+    "onSale": false,
+    "currency": "ZAR",
+    "inStock": true,
+    "purchasable": true,
+    "averageRating": 0.0,
+    "reviewCount": 0,
+    "weight": null,
+    "categories": [
+      "mens-range"
+    ],
+    "tags": [
+      {
+        "name": "Balm Beard",
+        "slug": "balm-beard"
+      },
+      {
+        "name": "Shave cream",
+        "slug": "shave-cream"
+      },
+      {
+        "name": "Wash Cream",
+        "slug": "wash-cream"
+      }
+    ],
+    "images": [
+      {
+        "wpId": 6696,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Shave_3.jpg",
+        "alt": "BEARD SHAVE & WASH CREAM",
+        "localSrc": "/images/products/beard-shave-and-wash-cream-1-4762ca.jpg"
+      },
+      {
+        "wpId": 6696,
+        "src": "https://khanatural.com/wp-content/uploads/2024/10/Beard-Shave_3.jpg",
+        "alt": "BEARD SHAVE & WASH CREAM",
+        "localSrc": "/images/products/beard-shave-and-wash-cream-1-4762ca.jpg"
+      }
+    ]
+  }
+]
