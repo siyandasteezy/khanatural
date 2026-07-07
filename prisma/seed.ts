@@ -148,6 +148,7 @@ async function main() {
       content:
         "<p>Inside This isuue, we get to know our cover star, Mokgadi Shogole’s beauty from within, while Jamie oliver inspires your palate with hearty winter meals.</p>\n<p>Radio and TV host, Tyrone Willard is our One To Watch this month. He has a voice and he is using it to highlight what’s happening in South Africa.</p>\n<p>Stretching has become as important as working out and we ask you if have you ever been told a beautiful lie?</p>\n<p>We also have our usual features from Mokwadi and Dambisa. Mokwadi reminisces on the boys who once were, while Dambisa educates us in the beauty of presence.</p>",
       coverImage: "/images/brand/emag-cover-july-2026.jpeg",
+      downloadUrl: "/uploads/emag/khanatural-emag-july-2026.pdf",
       publishedAt: new Date("2026-07-01"),
     },
     update: {},
