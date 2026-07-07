@@ -1,0 +1,21 @@
+# Netlify deploy configuration for the Khanatural Next.js app.
+#
+# Required environment variables (Site settings → Environment variables):
+#   DATABASE_URL    – hosted PostgreSQL connection string (use a pooled URL,
+#                     e.g. Neon's "-pooler" host — the build also needs this
+#                     because product/category pages are prerendered from the DB)
+#   SITE_URL        – canonical origin, e.g. https://khanatural.com
+#   AUTH_SECRET     – admin session signing secret (openssl rand -hex 32)
+#
+# Seed the hosted database once from your machine:
+#   DATABASE_URL="<hosted url>" npx prisma migrate deploy
+#   DATABASE_URL="<hosted url>" ADMIN_EMAIL=... ADMIN_PASSWORD=... npm run db:seed
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -77,11 +77,16 @@ export async function updateOrderStatus(id: string, formData: FormData) {
 // ---------- articles ----------
 
 const MAX_PDF_BYTES = 50 * 1024 * 1024;
+// Netlify functions reject request bodies over ~6MB, so uploads there must be
+// compressed exports; self-hosted `next start` can take the full 50MB.
+const MAX_NETLIFY_PDF_BYTES = 5 * 1024 * 1024 + 512 * 1024;
 
 /**
- * Persist an uploaded e-Mag PDF to public/uploads/emag/ and return its public
- * URL, or null when no file was chosen. `next start` serves public/ from disk
- * at request time, so files written here are available immediately.
+ * Persist an uploaded e-Mag PDF and return its public URL, or null when no
+ * file was chosen. Self-hosted (`next start`) writes to public/uploads/emag/,
+ * which is served from disk at request time. On Netlify the filesystem is
+ * read-only, so the PDF goes to Netlify Blobs and is served back through
+ * /api/emag-pdf/[slug]/.
  */
 async function saveEmagPdf(formData: FormData, slug: string): Promise<string | null> {
   const file = formData.get("pdf");
@@ -90,6 +95,18 @@ async function saveEmagPdf(formData: FormData, slug: string): Promise<string | n
     throw new Error("The e-Mag upload must be a PDF file");
   }
   if (file.size > MAX_PDF_BYTES) throw new Error("PDF is too large (max 50MB)");
+
+  if (process.env.NETLIFY) {
+    if (file.size > MAX_NETLIFY_PDF_BYTES) {
+      throw new Error("On Netlify hosting, e-Mag PDFs must be under ~5.5MB — export a compressed PDF and retry");
+    }
+    const { getStore } = await import("@netlify/blobs");
+    const store = getStore("emag");
+    await store.set(`${slug}.pdf`, await file.arrayBuffer(), {
+      metadata: { contentType: "application/pdf", uploadedAt: new Date().toISOString() },
+    });
+    return `/api/emag-pdf/${slug}/`;
+  }
 
   const dir = join(process.cwd(), "public", "uploads", "emag");
   await mkdir(dir, { recursive: true });
