@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "./site";
+import { site, isStagingDomain } from "./site";
 
 type SeoInput = {
   title: string;
@@ -18,7 +18,10 @@ export function buildMetadata({ title, description, path, image, type = "website
     title,
     description: desc,
     alternates: { canonical: url },
-    robots: noIndex ? { index: false, follow: false } : undefined,
+    // staging deployments are noindexed site-wide; set here (not only in the
+    // root layout) because a page's `robots: undefined` would override the
+    // layout value in Next's metadata merge
+    robots: noIndex || isStagingDomain ? { index: false, follow: false } : undefined,
     openGraph: {
       title,
       description: desc,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
-import { site } from "@/lib/site";
+import { site, isStagingDomain } from "@/lib/site";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "Your go-to destination for the finest, nutrient-rich seamoss products. Sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your health.",
   applicationName: site.name,
   formatDetection: { telephone: false },
+  // staging (non-khanatural.com) deployments must never be indexed; pages
+  // that don't set their own robots inherit this
+  robots: isStagingDomain ? { index: false, follow: false } : undefined,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -17,6 +17,18 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "khanatural.com", pathname: "/wp-content/uploads/**" },
     ],
   },
+  async headers() {
+    // Belt-and-braces noindex for staging domains: the X-Robots-Tag header
+    // also covers non-HTML responses (PDFs, images) that meta robots can't.
+    const siteUrl = process.env.SITE_URL ?? "https://khanatural.com";
+    if (siteUrl.startsWith("https://khanatural.com")) return [];
+    return [
+      {
+        source: "/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       // WordPress-era paths that no longer exist as pages
