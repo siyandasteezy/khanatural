@@ -5,6 +5,8 @@ import { buildMetadata, breadcrumbJsonLd, jsonLd } from "@/lib/seo";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
 import { FlipbookViewer } from "@/components/emag/FlipbookViewer";
+import { EmagDownloadButton } from "@/components/emag/EmagDownloadButton";
+import { EmagSubscribeInline } from "@/components/emag/EmagSubscribeInline";
 
 export const revalidate = 300;
 
@@ -65,17 +67,17 @@ export default async function EmagReaderPage({ params }: Params) {
             >
               ← All issues
             </ButtonLink>
-            <a
-              href={issue.downloadUrl}
-              download
-              className="inline-flex h-9 items-center rounded-full bg-gold-500 px-4 text-xs font-semibold uppercase tracking-wide text-kelp-950 hover:bg-gold-400"
-            >
-              Download PDF
-            </a>
+            <EmagDownloadButton
+              pdfUrl={issue.downloadUrl}
+              issueTitle={issue.title}
+              label="Download PDF"
+              className="!h-9 !px-4 !text-xs"
+            />
           </div>
         </div>
 
         <FlipbookViewer pdfUrl={issue.downloadUrl} title={issue.title} />
+        <EmagSubscribeInline />
       </Container>
     </section>
   );

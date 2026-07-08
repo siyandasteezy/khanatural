@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
+import { EmagDownloadButton } from "@/components/emag/EmagDownloadButton";
 
 type EmagIssue = {
   title: string;
@@ -25,13 +26,7 @@ export function EmagSection({ issue }: { issue: EmagIssue | null }) {
               Read the eMag
             </ButtonLink>
             {issue.downloadUrl && (
-              <a
-                href={issue.downloadUrl}
-                download
-                className="inline-flex h-12 items-center justify-center rounded-full border border-sand-200/60 px-8 text-sm font-semibold uppercase tracking-wide text-sand-50 hover:bg-sand-50 hover:text-kelp-950"
-              >
-                Download eMag
-              </a>
+              <EmagDownloadButton pdfUrl={issue.downloadUrl} issueTitle={issue.title} variant="outlineLight" />
             )}
             <ButtonLink
               href="/media/"

@@ -178,6 +178,8 @@ model MediaAsset {
 model NewsletterSubscriber {
   id        String   @id @default(cuid())
   email     String   @unique
+  name      String   @default("")
+  source    String   @default("newsletter") // "newsletter" | "emag-download" | "emag-reader"
   createdAt DateTime @default(now())
 }
 

@@ -13,13 +13,17 @@ import { Section } from "@/components/ui/Section";
 
 export const revalidate = 300; // ISR: refresh content every 5 minutes
 
-export const metadata: Metadata = buildMetadata({
-  // original WordPress homepage title, preserved exactly
-  title: `${site.name} – ${site.tagline}`,
-  description:
-    "Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean, our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your health.",
-  path: "/",
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: `${site.name} – ${site.tagline}`,
+    description:
+      "Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean, our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your health.",
+    path: "/",
+  }),
+  // absolute: the layout's "%s – Khanatural Shop" template would double the
+  // suffix on the original WordPress homepage title
+  title: { absolute: `${site.name} – ${site.tagline}` },
+};
 
 export default async function HomePage() {
   const [products, testimonials, emag] = await Promise.all([
