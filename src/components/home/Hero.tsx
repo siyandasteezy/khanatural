@@ -7,27 +7,32 @@ export function Hero() {
     // pulled up behind the translucent header (36px bar + 80px band) and padded
     // back out, so the photography shows through the frosted chrome
     <section className="relative -mt-[116px] overflow-hidden bg-kelp-950 pt-[116px] text-sand-50">
-      {/* sunlit kelp forest — the ocean the seamoss comes from, at full strength */}
+      {/* Sunlit kelp forest — the ocean the seamoss comes from, at full
+          strength. Mobile crops to the photo's darkest slice (far left) so the
+          scrim over the copy can stay as light as possible; desktop shows the
+          bright fronds on the right. */}
       <Image
         src="/images/stock/kelp-forest.jpg"
         alt=""
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[70%_center]"
+        className="object-cover object-[0%_center] lg:object-[70%_center]"
       />
 
       {/* Legibility scrim, kept off the photograph as much as possible.
           On desktop it is anchored to the text column and clears completely
           by 70% of the width, leaving the right third of the kelp untouched.
-          Measured against the photo's own pixels: lead copy 4.7:1, headline
-          6.0:1 — both clear WCAG AA. */}
+          On mobile it is anchored in PIXELS to the text band (which starts at
+          a fixed offset under the header): light above the copy, opaque only
+          across it, and gone below the buttons — the extra bottom padding
+          gives the photo a clean showcase before the wave. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 lg:hidden"
         style={{
           background:
-            "linear-gradient(180deg, rgba(17,17,16,0.82) 0%, rgba(17,17,16,0.78) 60%, rgba(17,17,16,0.55) 100%)",
+            "linear-gradient(180deg, rgba(17,17,16,0.30) 0px, rgba(17,17,16,0.30) 165px, rgba(17,17,16,0.62) 208px, rgba(17,17,16,0.62) 620px, rgba(17,17,16,0.35) 700px, rgba(17,17,16,0) 790px)",
         }}
       />
       <div
@@ -38,7 +43,8 @@ export function Hero() {
             "linear-gradient(100deg, rgba(17,17,16,0.76) 0%, rgba(17,17,16,0.74) 42%, rgba(17,17,16,0) 70%), radial-gradient(40rem 24rem at 8% 108%, rgba(193,154,61,0.20), transparent 62%)",
         }}
       />
-      <Container className="relative py-24 sm:py-32 lg:py-40">
+      {/* extra bottom padding below lg = the scrim-free photo showcase */}
+      <Container className="relative pt-24 pb-56 sm:pt-32 sm:pb-64 lg:py-40">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-gold-300">Welcome to</p>
           <h1 className="font-[family-name:var(--font-display)] text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
