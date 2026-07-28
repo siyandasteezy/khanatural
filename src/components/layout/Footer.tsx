@@ -58,9 +58,15 @@ export function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(3,1fr)] xl:grid-cols-[1.4fr_repeat(5,1fr)]">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/images/brand/logo.png" alt="" width={48} height={48} className="h-12 w-12 rounded-full object-contain" />
-              <span className="font-[family-name:var(--font-display)] text-xl font-semibold text-sand-50">Khanatural</span>
+            <Link href="/" className="inline-block" aria-label={`${site.name} — home`}>
+              {/* black lockup inverted to white for the dark footer */}
+              <Image
+                src="/images/brand/logo.png"
+                alt={`${site.name} — ${site.tagline}`}
+                width={666}
+                height={206}
+                className="h-14 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-sand-200/80">
               Our mission is to help you achieve a healthier, more radiant appearance and feel more confident and vibrant. Our

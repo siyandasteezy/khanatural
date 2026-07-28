@@ -8,7 +8,7 @@ export function CartButton() {
   return (
     <Link
       href="/shopping-cart/"
-      className="relative inline-flex h-10 w-10 items-center justify-center rounded-full text-sand-50 hover:bg-kelp-800"
+      className="relative inline-flex h-11 w-11 items-center justify-center rounded-full text-kelp-800 hover:bg-sand-100"
       aria-label={`Shopping cart, ${count} item${count === 1 ? "" : "s"}`}
     >
       <svg aria-hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">

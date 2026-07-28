@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
@@ -50,7 +51,14 @@ export function MobileMenu({ links }: { links: { label: string; href: string }[]
               className="flex h-full flex-col overflow-y-auto bg-kelp-950 px-6 pb-10 pt-4"
             >
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-[family-name:var(--font-display)] text-lg font-semibold text-sand-50">Khanatural</span>
+                {/* black lockup inverted to white for the dark sheet */}
+                <Image
+                  src="/images/brand/logo.png"
+                  alt={site.name}
+                  width={666}
+                  height={206}
+                  className="h-9 w-auto brightness-0 invert"
+                />
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -103,7 +111,7 @@ export function MobileMenu({ links }: { links: { label: string; href: string }[]
         aria-expanded={open}
         aria-controls="mobile-nav"
         aria-label={open ? "Close menu" : "Open menu"}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full text-sand-50 hover:bg-kelp-800"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full text-kelp-800 hover:bg-sand-100"
       >
         <svg aria-hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

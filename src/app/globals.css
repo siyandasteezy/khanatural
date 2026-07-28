@@ -1,22 +1,24 @@
 @import "tailwindcss";
 
 /*
- * Khanatural design tokens — a premium wellness palette drawn from the brand:
- * deep sea-kelp greens, warm sand neutrals, and a muted gold accent.
+ * Khanatural design tokens — matched to the brand's monochrome identity:
+ * charcoal/black (the K logo), warm sand neutrals, and the brand gold.
+ * The "kelp" scale name is kept for compatibility across components, but it
+ * now holds warm charcoals — nature greens live in the photography, not the UI.
  */
 @theme {
-  /* brand greens (sea kelp / moss) */
-  --color-kelp-50: #f1f7f3;
-  --color-kelp-100: #dcede2;
-  --color-kelp-200: #bbdac8;
-  --color-kelp-300: #8fc0a7;
-  --color-kelp-400: #5fa082;
-  --color-kelp-500: #3f8466;
-  --color-kelp-600: #2e6a51;
-  --color-kelp-700: #265542;
-  --color-kelp-800: #204437;
-  --color-kelp-900: #1b392e;
-  --color-kelp-950: #0d201a;
+  /* brand charcoals (warm, faint olive undertone) */
+  --color-kelp-50: #f6f6f4;
+  --color-kelp-100: #e9e9e5;
+  --color-kelp-200: #d4d4cd;
+  --color-kelp-300: #b3b3a9;
+  --color-kelp-400: #8b8b80;
+  --color-kelp-500: #6b6b60;
+  --color-kelp-600: #52524a;
+  --color-kelp-700: #3f3f39;
+  --color-kelp-800: #2b2b27;
+  --color-kelp-900: #1d1d1a;
+  --color-kelp-950: #111110;
 
   /* warm sand neutrals */
   --color-sand-50: #fbf9f4;
@@ -25,15 +27,17 @@
   --color-sand-300: #dcc9a6;
   --color-sand-400: #ccb083;
 
-  /* muted gold accent */
+  /* muted gold accent — 500 is the brand gold used as a fill (buttons, chips).
+     600/700 are the text-safe shades: both clear WCAG AA (4.5:1) on white and
+     sand, since the gold eyebrows render at 12px bold. */
   --color-gold-300: #e2c887;
   --color-gold-400: #d4b164;
   --color-gold-500: #c19a3d;
-  --color-gold-600: #a5812e;
-  --color-gold-700: #866726;
+  --color-gold-600: #866726;
+  --color-gold-700: #6d5320;
 
   /* text */
-  --color-ink: #1d211f;
+  --color-ink: #1c1c1a;
 
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;

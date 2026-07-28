@@ -52,7 +52,7 @@ export default async function CategoryPage({ params }: Params) {
           ),
         }}
       />
-      <PageHero eyebrow="Shop by range" title={category.name} lead={category.description || undefined} image="/images/stock/leaves.jpg" />
+      <PageHero eyebrow="Shop by range" title={category.name} lead={category.description || undefined} image="/images/stock/sea-algae.jpg" />
       <Container className="py-12 sm:py-16">
         <nav aria-label="Product categories" className="mb-10 flex flex-wrap gap-3">
           <ButtonLink href="/shop/" variant="outline" size="sm">

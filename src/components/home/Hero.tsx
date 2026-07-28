@@ -20,7 +20,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(100deg, rgba(13,32,26,0.94) 0%, rgba(13,32,26,0.75) 45%, rgba(13,32,26,0.35) 100%), radial-gradient(40rem 24rem at 10% 110%, rgba(193,154,61,0.25), transparent 60%)",
+            "linear-gradient(100deg, rgba(17,17,16,0.94) 0%, rgba(17,17,16,0.75) 45%, rgba(17,17,16,0.35) 100%), radial-gradient(40rem 24rem at 10% 110%, rgba(193,154,61,0.25), transparent 60%)",
         }}
       />
       <Container className="relative py-24 sm:py-32 lg:py-40">

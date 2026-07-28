@@ -6,7 +6,7 @@ import { NewsletterForm } from "./NewsletterForm";
 export function NewsletterBand() {
   return (
     <section className="relative overflow-hidden border-t border-sand-200 py-16 sm:py-24">
-      <Image src="/images/stock/botanicals.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" />
+      <Image src="/images/stock/leaves.jpg" alt="" fill sizes="100vw" className="object-cover opacity-25" />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-sand-100/90 via-sand-100/70 to-sand-100/90" />
       <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
