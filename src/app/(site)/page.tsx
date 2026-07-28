@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { Hero } from "@/components/home/Hero";
 import { InfoStrip } from "@/components/home/InfoStrip";
 import { BestSellers } from "@/components/home/BestSellers";
+import { FeaturedProduct } from "@/components/home/FeaturedProduct";
 import { BrandCampaign } from "@/components/home/BrandCampaign";
 import { EmagSection } from "@/components/home/EmagSection";
 import { MovesSection } from "@/components/home/MovesSection";
@@ -25,8 +26,14 @@ export const metadata: Metadata = {
   title: { absolute: `${site.name} – ${site.tagline}` },
 };
 
+/**
+ * Product given the homepage spotlight. Falls back to the top best seller if
+ * the slug is ever retired, so the section never renders empty.
+ */
+const FEATURED_SLUG = "avo-seamoss-cream-2";
+
 export default async function HomePage() {
-  const [products, testimonials, emag] = await Promise.all([
+  const [products, testimonials, emag, featured] = await Promise.all([
     prisma.product.findMany({
       where: { isPublished: true },
       orderBy: [{ inStock: "desc" }, { reviewCount: "desc" }, { name: "asc" }],
@@ -38,12 +45,19 @@ export default async function HomePage() {
       where: { kind: "EMAG_ISSUE", isPublished: true },
       orderBy: { publishedAt: "desc" },
     }),
+    prisma.product.findFirst({
+      where: { slug: FEATURED_SLUG, isPublished: true },
+      include: { images: { orderBy: { sortOrder: "asc" }, take: 1 } },
+    }),
   ]);
+
+  const featuredProduct = featured ?? products[0] ?? null;
 
   return (
     <>
       <Hero />
       <InfoStrip />
+      <FeaturedProduct product={featuredProduct} />
       <BestSellers products={products} />
       <BrandCampaign />
       <EmagSection
