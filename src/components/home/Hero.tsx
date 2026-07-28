@@ -1,16 +1,26 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-kelp-950 text-sand-50">
-      {/* decorative kelp glow */}
+      {/* sunlit kelp forest — the ocean the seamoss comes from */}
+      <Image
+        src="/images/stock/kelp-forest.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[70%_center] opacity-60"
+      />
+      {/* legibility scrim + brand glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60rem 30rem at 80% -10%, rgba(63,132,102,0.35), transparent 60%), radial-gradient(40rem 24rem at 10% 110%, rgba(193,154,61,0.18), transparent 60%)",
+            "linear-gradient(100deg, rgba(13,32,26,0.94) 0%, rgba(13,32,26,0.75) 45%, rgba(13,32,26,0.35) 100%), radial-gradient(40rem 24rem at 10% 110%, rgba(193,154,61,0.25), transparent 60%)",
         }}
       />
       <Container className="relative py-24 sm:py-32 lg:py-40">
@@ -19,7 +29,7 @@ export function Hero() {
           <h1 className="font-[family-name:var(--font-display)] text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
             Khanatural Shop
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200/90 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200/95 sm:text-xl">
             Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean,
             our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your
             health.
@@ -32,7 +42,7 @@ export function Hero() {
               href="/media/"
               variant="outline"
               size="lg"
-              className="border-sand-200/60 text-sand-50 hover:bg-sand-50 hover:text-kelp-950"
+              className="border-sand-200/60 text-sand-50 backdrop-blur-sm hover:bg-sand-50 hover:text-kelp-950"
             >
               View eMag
             </ButtonLink>

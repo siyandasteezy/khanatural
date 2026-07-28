@@ -20,7 +20,7 @@ export default async function WhySeamossPage() {
 
   return (
     <>
-      <PageHero eyebrow="The science and the story" title="Why Seamoss" />
+      <PageHero eyebrow="The science and the story" title="Why Seamoss" image="/images/stock/kelp-forest.jpg" />
       <Container className="py-12 sm:py-16">
         <ContentBlocks blocks={page.blocks} />
         <div className="mt-12">

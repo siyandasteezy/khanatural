@@ -5,11 +5,11 @@ import { buildMetadata } from "@/lib/seo";
 import { Hero } from "@/components/home/Hero";
 import { InfoStrip } from "@/components/home/InfoStrip";
 import { BestSellers } from "@/components/home/BestSellers";
+import { BrandCampaign } from "@/components/home/BrandCampaign";
 import { EmagSection } from "@/components/home/EmagSection";
 import { MovesSection } from "@/components/home/MovesSection";
 import { Testimonials } from "@/components/home/Testimonials";
-import { NewsletterForm } from "@/components/home/NewsletterForm";
-import { Section } from "@/components/ui/Section";
+import { NewsletterBand } from "@/components/home/NewsletterBand";
 
 export const revalidate = 300; // ISR: refresh content every 5 minutes
 
@@ -45,6 +45,7 @@ export default async function HomePage() {
       <Hero />
       <InfoStrip />
       <BestSellers products={products} />
+      <BrandCampaign />
       <EmagSection
         issue={
           emag
@@ -54,17 +55,7 @@ export default async function HomePage() {
       />
       <MovesSection />
       <Testimonials testimonials={testimonials} />
-      <Section
-        tone="cream"
-        eyebrow="Stay in the loop"
-        title="Subscribe to our newsletter"
-        lead="Get Exclusive Content by submitting your email address to us. We also offer great health tips for your wellbeing as well as the latest from the natural lifestyle scene."
-        className="border-t border-sand-200"
-      >
-        <div className="flex justify-center">
-          <NewsletterForm />
-        </div>
-      </Section>
+      <NewsletterBand />
     </>
   );
 }

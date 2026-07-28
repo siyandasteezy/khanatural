@@ -19,7 +19,7 @@ export default async function OurBrandPage() {
 
   return (
     <>
-      <PageHero eyebrow="Rooted in realness" title="Our Brand" />
+      <PageHero eyebrow="Rooted in realness" title="Our Brand" image="/images/brand/khabo.jpg" imagePosition="center 20%" />
       <Container className="py-12 sm:py-16">
         <ContentBlocks blocks={page.blocks} />
       </Container>
