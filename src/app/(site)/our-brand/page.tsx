@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPage, pageMetadata } from "@/lib/pages";
+import { getPage } from "@/lib/pages";
+import { buildMetadata, breadcrumbJsonLd, jsonLd } from "@/lib/seo";
 import { PageHero } from "@/components/layout/PageHero";
-import { Container } from "@/components/ui/Container";
-import { ContentBlocks } from "@/components/content/ContentBlocks";
+import { EditorialSections } from "@/components/content/EditorialSections";
+import { ClosingCta } from "@/components/content/ClosingCta";
 
 export const revalidate = 300;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const page = await getPage("our-brand");
-  if (!page) return {};
-  return pageMetadata(page, "Meet Khanatural — our founder, our story, and the promise behind every product.");
-}
+export const metadata: Metadata = buildMetadata({
+  title: "Our Brand — Founder Khabonina Qubeka",
+  description:
+    "Meet Khabonina Qubeka — award-winning South African actress and founder of Khanatural, the wild-crafted sea moss range rooted in realness.",
+  path: "/our-brand/",
+  image: "/images/brand/khabo.jpg",
+});
 
 export default async function OurBrandPage() {
   const page = await getPage("our-brand");
@@ -19,10 +22,33 @@ export default async function OurBrandPage() {
 
   return (
     <>
-      <PageHero eyebrow="Rooted in realness" title="Our Brand" image="/images/brand/khabo.jpg" imagePosition="center 20%" />
-      <Container className="py-12 sm:py-16">
-        <ContentBlocks blocks={page.blocks} />
-      </Container>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Our Brand", path: "/our-brand/" },
+            ]),
+          ),
+        }}
+      />
+      <PageHero
+        eyebrow="Rooted in realness"
+        title="Our Brand"
+        lead="Founded by award-winning actress Khabonina Qubeka — a South African wellness range built on wild-crafted sea moss and honest ingredients."
+        image="/images/brand/khabo.jpg"
+        imagePosition="center 20%"
+      />
+      <EditorialSections blocks={page.blocks} />
+      <ClosingCta
+        eyebrow="Join the movement"
+        title="Nurture your body, mind and soul"
+        lead="Explore the range Khabonina built — for ladies, for men, and everyone in between."
+        primary={{ label: "Shop the range", href: "/shop/" }}
+        secondary={{ label: "Why seamoss?", href: "/why-seamoss/" }}
+        image="/images/brand/khabo.jpg"
+      />
     </>
   );
 }

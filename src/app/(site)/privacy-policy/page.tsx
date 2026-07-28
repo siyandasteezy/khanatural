@@ -10,7 +10,10 @@ export const revalidate = 3600;
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getPage("privacy-policy");
   if (!page) return {};
-  return pageMetadata(page, "How Khanatural collects, uses and protects your personal information.");
+  return pageMetadata(
+    page,
+    "How Khanatural collects, uses, stores and protects your personal information, and the choices you have over your data as a customer.",
+  );
 }
 
 export default async function PrivacyPolicyPage() {

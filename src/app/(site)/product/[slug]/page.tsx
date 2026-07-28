@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-function plainText(html: string, max = 160): string {
+function plainText(html: string, max = 155): string {
   const text = html
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")

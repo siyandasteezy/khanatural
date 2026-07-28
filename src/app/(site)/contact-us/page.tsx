@@ -61,7 +61,7 @@ export default async function ContactPage() {
           ))}
         </ul>
         <div className="mt-12">
-          <ContentBlocks blocks={page.blocks} />
+          <ContentBlocks blocks={page.blocks} fallbackAlt="Contact Khanatural" />
         </div>
       </Container>
     </>

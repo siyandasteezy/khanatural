@@ -21,7 +21,7 @@ export default async function LegalNoticePage() {
     <>
       <PageHero title="Legal Notice" lead="Terms & Conditions, Privacy, Cookie Policy, PAIA Manual and POPI Act." />
       <Container className="py-12 sm:py-16">
-        <ContentBlocks blocks={page.blocks} />
+        <ContentBlocks blocks={page.blocks} fallbackAlt="Khanatural legal notice" />
       </Container>
     </>
   );

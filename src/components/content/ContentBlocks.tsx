@@ -33,7 +33,15 @@ const headingStyles: Record<string, string> = {
   h6: "mt-6 text-sm font-bold uppercase tracking-wider text-kelp-800",
 };
 
-export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
+export function ContentBlocks({
+  blocks,
+  /** Migrated images frequently carry no alt; describe them by page context
+      rather than shipping empty alt text on meaningful content images. */
+  fallbackAlt = "",
+}: {
+  blocks: ContentBlock[];
+  fallbackAlt?: string;
+}) {
   const rendered: React.ReactNode[] = [];
   let listBuffer: string[] = [];
 
@@ -63,7 +71,7 @@ export function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
         <Image
           key={i}
           src={b.localSrc ?? b.src!}
-          alt={b.alt ?? ""}
+          alt={b.alt || fallbackAlt}
           width={960}
           height={640}
           sizes="(max-width: 768px) 100vw, 768px"

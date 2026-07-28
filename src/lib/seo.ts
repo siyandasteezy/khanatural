@@ -11,9 +11,13 @@ type SeoInput = {
   noIndex?: boolean;
 };
 
+/** Shown when a page has no image of its own, so every link preview has art. */
+const DEFAULT_OG_IMAGE = "/images/stock/kelp-forest.jpg";
+
 export function buildMetadata({ title, description, path, image, type = "website", noIndex }: SeoInput): Metadata {
   const url = `${site.url}${path}`;
   const desc = description ?? undefined;
+  const ogImage = image || DEFAULT_OG_IMAGE;
   return {
     title,
     description: desc,
@@ -29,12 +33,13 @@ export function buildMetadata({ title, description, path, image, type = "website
       siteName: site.name,
       type,
       locale: "en_ZA",
-      images: image ? [{ url: image.startsWith("http") ? image : `${site.url}${image}` }] : undefined,
+      images: [{ url: ogImage.startsWith("http") ? ogImage : `${site.url}${ogImage}` }],
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary",
+      card: "summary_large_image",
       title,
       description: desc,
+      images: [ogImage.startsWith("http") ? ogImage : `${site.url}${ogImage}`],
     },
   };
 }

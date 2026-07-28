@@ -70,7 +70,7 @@ export default async function MediaPage() {
         </Section>
       )}
       <Container className="py-12 sm:py-16">
-        <ContentBlocks blocks={page.blocks} />
+        <ContentBlocks blocks={page.blocks} fallbackAlt="Khanatural in the media" />
       </Container>
     </>
   );

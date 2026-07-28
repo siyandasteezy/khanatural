@@ -24,9 +24,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return buildMetadata({
     title: category.seoTitle ?? category.name,
     description:
-      category.seoDescription ??
-      category.description ??
-      `Shop the Khanatural ${category.name} range of natural seamoss and wellness products.`,
+      // `||` not `??`: the migrated categories have empty-string descriptions,
+      // which would otherwise pass through and leave the page with no meta
+      category.seoDescription ||
+      category.description ||
+      `Shop the Khanatural ${category.name.toLowerCase()} range — wild-crafted seamoss gels, superfoods and natural skincare, handmade in South Africa.`,
     path: `/product-category/${slug}/`,
   });
 }

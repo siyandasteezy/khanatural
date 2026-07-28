@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: `${site.name} – ${site.tagline}`,
     description:
-      "Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean, our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your health.",
+      "Wild-crafted seamoss gels, superfoods and natural skincare, handmade in South Africa. Packed with 92 essential minerals. R120 delivery nationwide.",
     path: "/",
   }),
   // absolute: the layout's "%s – Khanatural Shop" template would double the

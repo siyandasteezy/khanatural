@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPage, pageMetadata } from "@/lib/pages";
+import { getPage } from "@/lib/pages";
+import { buildMetadata, breadcrumbJsonLd, jsonLd } from "@/lib/seo";
 import { PageHero } from "@/components/layout/PageHero";
-import { Container } from "@/components/ui/Container";
-import { ContentBlocks } from "@/components/content/ContentBlocks";
-import { ButtonLink } from "@/components/ui/Button";
+import { EditorialSections } from "@/components/content/EditorialSections";
+import { ClosingCta } from "@/components/content/ClosingCta";
 
 export const revalidate = 300;
 
-export async function generateMetadata(): Promise<Metadata> {
-  const page = await getPage("why-seamoss");
-  if (!page) return {};
-  return pageMetadata(page, "Why seamoss? Discover the 92 essential minerals, the Khanatural quality promise, and how to use seamoss daily.");
-}
+// Keeps the "Why Seamoss" keyword leading (as the WordPress title had it)
+// while adding the terms people actually search alongside it.
+export const metadata: Metadata = buildMetadata({
+  title: "Why Seamoss — Benefits & How to Use It",
+  description:
+    "Wild-crafted sea moss for immune support, gut health and glowing skin — plus how to prepare raw sea moss and make your own gel at home.",
+  path: "/why-seamoss/",
+  image: "/images/stock/kelp-forest.jpg",
+});
 
 export default async function WhySeamossPage() {
   const page = await getPage("why-seamoss");
@@ -20,15 +24,31 @@ export default async function WhySeamossPage() {
 
   return (
     <>
-      <PageHero eyebrow="The science and the story" title="Why Seamoss" image="/images/stock/kelp-forest.jpg" />
-      <Container className="py-12 sm:py-16">
-        <ContentBlocks blocks={page.blocks} />
-        <div className="mt-12">
-          <ButtonLink href="/shop/" variant="gold" size="lg">
-            Buy Seamoss
-          </ButtonLink>
-        </div>
-      </Container>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            breadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Why Seamoss", path: "/why-seamoss/" },
+            ]),
+          ),
+        }}
+      />
+      <PageHero
+        eyebrow="The science and the story"
+        title="Why Seamoss"
+        lead="92 of the 102 minerals your body needs, wild-crafted from the ocean — and everything you need to know about using it."
+        image="/images/stock/kelp-forest.jpg"
+      />
+      <EditorialSections blocks={page.blocks} />
+      <ClosingCta
+        eyebrow="Ready to feel it"
+        title="Start your seamoss ritual"
+        lead="Gels, superfoods and skincare — wild-crafted, handmade in South Africa, delivered for R120 nationwide."
+        primary={{ label: "Shop seamoss", href: "/shop/" }}
+        secondary={{ label: "Read the e-Mag", href: "/media/" }}
+      />
     </>
   );
 }
