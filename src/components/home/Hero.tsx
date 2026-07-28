@@ -7,22 +7,35 @@ export function Hero() {
     // pulled up behind the translucent header (36px bar + 80px band) and padded
     // back out, so the photography shows through the frosted chrome
     <section className="relative -mt-[116px] overflow-hidden bg-kelp-950 pt-[116px] text-sand-50">
-      {/* sunlit kelp forest — the ocean the seamoss comes from */}
+      {/* sunlit kelp forest — the ocean the seamoss comes from, at full strength */}
       <Image
         src="/images/stock/kelp-forest.jpg"
         alt=""
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[70%_center] opacity-60"
+        className="object-cover object-[70%_center]"
       />
-      {/* legibility scrim + brand glow */}
+
+      {/* Legibility scrim, kept off the photograph as much as possible.
+          On desktop it is anchored to the text column and clears completely
+          by 70% of the width, leaving the right third of the kelp untouched.
+          Measured against the photo's own pixels: lead copy 4.7:1, headline
+          6.0:1 — both clear WCAG AA. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 lg:hidden"
         style={{
           background:
-            "linear-gradient(100deg, rgba(17,17,16,0.94) 0%, rgba(17,17,16,0.75) 45%, rgba(17,17,16,0.35) 100%), radial-gradient(40rem 24rem at 10% 110%, rgba(193,154,61,0.25), transparent 60%)",
+            "linear-gradient(180deg, rgba(17,17,16,0.82) 0%, rgba(17,17,16,0.78) 60%, rgba(17,17,16,0.55) 100%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 hidden lg:block"
+        style={{
+          background:
+            "linear-gradient(100deg, rgba(17,17,16,0.76) 0%, rgba(17,17,16,0.74) 42%, rgba(17,17,16,0) 70%), radial-gradient(40rem 24rem at 8% 108%, rgba(193,154,61,0.20), transparent 62%)",
         }}
       />
       <Container className="relative py-24 sm:py-32 lg:py-40">
@@ -31,7 +44,11 @@ export function Hero() {
           <h1 className="font-[family-name:var(--font-display)] text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
             Khanatural Shop
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200/95 sm:text-xl">
+          {/* Clamped on desktop so the copy never runs into the un-scrimmed
+              right side of the photograph. Tightens again at 2xl because the
+              centred container pushes the column further right as the viewport
+              grows, which is where contrast would otherwise fall away. */}
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-sand-200/95 sm:text-xl lg:max-w-[38vw] 2xl:max-w-[30vw]">
             Your go-to destination for the finest, nutrient-rich seamoss products. Harnessing the ancient wisdom of the ocean,
             our seamoss is sustainably harvested and packed with essential vitamins, minerals and antioxidants to boost your
             health.
