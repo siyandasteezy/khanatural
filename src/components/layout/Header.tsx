@@ -18,8 +18,10 @@ export const NAV_LINKS = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50">
-      {/* announcement bar — copy from the original homepage info strip */}
-      <div className="bg-kelp-950 text-sand-200">
+      {/* Announcement bar — copy from the original homepage info strip.
+          Translucent so the hero photography reads through the chrome; the
+          opaque fallback keeps contrast where backdrop-filter is unsupported. */}
+      <div className="bg-kelp-950/95 text-sand-200 backdrop-blur-md supports-[backdrop-filter]:bg-kelp-950/80">
         <Container className="flex h-9 items-center justify-between text-xs">
           <p className="font-medium tracking-wide">Local orders: R120 for delivery in S.A.</p>
           <a href={`mailto:${site.email}`} className="hidden sm:block hover:text-gold-500">
@@ -28,8 +30,9 @@ export function Header() {
         </Container>
       </div>
 
-      {/* white band so the black brand lockup reads exactly as designed */}
-      <div className="border-b border-sand-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+      {/* Frosted white band — light enough that the black brand lockup stays
+          legible over whatever scrolls beneath, sheer enough to show it. */}
+      <div className="border-b border-white/25 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/70">
         <Container className="flex h-20 items-center justify-between gap-4">
           <Link href="/" aria-label={`${site.name} — home`} className="shrink-0">
             <Image

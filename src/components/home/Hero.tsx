@@ -4,7 +4,9 @@ import { Container } from "@/components/ui/Container";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-kelp-950 text-sand-50">
+    // pulled up behind the translucent header (36px bar + 80px band) and padded
+    // back out, so the photography shows through the frosted chrome
+    <section className="relative -mt-[116px] overflow-hidden bg-kelp-950 pt-[116px] text-sand-50">
       {/* sunlit kelp forest — the ocean the seamoss comes from */}
       <Image
         src="/images/stock/kelp-forest.jpg"

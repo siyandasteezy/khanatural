@@ -19,7 +19,9 @@ export function PageHero({
   imagePosition?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-kelp-950 text-sand-50">
+    // pulled up behind the translucent header (36px bar + 80px band) and padded
+    // back out, so the backdrop shows through the frosted chrome
+    <section className="relative -mt-[116px] overflow-hidden bg-kelp-950 pt-[116px] text-sand-50">
       {image && (
         <>
           <Image src={image} alt="" fill sizes="100vw" className="object-cover opacity-85" style={{ objectPosition: imagePosition }} />
