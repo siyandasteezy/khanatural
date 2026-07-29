@@ -24,7 +24,7 @@ export default async function ShopPage() {
         eyebrow="Khashop"
         title="Shop"
         lead="Your trusted source for naturally made products. Nurture your body, mind and soul; khaNaturally."
-        image="/images/stock/skin-golden.jpg"
+        image="/images/shoot/shea-butter.jpg"
       />
       <Container className="py-12 sm:py-16">
         <nav aria-label="Product categories" className="mb-10 flex flex-wrap gap-3">

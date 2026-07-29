@@ -9,8 +9,8 @@ export function MovesSection() {
         <div className="grid items-center gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2.5rem] shadow-xl">
             <Image
-              src="/images/stock/dancer-beach.jpg"
-              alt="Dancer silhouetted against a sunset"
+              src="/images/shoot/honey-joy.jpg"
+              alt="Laughing woman wearing a gold laurel crown, honey on her skin"
               fill
               sizes="(max-width: 1024px) 90vw, 420px"
               className="object-cover"

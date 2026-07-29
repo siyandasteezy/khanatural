@@ -12,7 +12,7 @@ type SeoInput = {
 };
 
 /** Shown when a page has no image of its own, so every link preview has art. */
-const DEFAULT_OG_IMAGE = "/images/stock/skin-glow.jpg";
+const DEFAULT_OG_IMAGE = "/images/shoot/gel-hero.jpg";
 
 export function buildMetadata({ title, description, path, image, type = "website", noIndex }: SeoInput): Metadata {
   const url = `${site.url}${path}`;

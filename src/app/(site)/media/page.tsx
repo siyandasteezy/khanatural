@@ -30,7 +30,7 @@ export default async function MediaPage() {
 
   return (
     <>
-      <PageHero eyebrow="Khanatural e-Mag & press" title="Media" image="/images/stock/skin-mens.jpg" />
+      <PageHero eyebrow="Khanatural e-Mag & press" title="Media" image="/images/shoot/beard-duo.jpg" />
       {issues.length > 0 && (
         <Section tone="kelp" eyebrow="Digital magazine" title="Khanatural e-Mag" align="left">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

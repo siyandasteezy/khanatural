@@ -3,26 +3,22 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 /**
- * Full-bleed hero: the photograph runs edge to edge and is never tinted or
- * scrimmed. The copy sits in its own defined charcoal panel instead of
- * floating on the picture — measured against this image, a soft overlay could
- * not carry body copy past ~2:1, so the panel guarantees contrast while
- * leaving the photograph completely clean around it.
+ * Full-bleed hero on the brand's own campaign photography. The copy sits in a
+ * defined charcoal panel rather than on the picture: measured across the
+ * shoot, no frame has negative space clean enough to carry a headline (the
+ * best candidate still dipped to 2.5:1 against its own product label), so the
+ * panel guarantees contrast while the photograph runs edge to edge, untinted.
  */
 export function Hero() {
   return (
     <section className="relative -mt-[116px] overflow-hidden bg-kelp-950 pt-[116px] text-sand-50">
-      {/* Full-bleed and completely untinted. Measured across three candidate
-          photographs, none has a dark region wide enough to carry a headline
-          directly, so the copy sits in its own panel rather than a scrim being
-          spread over the picture. */}
       <Image
-        src="/images/stock/skin-sunlight.jpg"
-        alt="A woman with her face turned up to the sunlight, eyes closed"
+        src="/images/shoot/coco-avo-joy.jpg"
+        alt="A smiling woman holding KhaNatural Coco Avo Butter, with fresh coconut and avocado"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[58%_center] lg:object-[62%_38%]"
+        className="object-cover object-[58%_22%] lg:object-[62%_18%]"
       />
 
       <Container className="relative py-12 sm:py-16 lg:py-24">
