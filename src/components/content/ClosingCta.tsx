@@ -12,7 +12,7 @@ export function ClosingCta({
   lead,
   primary = { label: "Shop the range", href: "/shop/" },
   secondary,
-  image = "/images/stock/kelp-forest.jpg",
+  image = "/images/stock/skin-unapologetic.jpg",
 }: {
   eyebrow: string;
   title: string;

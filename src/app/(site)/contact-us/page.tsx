@@ -43,7 +43,7 @@ export default async function ContactPage() {
 
   return (
     <>
-      <PageHero eyebrow="We’d love to hear from you" title="Contact Us" image="/images/stock/seashore.jpg" />
+      <PageHero eyebrow="We’d love to hear from you" title="Contact Us" image="/images/stock/skin-ochre.jpg" />
       <Container className="py-12 sm:py-16">
         <ul className="grid gap-4 sm:grid-cols-3">
           {contactCards.map((c) => (
