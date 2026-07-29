@@ -156,6 +156,19 @@ export function Footer() {
             Copyrights © 2022 – {new Date().getFullYear()}
             <br />
             Khanatural.com / All Rights Reserved
+            <p className="mt-4">
+              <a
+                href="https://www.smartpick.co.za/it"
+                target="_blank"
+                rel="noopener"
+                className="group inline-flex items-baseline gap-1.5 text-sand-200/60 transition-colors hover:text-gold-300"
+              >
+                <span className="text-xs uppercase tracking-[0.14em]">Developed by</span>
+                <span className="font-semibold tracking-wide text-sand-200/90 underline decoration-sand-200/25 underline-offset-4 transition-colors group-hover:text-gold-300 group-hover:decoration-gold-300/60">
+                  SmartP1ck
+                </span>
+              </a>
+            </p>
           </div>
         </div>
       </Container>

@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 !.env.example
+
+# Raw photoshoot originals — multi-GB source assets, kept out of git.
+# Web-ready exports belong in public/images/.
+/images/
