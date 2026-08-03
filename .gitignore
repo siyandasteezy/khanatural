@@ -44,3 +44,6 @@ next-env.d.ts
 # Raw photoshoot originals — multi-GB source assets, kept out of git.
 # Web-ready exports belong in public/images/.
 /images/
+
+# Raw / unedited photography — web exports go in public/images/
+/unedited pictures/
