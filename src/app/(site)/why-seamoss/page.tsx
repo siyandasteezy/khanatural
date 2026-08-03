@@ -39,7 +39,7 @@ export default async function WhySeamossPage() {
         eyebrow="The science and the story"
         title="Why Seamoss"
         lead="92 of the 102 minerals your body needs, wild-crafted from the ocean — and everything you need to know about using it."
-        image="/images/shoot/honey-ritual.jpg"
+        image="/images/shoot/page-why.jpg"
         imagePosition="center 35%"
       />
       <EditorialSections blocks={page.blocks} />

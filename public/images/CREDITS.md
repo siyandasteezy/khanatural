@@ -22,3 +22,14 @@ the previous khanatural.com site, and the Our Brand page keeps its migrated
 founder imagery.
 
 No stock photography remains on the site.
+
+## Page hero backgrounds (May 2026 shoot, owner-supplied wide crops)
+
+| File | Page |
+| --- | --- |
+| hero-honey.jpg | Homepage hero |
+| page-shop.jpg | Shop + category heroes (Shea Butter) |
+| page-why.jpg | Why Seamoss hero (Sea Moss Gel) |
+| page-brand.jpg | Our Brand hero (Sea Moss Gel label) |
+| page-contact.jpg | Contact hero (beard range) |
+| page-media.jpg | Media hero — Unsplash (photo-1690300104760-a5e650952ba7), open editorial spread, no competitor branding |

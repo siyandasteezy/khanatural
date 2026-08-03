@@ -37,8 +37,8 @@ export default async function OurBrandPage() {
         eyebrow="Rooted in realness"
         title="Our Brand"
         lead="Founded by award-winning actress Khabonina Qubeka — a South African wellness range built on wild-crafted sea moss and honest ingredients."
-        image="/images/brand/khabo.jpg"
-        imagePosition="center 20%"
+        image="/images/shoot/page-brand.jpg"
+        imagePosition="center"
       />
       <EditorialSections blocks={page.blocks} />
       <ClosingCta
