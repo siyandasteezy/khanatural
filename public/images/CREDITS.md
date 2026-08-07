@@ -17,7 +17,7 @@ product shoot plus the edited product stills. Web-optimised exports live in
 | beard-duo.jpg | Media hero |
 | body-wash.jpg, mens-portrait.jpg | Held for the men's range |
 
-`brand-honey.jpg` (May 2026 shoot, frame 1539) anchors the "Rooted in Realness" brand band — founder Khabonina Qubeka in the gold laurel crown with the KhaHoney range.
+`brand-honey.jpg` (May 2026 shoot, frame 1520) anchors the "Rooted in Realness" brand band — founder Khabonina Qubeka in the gold laurel crown with the KhaHoney range.
 
 `/images/brand/khabo.jpg` is the founder campaign photograph carried over from
 the previous khanatural.com site, and the Our Brand page keeps its migrated
