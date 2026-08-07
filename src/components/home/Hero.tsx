@@ -23,7 +23,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_20%] lg:object-[center_18%]"
+          className="object-cover object-[center_20%] lg:object-[center_25%]"
         />
         {/* desktop-only left lift, off the face */}
         <div
