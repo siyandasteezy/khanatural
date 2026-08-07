@@ -11,13 +11,13 @@ export function BrandCampaign() {
   return (
     <section className="relative overflow-hidden bg-kelp-950 text-sand-50">
       <div className="grid lg:grid-cols-2">
-        <div className="relative min-h-[28rem] lg:min-h-[46rem]">
+        <div className="relative min-h-[26rem] lg:min-h-[38rem]">
           <Image
-            src="/images/shoot/brand-honey.jpg"
-            alt="Founder Khabonina Qubeka in a gold laurel crown with the KhaHoney range"
+            src="/images/brand/khabo.jpg"
+            alt="Khanatural founder campaign photograph"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-[center_28%]"
+            className="object-cover object-[center_20%]"
           />
           {/* soften the photo edge into the copy panel */}
           <div
