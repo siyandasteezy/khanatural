@@ -47,3 +47,7 @@ next-env.d.ts
 
 # Raw / unedited photography — web exports go in public/images/
 /unedited pictures/
+
+# Stray raw shoot files dropped into the project root
+/Khanatural-shoot-*.jpg
+/khaboooo-*.jpg
