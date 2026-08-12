@@ -32,9 +32,14 @@
     },
     {
       "type": "img",
+      "localSrc": "/images/shoot/honey-joy.jpg",
+      "alt": "Laughing woman wearing a gold laurel crown with KhaNatural honey on her skin"
+    },
+    {
+      "type": "signature",
       "src": "https://khanatural.com/wp-content/uploads/2024/12/Name.png",
-      "alt": "",
-      "localSrc": "/images/content/our-brand-3-5d1da8.png"
+      "localSrc": "/images/brand/founder-signature.png",
+      "alt": "Khabonina Qubeka's signature"
     },
     {
       "type": "p",

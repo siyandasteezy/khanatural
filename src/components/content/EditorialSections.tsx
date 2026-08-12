@@ -9,6 +9,7 @@ type Section = {
   kicker?: string; // an h3/h4 sitting under the heading
   body: ContentBlock[];
   images: ContentBlock[];
+  signature?: ContentBlock; // the founder's signature, signed off under the copy
 };
 
 function slugify(s: string): string {
@@ -33,6 +34,10 @@ function groupSections(blocks: ContentBlock[]): Section[] {
     }
     if (b.type === "img") {
       current.images.push(b);
+      continue;
+    }
+    if (b.type === "signature") {
+      current.signature = b;
       continue;
     }
     if ((b.type === "h3" || b.type === "h4") && !current.kicker && current.body.length === 0) {
@@ -81,7 +86,35 @@ function SectionCopy({ section }: { section: Section }) {
           return <RichText key={i} text={b.text ?? ""} />;
         })}
       </div>
+      {section.signature && <Signature block={section.signature} />}
     </div>
+  );
+}
+
+/**
+ * The founder's signature signs off the section she narrates.
+ *
+ * The editorial image grid used to stretch the signature across a ~250px
+ * square tile, which is what made it look blurry. Rendered small, at its own
+ * aspect ratio, it reads as a signature rather than as a broken image.
+ */
+function Signature({ block }: { block: ContentBlock }) {
+  const src = block.localSrc ?? block.src;
+  if (!src) return null;
+  return (
+    <figure className="mt-8 border-t border-sand-300/70 pt-6">
+      <Image
+        src={src}
+        alt={block.alt || "Founder's signature"}
+        width={800}
+        height={240}
+        sizes="180px"
+        className="h-auto w-[180px] max-w-full opacity-90"
+      />
+      <figcaption className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">
+        Founder, Khanatural
+      </figcaption>
+    </figure>
   );
 }
 

@@ -13,7 +13,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -104,7 +104,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -163,7 +163,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -185,22 +185,18 @@
     ],
     "images": [
       {
-        "wpId": 12322,
-        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1.jpeg",
-        "alt": "KhaNatural Black Soap",
-        "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
+        "alt": "KhaNatural Black Soap Liquid Body Wash for Women, 250ml pump bottle, studio shot",
+        "localSrc": "/images/products/body-wash-women-studio-front.jpg"
+      },
+      {
+        "alt": "KhaNatural Black Soap Liquid Body Wash for Women, angled product view",
+        "localSrc": "/images/products/body-wash-women-studio-angle.jpg"
       },
       {
         "wpId": 12323,
         "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55-1.jpeg",
         "alt": "KhaNatural Black Soap Liquid Body Wash – For Women",
         "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-2-b172ba.jpeg"
-      },
-      {
-        "wpId": 12322,
-        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56-1.jpeg",
-        "alt": "KhaNatural Black Soap",
-        "localSrc": "/images/products/black-soap-liquid-body-wash-for-women-head-to-toe-1-05d9b6.jpeg"
       }
     ]
   },
@@ -218,7 +214,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -244,22 +240,18 @@
     ],
     "images": [
       {
-        "wpId": 12319,
-        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55.jpeg",
-        "alt": "KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)",
-        "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-1-33a453.jpeg"
+        "alt": "KhaNatural Black Soap Liquid Body Wash for Men, 250ml pump bottle, studio shot",
+        "localSrc": "/images/products/body-wash-men-studio-front.jpg"
+      },
+      {
+        "alt": "KhaNatural Black Soap Liquid Body Wash for Men, angled product view",
+        "localSrc": "/images/products/body-wash-men-studio-angle.jpg"
       },
       {
         "wpId": 12320,
         "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.56.jpeg",
         "alt": "KhaNatural Black Soap Liquid Body Wash – For Men",
         "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-2-be698c.jpeg"
-      },
-      {
-        "wpId": 12319,
-        "src": "https://khanatural.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-03-at-14.44.55.jpeg",
-        "alt": "KhaNatural Black Soap Liquid Body Wash – For Men (Head to Toe)",
-        "localSrc": "/images/products/black-soap-liquid-body-wash-for-men-head-to-toe-1-33a453.jpeg"
       }
     ]
   },
@@ -277,7 +269,7 @@
     "currency": "ZAR",
     "inStock": false,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -346,7 +338,7 @@
     "currency": "ZAR",
     "inStock": false,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -429,7 +421,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [],
@@ -514,7 +506,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -571,7 +563,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -628,7 +620,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -683,7 +675,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -706,22 +698,22 @@
     ],
     "images": [
       {
-        "wpId": 11922,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm.webp",
-        "alt": "KhaNatural Sea Moss Gel bottle – organic, non-GMO, vegan alkaline superfood rich in 92 minerals for energy, thyroid health, and immunity",
-        "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+        "alt": "KhaNatural Sea Moss Gel in a 500ml glass jar with a gold lid, studio shot",
+        "localSrc": "/images/products/seamoss-gel-studio-front.jpg"
+      },
+      {
+        "alt": "Close-up of KhaNatural Sea Moss Gel poured from the jar, showing its natural golden texture",
+        "localSrc": "/images/products/seamoss-gel-studio-texture.jpg"
+      },
+      {
+        "alt": "KhaNatural Sea Moss Gel jar, front label detail",
+        "localSrc": "/images/products/seamoss-gel-studio-close.jpg"
       },
       {
         "wpId": 11925,
         "src": "https://khanatural.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-26-at-12.56.28.jpeg",
         "alt": "KhaNatural Sea Moss Gel",
         "localSrc": "/images/products/seamoss-gel-2-63b01f.jpeg"
-      },
-      {
-        "wpId": 11923,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-26-at-12.56.28-1.jpeg",
-        "alt": "KhaNatural Sea Moss Gel",
-        "localSrc": "/images/products/seamoss-gel-3-effc39.jpeg"
       }
     ]
   },
@@ -739,7 +731,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -807,7 +799,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -870,7 +862,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -926,7 +918,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -979,7 +971,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1030,7 +1022,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1081,7 +1073,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1139,7 +1131,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1188,7 +1180,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1224,7 +1216,7 @@
     "currency": "ZAR",
     "inStock": false,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1279,7 +1271,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1356,7 +1348,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1427,7 +1419,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
@@ -1451,10 +1443,8 @@
         "localSrc": "/images/products/seamoss-gel-combo-1-ed612a.jpeg"
       },
       {
-        "wpId": 11922,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/o2udy2h6tciqkr5xqohm.webp",
-        "alt": "KhaNatural Sea Moss Gel bottle – organic, non-GMO, vegan alkaline superfood rich in 92 minerals for energy, thyroid health, and immunity",
-        "localSrc": "/images/products/seamoss-gel-1-118a4a.webp"
+        "alt": "KhaNatural Sea Moss Gel poured from the jar onto a stone plinth",
+        "localSrc": "/images/products/seamoss-gel-studio-pour.jpg"
       },
       {
         "wpId": 11920,
@@ -1490,7 +1480,7 @@
     "currency": "ZAR",
     "inStock": true,
     "purchasable": true,
-    "averageRating": 0.0,
+    "averageRating": 0,
     "reviewCount": 0,
     "weight": null,
     "categories": [
