@@ -189,16 +189,23 @@ async function main() {
   console.log(`articles: ${issues.length + 1} e-Mag issues (${issues.length} back issues + July 2026)`);
 
   // ---- admin user ----
+  // Only ever CREATES the account. It used to write `update: { passwordHash }`,
+  // which meant re-seeding content — something we do routinely, and against
+  // production — silently reset the live admin password to whatever the
+  // seeding machine happened to have in its .env, locking out anyone holding
+  // the real one. Seeding content must never touch credentials.
+  // To change a password deliberately: npm run admin:password
   const email = process.env.ADMIN_EMAIL ?? "sales@khanatural.com";
   const password = process.env.ADMIN_PASSWORD;
   if (password) {
-    const passwordHash = await bcrypt.hash(password, 12);
-    await prisma.user.upsert({
-      where: { email },
-      create: { email, name: "Khanatural Admin", passwordHash, role: "ADMIN" },
-      update: { passwordHash },
-    });
-    console.log(`admin user: ${email}`);
+    const existing = await prisma.user.findUnique({ where: { email }, select: { id: true } });
+    if (existing) {
+      console.log(`admin user: ${email} (already exists — password left as-is)`);
+    } else {
+      const passwordHash = await bcrypt.hash(password, 12);
+      await prisma.user.create({ data: { email, name: "Khanatural Admin", passwordHash, role: "ADMIN" } });
+      console.log(`admin user: ${email} (created)`);
+    }
   } else {
     console.log("ADMIN_PASSWORD not set — skipping admin user");
   }
