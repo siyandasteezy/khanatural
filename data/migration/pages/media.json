@@ -1,74 +1,7 @@
 {
   "title": "MEDIA – Khanatural Shop",
   "metaDescription": "",
-  "blocks": [
-    {
-      "type": "img",
-      "src": "https://khanatural.com/wp-content/uploads/2025/08/DSC08695.png",
-      "alt": "",
-      "localSrc": "/images/content/media-1-92009d.png"
-    },
-    {
-      "type": "h2",
-      "text": "khanatural e-mag"
-    },
-    {
-      "type": "h2",
-      "text": "July 2026 edition"
-    },
-    {
-      "type": "p",
-      "text": "Subscribe to our FREE e-magazine that we publish once every month. See the digital mag and download it from the below link."
-    },
-    {
-      "type": "p",
-      "text": "Discover the incredible benefits of seamoss and how our 100% natural products can revitalise your skin, hair, and body. Inside the e-mag, you’ll find expert tips, real-life success stories, and exclusive lifestyle promotions to help you glow from the inside out."
-    },
-    {
-      "type": "h2",
-      "text": "IN THE NEWS"
-    },
-    {
-      "type": "p",
-      "text": "Khabonina had a live discussion with Leeroy Wright on the morning show about healthy habits. This relates to educating the public about eating healthy food and taking care your body."
-    },
-    {
-      "type": "h2",
-      "text": "OUR GALLERY"
-    },
-    {
-      "type": "h4",
-      "text": "Khanatural"
-    },
-    {
-      "type": "p",
-      "text": "Sleepwear for him and her."
-    },
-    {
-      "type": "h4",
-      "text": "Beard Oil"
-    },
-    {
-      "type": "p",
-      "text": "for Modern Men\n500 ml"
-    },
-    {
-      "type": "h4",
-      "text": "Black Elderberry"
-    },
-    {
-      "type": "p",
-      "text": "Vegan Capsules\n500 ml"
-    },
-    {
-      "type": "h4",
-      "text": "Reviving Facial Oil"
-    },
-    {
-      "type": "p",
-      "text": "Revives the skin\n500 ml"
-    }
-  ],
+  "blocks": [],
   "slug": "media",
   "sourceUrl": "https://khanatural.com/media/"
 }

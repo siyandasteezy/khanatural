@@ -48,11 +48,15 @@ export function ArticleForm({ article, action }: { article?: Article; action: (f
           <div className="space-y-4">
             <div>
               <Label htmlFor="a-kind">Type</Label>
-              <Select id="a-kind" name="kind" defaultValue={article?.kind ?? "ARTICLE"}>
+              <Select id="a-kind" name="kind" defaultValue={article?.kind ?? "NEWS"}>
                 <option value="EMAG_ISSUE">e-Mag issue</option>
                 <option value="NEWS">In the news</option>
                 <option value="ARTICLE">Article</option>
               </Select>
+              <p className="mt-1.5 text-xs text-ink/50">
+                “In the news” and “Article” both publish to the blog on the Media page. “e-Mag issue” becomes a
+                flip-through magazine instead.
+              </p>
             </div>
             <div>
               <Label htmlFor="a-published-at">Publish date</Label>
