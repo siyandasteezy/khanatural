@@ -19,3 +19,16 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# NOTE — keep bulk assets out of public/uploads/.
+#
+# The admin upload action names that directory with a literal
+# join(process.cwd(), "public", "uploads", "emag"), so Next's file tracer
+# resolves it and copies the WHOLE directory into the serverless bundle — on top
+# of the copy already uploaded to the CDN. Netlify caps that function at 250 MB,
+# and 100 MB of magazine PDFs parked there went straight past it.
+#
+# `excluded_files` does not help: the runtime assembles this function itself, and
+# the tracer has pulled the files in well before bundling runs. The e-Mag back
+# catalogue therefore lives under public/emag/, which no server code names, so it
+# ships to the CDN only.

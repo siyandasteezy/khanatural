@@ -12,7 +12,14 @@ So each issue is rendered once, here, into:
 
   public/emag/<slug>/pNNN.webp   page images the flipbook loads directly
   public/emag/<slug>/cover.jpg   the Media page's cover thumbnail
-  public/uploads/emag/<slug>.pdf a compressed PDF for the Download button
+  public/emag/<slug>/issue.pdf   a compressed PDF for the Download button
+
+Everything lands under public/emag/ rather than the public/uploads/emag/ the
+admin writes to, and that matters: the admin upload action names that directory
+with a literal join(), so Next's file tracer resolves it and copies the whole
+thing into the serverless bundle. Parking 100 MB of back issues there put the
+function over its 250 MB ceiling. Nothing in server code references
+public/emag/, so it ships to the CDN only.
 
 and a manifest is written for the seed. Everything derives from a single
 150 dpi render pass, so the pixels behind the page images and the download PDF
@@ -37,7 +44,6 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "magazine"
 PAGES_OUT = ROOT / "public" / "emag"
-PDF_OUT = ROOT / "public" / "uploads" / "emag"
 MANIFEST = ROOT / "data" / "migration" / "emag-issues.json"
 
 RENDER_DPI = 150          # A4 -> ~1241px wide, the master render
@@ -83,7 +89,6 @@ def ingest(pdf: Path) -> dict:
     if pages_dir.exists():
         shutil.rmtree(pages_dir)
     pages_dir.mkdir(parents=True)
-    PDF_OUT.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory() as tmp:
         rendered = render_pages(pdf, Path(tmp))
@@ -107,7 +112,7 @@ def ingest(pdf: Path) -> dict:
             pdf_frames.append(im)
 
         # rebuild the download PDF from the same render pass
-        out_pdf = PDF_OUT / f"{slug}.pdf"
+        out_pdf = pages_dir / "issue.pdf"
         pdf_frames[0].save(
             out_pdf, "PDF", save_all=True, append_images=pdf_frames[1:],
             resolution=float(RENDER_DPI), quality=PDF_QUALITY,
@@ -121,7 +126,7 @@ def ingest(pdf: Path) -> dict:
         "title": title,
         "excerpt": f"The {month} {year} issue of the Khanatural e-Mag.",
         "coverImage": f"/emag/{slug}/cover.jpg",
-        "downloadUrl": f"/uploads/emag/{slug}.pdf",
+        "downloadUrl": f"/emag/{slug}/issue.pdf",
         "pageCount": len(rendered),
         "publishedAt": f"{year}-{month_num:02d}-01T00:00:00.000Z",
     }

@@ -54,3 +54,7 @@ next-env.d.ts
 
 # raw magazine PDFs — ingested into public/emag + public/uploads/emag
 /magazine/
+
+# Netlify local build output (netlify build / netlify dev)
+/.netlify/
+deno.lock
