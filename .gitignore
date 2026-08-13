@@ -51,3 +51,6 @@ next-env.d.ts
 # Stray raw shoot files dropped into the project root
 /Khanatural-shoot-*.jpg
 /khaboooo-*.jpg
+
+# raw magazine PDFs — ingested into public/emag + public/uploads/emag
+/magazine/

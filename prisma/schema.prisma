@@ -135,6 +135,10 @@ model Article {
   content        String      @default("") // HTML
   coverImage     String?
   downloadUrl    String? // e-Mag PDF download
+  // Number of pre-rendered page images at /emag/<slug>/pNNN.webp. When set the
+  // flipbook loads those directly instead of downloading and rasterising the
+  // whole PDF; issues without it fall back to the PDF.
+  pageCount      Int?
   isPublished    Boolean     @default(true)
   publishedAt    DateTime    @default(now())
   seoTitle       String?

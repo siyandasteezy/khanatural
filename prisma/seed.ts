@@ -40,6 +40,15 @@ type MigProduct = {
 type MigBlock = { type: string; text?: string; src?: string; alt?: string; localSrc?: string };
 type MigPage = { slug: string; title: string; metaDescription: string; blocks: MigBlock[] };
 type MigTestimonial = { author: string; location: string; quote: string; image: string; sortOrder: number };
+type MigEmagIssue = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  coverImage: string;
+  downloadUrl: string;
+  pageCount: number;
+  publishedAt: string;
+};
 
 const CATEGORY_ORDER: Record<string, number> = { ladies: 1, "mens-range": 2, unisex: 3, uncategorised: 99 };
 
@@ -153,7 +162,31 @@ async function main() {
     },
     update: {},
   });
-  console.log("articles: 1 (July 2026 e-Mag)");
+
+  // ---- back catalogue, ingested by scripts/ingest-magazine.py ----
+  // `update` deliberately leaves excerpt/content alone so anything reworded in
+  // the admin survives a re-seed; only the generated assets are refreshed.
+  const issues = load<MigEmagIssue[]>("emag-issues.json");
+  for (const issue of issues) {
+    const assets = {
+      coverImage: issue.coverImage,
+      downloadUrl: issue.downloadUrl,
+      pageCount: issue.pageCount,
+    };
+    await prisma.article.upsert({
+      where: { slug: issue.slug },
+      create: {
+        kind: ArticleKind.EMAG_ISSUE,
+        title: issue.title,
+        slug: issue.slug,
+        excerpt: issue.excerpt,
+        publishedAt: new Date(issue.publishedAt),
+        ...assets,
+      },
+      update: assets,
+    });
+  }
+  console.log(`articles: ${issues.length + 1} e-Mag issues (${issues.length} back issues + July 2026)`);
 
   // ---- admin user ----
   const email = process.env.ADMIN_EMAIL ?? "sales@khanatural.com";

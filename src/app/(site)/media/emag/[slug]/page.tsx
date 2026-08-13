@@ -76,7 +76,20 @@ export default async function EmagReaderPage({ params }: Params) {
           </div>
         </div>
 
-        <FlipbookViewer pdfUrl={issue.downloadUrl} title={issue.title} />
+        {/* Ingested issues carry pre-rendered pages at /emag/<slug>/pNNN.webp, so
+            the reader opens without pulling the PDF down first. */}
+        <FlipbookViewer
+          pdfUrl={issue.downloadUrl}
+          title={issue.title}
+          pages={
+            issue.pageCount
+              ? Array.from(
+                  { length: issue.pageCount },
+                  (_, i) => `/emag/${slug}/p${String(i + 1).padStart(3, "0")}.webp`,
+                )
+              : undefined
+          }
+        />
         <EmagSubscribeInline />
       </Container>
     </section>

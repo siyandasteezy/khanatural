@@ -6,15 +6,34 @@ import type { PageFlip } from "page-flip";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 
 /**
- * Book-style reader for e-Mag PDFs. pdf.js rasterises pages to images and
- * page-flip presents them as a magazine you can drag/click through.
+ * Book-style reader for e-Mag issues, presented by page-flip as a magazine you
+ * can drag/click through.
  *
- * Loading is progressive: the book opens as soon as the cover is rendered and
- * the remaining pages stream in behind it. A zoom lightbox re-renders the
- * current page from the PDF at high resolution, so zoomed text stays sharp
- * instead of blowing up the book's screen-sized raster.
+ * Pages come from one of two places:
+ *
+ *   `pages` — URLs of images rendered ahead of time by scripts/ingest-magazine.py.
+ *   The book opens after a couple of hundred KB, and the browser never sees the
+ *   PDF. This is the path every ingested issue takes.
+ *
+ *   otherwise — pdf.js downloads the PDF and rasterises it here, progressively:
+ *   the book opens once the cover is ready and the rest stream in behind it.
+ *   Kept for issues uploaded through the admin, which have no pre-rendered
+ *   pages. It means downloading the whole file first, so it only stays tolerable
+ *   while those issues are small.
+ *
+ * Either way the zoom lightbox wants more resolution than the book does, so it
+ * pulls the PDF in on first zoom and re-renders that page large.
  */
-export function FlipbookViewer({ pdfUrl, title }: { pdfUrl: string; title: string }) {
+export function FlipbookViewer({
+  pdfUrl,
+  title,
+  pages,
+}: {
+  pdfUrl: string;
+  title: string;
+  /** Pre-rendered page image URLs, in reading order. */
+  pages?: string[];
+}) {
   const bookRef = useRef<HTMLDivElement>(null);
   const flipRef = useRef<PageFlip | null>(null);
   const pdfRef = useRef<PDFDocumentProxy | null>(null);
@@ -25,91 +44,123 @@ export function FlipbookViewer({ pdfUrl, title }: { pdfUrl: string; title: strin
   const [pageCount, setPageCount] = useState(0);
   const [zoomIndex, setZoomIndex] = useState<number | null>(null);
 
+  // The parent builds `pages` inline, so its identity changes every render.
+  // Keying the effect on the joined list keeps it from re-opening the book.
+  const pagesKey = pages?.join("|") ?? "";
+
   useEffect(() => {
     let cancelled = false;
+    const pageUrls = pagesKey ? pagesKey.split("|") : [];
 
-    async function load() {
-      try {
-        const pdfjs = await import("pdfjs-dist");
-        pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+    /** Build the book. Returns the instance so callers can keep feeding it. */
+    async function openBook(images: string[], pageRatio: number) {
+      const { PageFlip } = await import("page-flip");
+      const containerWidth = bookRef.current!.clientWidth;
+      const singlePageWidth = Math.min(Math.floor(containerWidth / 2), 560);
+      const pageHeight = Math.floor(singlePageWidth / pageRatio);
 
-        const pdf = await pdfjs.getDocument({ url: new URL(pdfUrl, window.location.origin).href }).promise;
+      const flip = new PageFlip(bookRef.current!, {
+        width: singlePageWidth,
+        height: pageHeight,
+        size: "stretch",
+        minWidth: 240,
+        maxWidth: 1200,
+        minHeight: 320,
+        maxHeight: 1600,
+        showCover: true,
+        usePortrait: true, // single page on narrow screens
+        maxShadowOpacity: 0.35,
+        mobileScrollSupport: true,
+        flippingTime: 700,
+      });
+      flip.loadFromImages([...images]);
+      flip.on("flip", (e) => setPage(e.data as number));
+      flipRef.current = flip;
+      setStatus("ready");
+      return flip;
+    }
+
+    /** Pre-rendered path: hand page-flip the URLs and let it fetch them. */
+    async function loadFromPrerendered(urls: string[]) {
+      // every page in an ingested issue shares the source page size, so the
+      // cover's dimensions size the whole book
+      const ratio = await new Promise<number>((resolve) => {
+        const probe = new window.Image();
+        probe.onload = () => resolve(probe.naturalWidth / probe.naturalHeight);
+        probe.onerror = () => resolve(210 / 297); // A4 portrait fallback
+        probe.src = urls[0];
+      });
+      if (cancelled || !bookRef.current) return;
+
+      imagesRef.current = [...urls];
+      setPageCount(urls.length);
+      setRenderedPages(urls.length);
+      await openBook(urls, ratio);
+    }
+
+    async function loadFromPdf() {
+      const pdfjs = await import("pdfjs-dist");
+      pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+
+      const pdf = await pdfjs.getDocument({ url: new URL(pdfUrl, window.location.origin).href }).promise;
+      if (cancelled) return;
+      pdfRef.current = pdf;
+      setPageCount(pdf.numPages);
+
+      // ~1200px tall balances sharpness against decode time and memory.
+      const images = imagesRef.current;
+      images.length = 0;
+      let pageRatio = 210 / 297; // A4 portrait fallback
+
+      const renderPage = async (i: number) => {
+        const pdfPage = await pdf.getPage(i);
+        const base = pdfPage.getViewport({ scale: 1 });
+        if (i === 1) pageRatio = base.width / base.height;
+        const viewport = pdfPage.getViewport({ scale: 1200 / base.height });
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.floor(viewport.width);
+        canvas.height = Math.floor(viewport.height);
+        // intent "print" renders without requestAnimationFrame scheduling,
+        // so pages keep rasterising even when the tab is in the background.
+        await pdfPage.render({ canvas, viewport, intent: "print" }).promise;
+        images.push(canvas.toDataURL("image/jpeg", 0.85));
+        setRenderedPages(i);
+      };
+
+      // Render the cover, then open the book immediately.
+      await renderPage(1);
+      if (!bookRef.current || cancelled) return;
+
+      const flip = await openBook(images, pageRatio);
+
+      // Stream the remaining pages in, refreshing the book in small batches
+      // so flipping stays smooth while pages arrive.
+      const BATCH = 3;
+      for (let i = 2; i <= pdf.numPages; i++) {
         if (cancelled) return;
-        pdfRef.current = pdf;
-        setPageCount(pdf.numPages);
-
-        // ~1200px tall balances sharpness against decode time and memory.
-        const images = imagesRef.current;
-        images.length = 0;
-        let pageRatio = 210 / 297; // A4 portrait fallback
-
-        const renderPage = async (i: number) => {
-          const pdfPage = await pdf.getPage(i);
-          const base = pdfPage.getViewport({ scale: 1 });
-          if (i === 1) pageRatio = base.width / base.height;
-          const viewport = pdfPage.getViewport({ scale: 1200 / base.height });
-          const canvas = document.createElement("canvas");
-          canvas.width = Math.floor(viewport.width);
-          canvas.height = Math.floor(viewport.height);
-          // intent "print" renders without requestAnimationFrame scheduling,
-          // so pages keep rasterising even when the tab is in the background.
-          await pdfPage.render({ canvas, viewport, intent: "print" }).promise;
-          images.push(canvas.toDataURL("image/jpeg", 0.85));
-          setRenderedPages(i);
-        };
-
-        // Render the cover, then open the book immediately.
-        await renderPage(1);
-        if (!bookRef.current || cancelled) return;
-
-        const { PageFlip } = await import("page-flip");
-        const containerWidth = bookRef.current.clientWidth;
-        const singlePageWidth = Math.min(Math.floor(containerWidth / 2), 560);
-        const pageHeight = Math.floor(singlePageWidth / pageRatio);
-
-        const flip = new PageFlip(bookRef.current, {
-          width: singlePageWidth,
-          height: pageHeight,
-          size: "stretch",
-          minWidth: 240,
-          maxWidth: 1200,
-          minHeight: 320,
-          maxHeight: 1600,
-          showCover: true,
-          usePortrait: true, // single page on narrow screens
-          maxShadowOpacity: 0.35,
-          mobileScrollSupport: true,
-          flippingTime: 700,
-        });
-        flip.loadFromImages([...images]);
-        flip.on("flip", (e) => setPage(e.data as number));
-        flipRef.current = flip;
-        setStatus("ready");
-
-        // Stream the remaining pages in, refreshing the book in small batches
-        // so flipping stays smooth while pages arrive.
-        const BATCH = 3;
-        for (let i = 2; i <= pdf.numPages; i++) {
-          if (cancelled) return;
-          await renderPage(i);
-          if (images.length % BATCH === 0 || i === pdf.numPages) {
-            flip.updateFromImages([...images]);
-          }
+        await renderPage(i);
+        if (images.length % BATCH === 0 || i === pdf.numPages) {
+          flip.updateFromImages([...images]);
         }
-      } catch (err) {
-        console.error("Failed to load e-Mag PDF", err);
-        if (!cancelled) setStatus("error");
       }
     }
 
-    load();
+    (async () => {
+      try {
+        if (pageUrls.length > 0) await loadFromPrerendered(pageUrls);
+        else await loadFromPdf();
+      } catch (err) {
+        console.error("Failed to open e-Mag", err);
+        if (!cancelled) setStatus("error");
+      }
+    })();
     return () => {
       cancelled = true;
       flipRef.current?.destroy();
       flipRef.current = null;
       pdfRef.current = null;
     };
-  }, [pdfUrl]);
+  }, [pdfUrl, pagesKey]);
 
   const closeZoom = useCallback((viewedIndex: number) => {
     setZoomIndex(null);

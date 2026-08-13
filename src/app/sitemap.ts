@@ -5,10 +5,14 @@ import { site } from "@/lib/site";
 export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [products, categories, pages] = await Promise.all([
+  const [products, categories, pages, issues] = await Promise.all([
     prisma.product.findMany({ where: { isPublished: true }, select: { slug: true, updatedAt: true } }),
     prisma.category.findMany({ where: { slug: { not: "uncategorised" } }, select: { slug: true } }),
     prisma.page.findMany({ select: { slug: true, updatedAt: true } }),
+    prisma.article.findMany({
+      where: { kind: "EMAG_ISSUE", isPublished: true, downloadUrl: { not: null } },
+      select: { slug: true, updatedAt: true },
+    }),
   ]);
 
   const staticEntries: MetadataRoute.Sitemap = [
@@ -37,5 +41,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: "monthly" as const,
         priority: 0.6,
       })),
+    // Every e-Mag issue is a readable page in its own right — back issues are
+    // the deepest archive on the site, so they belong in the index.
+    ...issues.map((i) => ({
+      url: `${site.url}/media/emag/${i.slug}/`,
+      lastModified: i.updatedAt,
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    })),
   ];
 }
