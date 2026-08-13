@@ -22,11 +22,7 @@ export default function AccountPage() {
             Checkout is quick and account-free.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-ink/70">
-            You don’t need an account to shop with us. For questions about an existing order, chat to us on WhatsApp at{" "}
-            <a href={site.whatsappUrl} className="font-semibold text-kelp-700 underline">
-              {site.phone}
-            </a>{" "}
-            or email{" "}
+            You don’t need an account to shop with us. For questions about an existing order, email{" "}
             <a href={`mailto:${site.email}`} className="font-semibold text-kelp-700 underline">
               {site.email}
             </a>

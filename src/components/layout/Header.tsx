@@ -62,12 +62,10 @@ export function Header() {
 
           <div className="flex items-center gap-1">
             <a
-              href={site.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${site.email}`}
               className="hidden md:inline-flex h-10 items-center rounded-full bg-gold-500 px-5 text-xs font-bold uppercase tracking-wider text-kelp-950 transition-colors hover:bg-gold-400"
             >
-              WhatsApp
+              Email Us
             </a>
             <CartButton />
             <MobileMenu links={NAV_LINKS.map((l) => ({ ...l }))} />

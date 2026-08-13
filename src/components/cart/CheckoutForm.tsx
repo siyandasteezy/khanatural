@@ -38,9 +38,9 @@ export function CheckoutForm() {
           reflects.
         </p>
         <p className="mt-3 text-sm text-ink/70">
-          Questions? WhatsApp us on{" "}
-          <a href={site.whatsappUrl} className="font-semibold text-kelp-700 underline">
-            {site.phone}
+          Questions? Email us at{" "}
+          <a href={`mailto:${site.email}`} className="font-semibold text-kelp-700 underline">
+            {site.email}
           </a>
           .
         </p>
@@ -116,7 +116,7 @@ export function CheckoutForm() {
               <Input id="co-email" name="email" type="email" required autoComplete="email" />
             </div>
             <div>
-              <Label htmlFor="co-phone">Phone (WhatsApp)</Label>
+              <Label htmlFor="co-phone">Phone</Label>
               <Input id="co-phone" name="phone" type="tel" autoComplete="tel" />
             </div>
           </div>

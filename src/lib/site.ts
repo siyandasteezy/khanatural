@@ -3,10 +3,9 @@ export const site = {
   name: "Khanatural Shop",
   tagline: "Rooted in Realness",
   url: process.env.SITE_URL ?? "https://khanatural.com",
+  // Email is the only direct contact channel — the WhatsApp line and the
+  // number behind it were removed at the brand's request.
   email: "sales@khanatural.com",
-  phone: "(+27) 79 695 8848",
-  phoneHref: "+27796958848",
-  whatsappUrl: "https://wa.me/27796958848",
   address: {
     street: "02 Francis Road",
     city: "Jeffrey’s Bay",

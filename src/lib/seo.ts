@@ -58,7 +58,6 @@ export function organizationJsonLd() {
     url: site.url,
     logo: `${site.url}/images/brand/logo.png`,
     email: site.email,
-    telephone: site.phoneHref,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

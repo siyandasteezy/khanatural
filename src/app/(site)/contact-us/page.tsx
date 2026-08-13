@@ -11,17 +11,10 @@ export const revalidate = 300;
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getPage("contact-us");
   if (!page) return {};
-  return pageMetadata(page, "Get in touch with Khanatural — WhatsApp, email, or visit us in Jeffrey’s Bay, Eastern Cape.");
+  return pageMetadata(page, "Get in touch with Khanatural — email us or visit us in Jeffrey’s Bay, Eastern Cape.");
 }
 
 const contactCards = [
-  {
-    heading: "WhatsApp",
-    body: "Chat to us",
-    detail: site.phone,
-    href: site.whatsappUrl,
-    external: true,
-  },
   {
     heading: "Email",
     body: "We reply within a business day",
@@ -45,7 +38,7 @@ export default async function ContactPage() {
     <>
       <PageHero eyebrow="We’d love to hear from you" title="Contact Us" image="/images/shoot/page-contact.jpg" />
       <Container className="py-12 sm:py-16">
-        <ul className="grid gap-4 sm:grid-cols-3">
+        <ul className="grid gap-4 sm:grid-cols-2">
           {contactCards.map((c) => (
             <li key={c.heading}>
               <a

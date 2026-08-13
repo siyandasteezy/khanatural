@@ -35,11 +35,10 @@ const cards = [
     icon: icons.truck,
   },
   {
-    heading: "WhatsApp",
+    heading: "Email Us",
     body: "Chat to us",
-    href: site.whatsappUrl,
-    cta: site.phone,
-    external: true,
+    href: `mailto:${site.email}`,
+    cta: site.email,
     icon: icons.chat,
   },
   {
@@ -59,7 +58,6 @@ export function InfoStrip() {
           <li key={c.heading}>
             <a
               href={c.href}
-              {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="group flex h-full gap-4 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-sand-200 transition-shadow hover:shadow-lg"
             >
               <span

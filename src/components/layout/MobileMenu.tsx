@@ -86,16 +86,12 @@ export function MobileMenu({ links }: { links: { label: string; href: string }[]
               </ul>
               <div className="mt-auto pt-8">
                 <a
-                  href={site.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`mailto:${site.email}`}
                   className="inline-flex h-12 w-full items-center justify-center rounded-full bg-gold-500 text-sm font-bold uppercase tracking-wider text-kelp-950 hover:bg-gold-400"
                 >
-                  WhatsApp us
+                  Email us
                 </a>
-                <a href={`mailto:${site.email}`} className="mt-4 block text-center text-sm text-sand-200/70 hover:text-gold-300">
-                  {site.email}
-                </a>
+                <p className="mt-4 text-center text-sm text-sand-200/70">{site.email}</p>
               </div>
             </nav>
           </div>,
