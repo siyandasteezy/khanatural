@@ -94,7 +94,7 @@ export function CartContents() {
         <ButtonLink href="/checkout/" variant="gold" size="lg" className="mt-6 w-full">
           Proceed to checkout
         </ButtonLink>
-        <p className="mt-3 text-center text-xs text-ink/50">EFT payments — we’ve teamed up with Peach Payments.</p>
+        <p className="mt-3 text-center text-xs text-ink/50">Card &amp; Instant EFT payments, secured by Yoco.</p>
       </aside>
     </div>
   );

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
+import { SmartPickWordmark } from "./SmartPickWordmark";
 
 /** Footer link groups migrated from the original site footer. */
 const groups = [
@@ -141,16 +142,16 @@ export function Footer() {
             <br />
             Khanatural.com / All Rights Reserved
             <p className="mt-4">
+              {/* The wordmark's "Smart" half is currentColor, so it takes the
+                  link's colour and hover transition; "Pick" stays brand green. */}
               <a
                 href="https://www.smartpick.co.za/it"
                 target="_blank"
                 rel="noopener"
-                className="group inline-flex items-baseline gap-1.5 text-sand-200/60 transition-colors hover:text-gold-300"
+                className="group inline-flex items-center gap-2 text-sand-200/70 transition-colors hover:text-gold-300"
               >
                 <span className="text-xs uppercase tracking-[0.14em]">Developed by</span>
-                <span className="font-semibold tracking-wide text-sand-200/90 underline decoration-sand-200/25 underline-offset-4 transition-colors group-hover:text-gold-300 group-hover:decoration-gold-300/60">
-                  SmartP1ck
-                </span>
+                <SmartPickWordmark className="h-3.5 w-auto opacity-90 transition-opacity group-hover:opacity-100" />
               </a>
             </p>
           </div>

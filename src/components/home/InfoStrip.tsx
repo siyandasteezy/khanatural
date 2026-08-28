@@ -42,8 +42,8 @@ const cards = [
     icon: icons.chat,
   },
   {
-    heading: "EFT Payments",
-    body: "We’ve teamed up with Peach Payments. Explore options.",
+    heading: "Secure Payments",
+    body: "Card & Instant EFT, secured by Yoco.",
     href: "/checkout/",
     cta: "Explore options",
     icon: icons.card,

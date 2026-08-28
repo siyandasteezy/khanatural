@@ -209,7 +209,7 @@ export function CheckoutForm() {
           {submitting ? "Placing order…" : "Place order"}
         </Button>
         <p className="mt-3 text-center text-xs text-ink/50">
-          EFT payments — we’ve teamed up with Peach Payments. Explore options.
+          You’ll be taken to Yoco to pay securely by card or Instant EFT.
         </p>
       </aside>
     </form>
