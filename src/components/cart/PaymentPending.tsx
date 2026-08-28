@@ -18,7 +18,10 @@ export function PaymentPending({ orderRef }: { orderRef: string }) {
     if (state !== "waiting") return;
     let cancelled = false;
     const startedAt = Date.now();
-    const LIMIT_MS = 60_000;
+    // each poll may ask Yoco to confirm the checkout, so keep the cadence
+    // gentle rather than hammering their API for a single order
+    const LIMIT_MS = 45_000;
+    const INTERVAL_MS = 3_000;
 
     const tick = async () => {
       if (cancelled) return;
@@ -46,10 +49,10 @@ export function PaymentPending({ orderRef }: { orderRef: string }) {
         if (!cancelled) setState("timeout");
         return;
       }
-      timer = window.setTimeout(tick, 2500);
+      timer = window.setTimeout(tick, INTERVAL_MS);
     };
 
-    let timer = window.setTimeout(tick, 1500);
+    let timer = window.setTimeout(tick, 1500); // first check quickly, then settle into INTERVAL_MS
     return () => {
       cancelled = true;
       window.clearTimeout(timer);

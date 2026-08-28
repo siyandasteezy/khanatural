@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { settleOrder } from "@/lib/payments";
 import { verifyWebhookSignature, type YocoWebhookEvent } from "@/lib/yoco";
 
 /**
@@ -47,58 +48,43 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
+  // Yoco's payment event carries no checkoutId or externalId, so metadata is
+  // the only link back to an order — and it is documented as optional. Log
+  // loudly when it is absent rather than returning a silent 200: an order that
+  // never settles must not look like a webhook that worked.
   const orderId = event.payload?.metadata?.orderId;
   if (!orderId) {
-    // Not ours, or sent without metadata — acknowledge so Yoco stops retrying.
-    console.warn(`Yoco webhook ${event.id} (${event.type}) had no orderId in metadata`);
-    return NextResponse.json({ received: true });
-  }
-
-  const order = await prisma.order.findUnique({
-    where: { id: orderId },
-    select: { id: true, orderNumber: true, totalCents: true, paymentStatus: true },
-  });
-  if (!order) {
-    console.warn(`Yoco webhook ${event.id} referenced unknown order ${orderId}`);
-    return NextResponse.json({ received: true });
-  }
-
-  // Webhooks can arrive more than once; a settled order stays settled.
-  if (order.paymentStatus === "PAID") {
-    return NextResponse.json({ received: true, duplicate: true });
+    console.error(
+      `[yoco-webhook] ${event.type} (${event.id}) arrived with no metadata.orderId — ` +
+        `payload keys: ${Object.keys(event.payload ?? {}).join(",")}; ` +
+        `metadata: ${JSON.stringify(event.payload?.metadata ?? null)}. ` +
+        `Order will settle via reconciliation instead.`,
+    );
+    return NextResponse.json({ received: true, unmatched: true });
   }
 
   if (event.type === "payment.succeeded" && event.payload.status === "succeeded") {
-    // Never trust the amount from the redirect chain — confirm Yoco charged
-    // what the order actually totals before treating it as settled.
-    if (event.payload.amount !== order.totalCents) {
-      console.error(
-        `Yoco amount mismatch on order ${order.orderNumber}: charged ${event.payload.amount}, expected ${order.totalCents}`,
-      );
-      return NextResponse.json({ received: true, mismatch: true });
-    }
-
-    await prisma.order.update({
-      where: { id: order.id },
-      data: {
-        paymentStatus: "PAID",
-        status: "PAID",
-        paidAt: new Date(),
-        yocoPaymentId: event.payload.id,
-        paymentMethod: event.payload.paymentMethodDetails?.type ?? null,
-        paymentCardBrand: event.payload.paymentMethodDetails?.card?.scheme ?? null,
-        paymentCardLast4: event.payload.paymentMethodDetails?.card?.maskedCard?.slice(-4) ?? null,
-      },
+    const result = await settleOrder({
+      orderId,
+      paymentId: event.payload.id,
+      amountCents: event.payload.amount,
+      method: event.payload.paymentMethodDetails?.type,
+      cardBrand: event.payload.paymentMethodDetails?.card?.scheme,
+      cardLast4: event.payload.paymentMethodDetails?.card?.maskedCard?.slice(-4),
+      source: "webhook",
     });
-    console.log(`Order ${order.orderNumber} paid via Yoco (${event.payload.id})`);
-    return NextResponse.json({ received: true });
+    return NextResponse.json({ received: true, result });
   }
 
   if (event.type === "payment.failed") {
-    await prisma.order.update({
-      where: { id: order.id },
-      data: { paymentStatus: "FAILED", yocoPaymentId: event.payload.id },
-    });
+    const order = await prisma.order.findUnique({ where: { id: orderId }, select: { paymentStatus: true } });
+    // a later failure event must not undo a payment that already succeeded
+    if (order && order.paymentStatus !== "PAID") {
+      await prisma.order.update({
+        where: { id: orderId },
+        data: { paymentStatus: "FAILED", yocoPaymentId: event.payload.id },
+      });
+    }
     return NextResponse.json({ received: true });
   }
 

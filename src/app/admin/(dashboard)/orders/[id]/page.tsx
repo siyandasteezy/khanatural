@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { OrderStatus } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { formatZar } from "@/lib/money";
-import { updateOrderStatus } from "@/app/admin/actions";
+import { updateOrderStatus, recheckOrderPayment } from "@/app/admin/actions";
 import { AdminCard, AdminTitle, SavedNotice, StatusPill } from "@/components/admin/ui";
 import { Button } from "@/components/ui/Button";
 import { Label, Select } from "@/components/ui/Input";
@@ -12,18 +12,38 @@ export default async function AdminOrderDetailPage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ saved?: string }>;
+  searchParams: Promise<{ saved?: string; payment?: string }>;
 }) {
-  const [{ id }, { saved }] = await Promise.all([params, searchParams]);
+  const [{ id }, { saved, payment }] = await Promise.all([params, searchParams]);
   const order = await prisma.order.findUnique({ where: { id }, include: { items: true } });
   if (!order) notFound();
 
   const action = updateOrderStatus.bind(null, order.id);
+  const recheck = recheckOrderPayment.bind(null, order.id);
+
+  const recheckMessage: Record<string, string> = {
+    settled: "Payment confirmed with Yoco — this order is now marked paid.",
+    "already-paid": "This order was already marked paid.",
+    "still-pending": "Yoco has no completed payment for this order yet.",
+    "amount-mismatch": "Yoco reports a different amount to this order's total — do not ship. Check the dashboard.",
+    "order-not-found": "Order not found.",
+    skipped: "This order has no Yoco checkout attached, so there is nothing to re-check.",
+    error: "Couldn’t reach Yoco just now. Try again in a moment.",
+  };
 
   return (
     <>
-      <AdminTitle title={`Order #${order.orderNumber}`} action={<StatusPill status={order.status} />} />
+      <AdminTitle
+        title={`Order #${order.orderNumber}`}
+        action={
+          <span className="flex gap-2">
+            <StatusPill status={order.paymentStatus} />
+            <StatusPill status={order.status} />
+          </span>
+        }
+      />
       <SavedNotice show={saved === "1"} text="Order updated." />
+      {payment && <SavedNotice show text={recheckMessage[payment] ?? `Payment check: ${payment}`} />}
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="space-y-6">
           <AdminCard>
@@ -119,6 +139,47 @@ export default async function AdminOrderDetailPage({
             </Button>
           </form>
           <p className="mt-4 text-xs text-ink/50">Placed {order.createdAt.toLocaleString("en-ZA")}</p>
+        </AdminCard>
+
+        <AdminCard className="h-fit lg:col-start-2">
+          <h2 className="mb-4 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Payment</h2>
+          <dl className="space-y-1.5 text-sm">
+            <div>
+              <dt className="inline font-semibold">Status: </dt>
+              <dd className="inline">{order.paymentStatus.toLowerCase()}</dd>
+            </div>
+            {order.paidAt && (
+              <div>
+                <dt className="inline font-semibold">Paid: </dt>
+                <dd className="inline">{order.paidAt.toLocaleString("en-ZA")}</dd>
+              </div>
+            )}
+            {order.paymentCardLast4 && (
+              <div>
+                <dt className="inline font-semibold">Card: </dt>
+                <dd className="inline">
+                  {order.paymentCardBrand ?? "card"} ending {order.paymentCardLast4}
+                </dd>
+              </div>
+            )}
+            {order.yocoPaymentId && (
+              <div className="break-all pt-1 text-xs text-ink/50">Yoco payment {order.yocoPaymentId}</div>
+            )}
+            {order.yocoCheckoutId && (
+              <div className="break-all text-xs text-ink/50">Yoco checkout {order.yocoCheckoutId}</div>
+            )}
+          </dl>
+
+          {order.paymentStatus !== "PAID" && order.yocoCheckoutId && (
+            <form action={recheck} className="mt-5">
+              <Button type="submit" variant="outline" className="w-full">
+                Re-check payment with Yoco
+              </Button>
+              <p className="mt-2 text-xs text-ink/50">
+                Confirms directly against the checkout, for when the webhook didn’t arrive.
+              </p>
+            </form>
+          )}
         </AdminCard>
       </div>
     </>

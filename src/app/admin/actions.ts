@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import { OrderStatus, ArticleKind } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin, destroySession } from "@/lib/auth";
+import { reconcileOrderWithYoco } from "@/lib/payments";
 
 function str(fd: FormData, key: string): string {
   return String(fd.get(key) ?? "").trim();
@@ -72,6 +73,27 @@ export async function updateOrderStatus(id: string, formData: FormData) {
   await prisma.order.update({ where: { id }, data: { status } });
   revalidatePath("/admin/orders");
   redirect(`/admin/orders/${id}/?saved=1`);
+}
+
+/**
+ * Ask Yoco again whether this order's checkout was paid.
+ *
+ * For an order stuck on AWAITING because its webhook never arrived or never
+ * matched — the payment event carries no checkout id, so matching relies on
+ * optional metadata. This settles it from the checkout itself, which is
+ * authoritative, so nobody has to reconcile by hand against the dashboard.
+ */
+export async function recheckOrderPayment(id: string) {
+  await requireAdmin();
+  let outcome: string;
+  try {
+    outcome = await reconcileOrderWithYoco(id);
+  } catch (err) {
+    console.error("[admin] payment re-check failed", err);
+    outcome = "error";
+  }
+  revalidatePath("/admin/orders");
+  redirect(`/admin/orders/${id}/?payment=${outcome}`);
 }
 
 // ---------- articles ----------

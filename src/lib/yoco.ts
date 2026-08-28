@@ -94,6 +94,37 @@ export async function createCheckout(input: {
   return json;
 }
 
+export type YocoCheckoutDetail = {
+  id: string;
+  status: "created" | "started" | "processing" | "completed";
+  paymentId: string | null;
+  amount: number;
+  currency: string;
+  metadata?: Record<string, string> | null;
+  processingMode?: "live" | "test";
+};
+
+/**
+ * Look a checkout up by id.
+ *
+ * This is the reconciliation path. The payment webhook carries no checkoutId or
+ * externalId — `metadata` is its only link back to an order, and Yoco does not
+ * document that checkout metadata is copied onto the payment event. So an order
+ * must not depend on the webhook alone to settle: we hold the checkout id, and
+ * this asks Yoco outright whether it completed.
+ */
+export async function getCheckout(id: string): Promise<YocoCheckoutDetail> {
+  const res = await fetch(`${API_BASE}/checkouts/${encodeURIComponent(id)}`, {
+    headers: { Authorization: `Bearer ${secretKey()}` },
+    cache: "no-store",
+  });
+  const text = await res.text();
+  if (!res.ok) {
+    throw new YocoError(`Yoco checkout lookup failed (${res.status})`, res.status, text.slice(0, 500));
+  }
+  return JSON.parse(text) as YocoCheckoutDetail;
+}
+
 /**
  * Verify a webhook against the `webhook-signature` header.
  *

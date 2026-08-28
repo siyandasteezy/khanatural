@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { reconcileOrderWithYoco } from "@/lib/payments";
+import { isYocoConfigured } from "@/lib/yoco";
 import { buildMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { formatZar } from "@/lib/money";
@@ -27,6 +29,18 @@ export default async function CheckoutSuccessPage({
 }) {
   const { ref } = await searchParams;
   if (!ref) notFound();
+
+  // Settle before rendering where we can. The customer arrives here straight
+  // from Yoco, so asking Yoco whether the checkout completed usually beats
+  // waiting for a webhook — and covers the case where the webhook never
+  // matches the order at all, since its payload carries no checkout id.
+  if (isYocoConfigured()) {
+    try {
+      await reconcileOrderWithYoco(ref);
+    } catch (err) {
+      console.error("[checkout-success] reconciliation failed", err);
+    }
+  }
 
   // `ref` is the order's cuid — unguessable, so it acts as the capability to
   // view this one order without exposing sequential order numbers.
