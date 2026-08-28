@@ -99,10 +99,30 @@ model Order {
   totalCents    Int
   currency      String      @default("ZAR")
   items         OrderItem[]
-  createdAt     DateTime    @default(now())
-  updatedAt     DateTime    @updatedAt
+
+  // Yoco payment tracking. `status` stays the fulfilment axis (PENDING ->
+  // PROCESSING -> SHIPPED); paymentStatus is the money axis, so a paid order
+  // awaiting packing and an unpaid abandoned checkout stay distinguishable.
+  paymentStatus    PaymentStatus @default(UNPAID)
+  yocoCheckoutId   String?       @unique
+  yocoPaymentId    String?
+  paymentMethod    String? // "card" | "instant_eft", from the webhook
+  paymentCardBrand String?
+  paymentCardLast4 String?
+  paidAt           DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@index([status, createdAt])
+  @@index([paymentStatus, createdAt])
+}
+
+enum PaymentStatus {
+  UNPAID // order created, customer not yet sent to Yoco
+  AWAITING // redirected to Yoco, no webhook yet
+  PAID
+  FAILED
 }
 
 model OrderItem {

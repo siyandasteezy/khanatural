@@ -32,9 +32,11 @@ export function CheckoutForm() {
         <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl font-semibold text-kelp-900">
           Thank you — order #{confirmed.orderNumber}
         </h2>
+        {/* Only reached when the card page could not be opened — the order is
+            saved, so the team can arrange payment directly. */}
         <p className="mt-4 text-sm leading-relaxed text-ink/70">
-          Your order total is <strong>{formatZar(confirmed.totalCents)}</strong>. We’ve emailed your order details along with
-          our EFT banking details — we’ve teamed up with Peach Payments. Explore options. Your order ships once payment
+          Your order total is <strong>{formatZar(confirmed.totalCents)}</strong>. We couldn’t open the card payment page
+          just now, so we’ve saved your order and will email you payment details shortly. Your order ships once payment
           reflects.
         </p>
         <p className="mt-3 text-sm text-ink/70">
@@ -90,12 +92,23 @@ export function CheckoutForm() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Could not place your order.");
+
+      // Hand off to Yoco's hosted card page. The basket is deliberately NOT
+      // cleared here — the customer might cancel and come back — it clears on
+      // the confirmation page instead. Keep `submitting` true so the button
+      // stays disabled through the redirect.
+      if (data.redirectUrl) {
+        window.location.assign(data.redirectUrl);
+        return;
+      }
+
+      // Yoco unavailable: the order is saved, so confirm it and let the team
+      // arrange payment rather than dropping the sale.
       clear();
       setConfirmed({ orderNumber: data.orderNumber, totalCents: data.totalCents });
       window.scrollTo({ top: 0 });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not place your order.");
-    } finally {
       setSubmitting(false);
     }
   }

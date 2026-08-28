@@ -17,7 +17,7 @@ export default async function AdminOrdersPage() {
           <p className="text-sm text-ink/60">No orders yet. They’ll appear here as customers check out.</p>
         </AdminCard>
       ) : (
-        <AdminTable head={["Order", "Customer", "Email", "Items", "Total", "Status", "Placed"]}>
+        <AdminTable head={["Order", "Customer", "Email", "Items", "Total", "Payment", "Status", "Placed"]}>
           {orders.map((o) => (
             <tr key={o.id} className="hover:bg-sand-50">
               <td className={tdClass}>
@@ -29,6 +29,16 @@ export default async function AdminOrdersPage() {
               <td className={`${tdClass} text-ink/60`}>{o.customerEmail}</td>
               <td className={tdClass}>{o._count.items}</td>
               <td className={tdClass}>{formatZar(o.totalCents)}</td>
+              <td className={tdClass}>
+                {/* AWAITING means the customer was sent to Yoco and never came
+                    back paid — an abandoned checkout, not a sale to pack. */}
+                <StatusPill status={o.paymentStatus} />
+                {o.paymentCardLast4 && (
+                  <span className="ml-2 text-xs text-ink/50">
+                    {o.paymentCardBrand ?? "card"} ••{o.paymentCardLast4}
+                  </span>
+                )}
+              </td>
               <td className={tdClass}>
                 <StatusPill status={o.status} />
               </td>

@@ -51,6 +51,10 @@ const statusTones: Record<string, string> = {
   SHIPPED: "bg-indigo-100 text-indigo-800",
   DELIVERED: "bg-kelp-200 text-kelp-900",
   CANCELLED: "bg-red-100 text-red-800",
+  // payment states (PAID is shared with the fulfilment scale above)
+  UNPAID: "bg-sand-200 text-ink/70",
+  AWAITING: "bg-gold-300/40 text-gold-700",
+  FAILED: "bg-red-100 text-red-800",
 };
 
 export function StatusPill({ status }: { status: string }) {

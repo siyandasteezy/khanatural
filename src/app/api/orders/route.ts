@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
 import { DELIVERY_FEE_CENTS } from "@/lib/money";
+import { site } from "@/lib/site";
+import { createCheckout, isYocoConfigured } from "@/lib/yoco";
 
 const orderSchema = z.object({
   customer: z.object({
@@ -68,5 +70,67 @@ export async function POST(req: Request) {
     select: { id: true, orderNumber: true, totalCents: true },
   });
 
-  return NextResponse.json({ ok: true, orderNumber: order.orderNumber, totalCents: order.totalCents }, { status: 201 });
+  // Without Yoco keys the order still lands (and the admin still sees it) —
+  // the customer just gets the manual-payment confirmation instead of a
+  // redirect, so a missing key degrades rather than losing the sale.
+  if (!isYocoConfigured()) {
+    return NextResponse.json(
+      { ok: true, orderNumber: order.orderNumber, totalCents: order.totalCents, redirectUrl: null },
+      { status: 201 },
+    );
+  }
+
+  try {
+    const checkout = await createCheckout({
+      amountCents: order.totalCents,
+      successUrl: `${site.url}/checkout/success/?ref=${order.id}`,
+      cancelUrl: `${site.url}/checkout/?status=cancelled`,
+      failureUrl: `${site.url}/checkout/?status=failed`,
+      // the webhook echoes this back — it is how a payment finds its order
+      metadata: { orderId: order.id, orderNumber: String(order.orderNumber) },
+      externalId: order.id,
+      // a retry for the same order reuses the checkout instead of making a second
+      idempotencyKey: order.id,
+      lineItems: [
+        ...items.map((i) => {
+          const p = byId.get(i.productId)!;
+          return {
+            displayName: p.name,
+            quantity: i.quantity,
+            pricingDetails: { price: p.priceCents },
+          };
+        }),
+        { displayName: "Delivery", quantity: 1, pricingDetails: { price: DELIVERY_FEE_CENTS } },
+      ],
+    });
+
+    await prisma.order.update({
+      where: { id: order.id },
+      data: { yocoCheckoutId: checkout.id, paymentStatus: "AWAITING" },
+    });
+
+    return NextResponse.json(
+      {
+        ok: true,
+        orderNumber: order.orderNumber,
+        totalCents: order.totalCents,
+        redirectUrl: checkout.redirectUrl,
+      },
+      { status: 201 },
+    );
+  } catch (err) {
+    // The order exists; only the handoff to Yoco failed. Say so plainly rather
+    // than pretending the order was lost — support can take payment manually.
+    console.error("Yoco checkout creation failed", err);
+    return NextResponse.json(
+      {
+        ok: true,
+        orderNumber: order.orderNumber,
+        totalCents: order.totalCents,
+        redirectUrl: null,
+        paymentError: "We couldn’t open the card payment page.",
+      },
+      { status: 201 },
+    );
+  }
 }

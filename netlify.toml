@@ -6,6 +6,10 @@
 #                     because product/category pages are prerendered from the DB)
 #   SITE_URL        – canonical origin, e.g. https://khanatural.com
 #   AUTH_SECRET     – admin session signing secret (openssl rand -hex 32)
+#   YOCO_SECRET_KEY – Yoco API key (sk_test_… / sk_live_…)
+#   YOCO_WEBHOOK_SECRET – whsec_… returned when registering the webhook against
+#                     https://<domain>/api/webhooks/yoco/ ; without it no order
+#                     is ever marked paid
 #
 # Seed the hosted database once from your machine:
 #   DATABASE_URL="<hosted url>" npx prisma migrate deploy
