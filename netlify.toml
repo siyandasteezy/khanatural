@@ -24,7 +24,15 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# NOTE — keep bulk assets out of public/uploads/.
+# NOTE — two ways to blow the 250 MB serverless function limit.
+#
+# 1. Build a filesystem path the tracer cannot read statically. Next resolves
+#    join() arguments literally; a spread or computed segment makes it give up
+#    and bundle all of process.cwd(). `join(process.cwd(), ...segments)` in
+#    lib/media.ts once produced a 1.3 GB function carrying the gitignored raw
+#    photoshoot and magazine folders. Always spell path segments out.
+#
+# 2. Keep bulk assets out of public/uploads/.
 #
 # The admin upload action names that directory with a literal
 # join(process.cwd(), "public", "uploads", "emag"), so Next's file tracer

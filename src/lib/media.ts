@@ -17,7 +17,16 @@ import { randomBytes } from "node:crypto";
  */
 
 const STORE = "media";
-const LOCAL_DIR = ["public", "uploads", "media"];
+
+// Local uploads go to public/uploads/media/.
+//
+// IMPORTANT: every join() below spells that path out in literal segments.
+// Next traces the files a route needs by reading paths statically, and anything
+// it cannot resolve — a spread array, a computed segment — makes it give up and
+// bundle the whole of process.cwd(). That is not theoretical: writing this as
+// `join(process.cwd(), ...segments)` produced a 1.3GB serverless function
+// carrying the raw photoshoot and magazine folders, against a 250MB limit.
+// Keep the segments literal.
 
 export const ALLOWED_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/avif"]);
 export const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
@@ -68,7 +77,8 @@ export async function saveImage(file: File): Promise<SavedImage> {
     return { url: `/api/media/${key}`, key };
   }
 
-  const dir = join(process.cwd(), ...LOCAL_DIR);
+  // literal segments — see the note at the top of this file
+  const dir = join(process.cwd(), "public", "uploads", "media");
   await mkdir(dir, { recursive: true });
   await writeFile(join(dir, key), Buffer.from(bytes));
   return { url: `/uploads/media/${key}`, key };
@@ -92,7 +102,8 @@ export async function deleteImage(url: string): Promise<void> {
       const { getStore } = await import("@netlify/blobs");
       await getStore(STORE).delete(blobKey);
     } else if (localKey) {
-      await unlink(join(process.cwd(), ...LOCAL_DIR, localKey));
+      // literal segments — see the note at the top of this file
+      await unlink(join(process.cwd(), "public", "uploads", "media", localKey));
     }
   } catch {
     // the row is going regardless; a missing file must not block the delete
