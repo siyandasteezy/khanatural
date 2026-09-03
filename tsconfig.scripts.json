@@ -1,0 +1,12 @@
+{
+  // Type-checks the maintenance scripts, which the app build deliberately
+  // excludes so a dev-only tool can never fail a production deploy again.
+  // Run with: npm run typecheck:scripts
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["scripts/**/*.ts", "scripts/**/*.mts"],
+  "exclude": ["node_modules"]
+}

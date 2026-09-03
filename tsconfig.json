@@ -30,5 +30,9 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  // `next build` type-checks everything this config includes, so a maintenance
+  // script reaching for a dev-only package used to fail the production deploy.
+  // Scripts are still type-checked — by tsconfig.scripts.json, via
+  // `npm run typecheck:scripts` — just not as a condition of shipping the site.
+  "exclude": ["node_modules", "scripts"]
 }
