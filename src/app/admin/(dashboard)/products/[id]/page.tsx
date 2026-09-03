@@ -6,6 +6,7 @@ import { updateProduct } from "@/app/admin/actions";
 import { AdminCard, AdminTitle } from "@/components/admin/ui";
 import { Button } from "@/components/ui/Button";
 import { Input, Label, Textarea } from "@/components/ui/Input";
+import { RichTextEditor } from "@/components/admin/RichTextEditor";
 
 export default async function AdminProductEditPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -48,14 +49,28 @@ export default async function AdminProductEditPage({ params }: { params: Promise
 
           <AdminCard>
             <h2 className="mb-4 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Content</h2>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <div>
-                <Label htmlFor="p-short">Short description (HTML)</Label>
-                <Textarea id="p-short" name="shortDescription" defaultValue={product.shortDescription} rows={5} />
+                <Label htmlFor="p-short">Short description</Label>
+                <p className="mb-2 text-xs text-ink/50">
+                  The summary beside the product photo. Use the buttons to format — no code needed.
+                </p>
+                <RichTextEditor
+                  name="shortDescription"
+                  defaultValue={product.shortDescription}
+                  minHeight="7rem"
+                  ariaLabel="Short description"
+                />
               </div>
               <div>
-                <Label htmlFor="p-desc">Full description (HTML)</Label>
-                <Textarea id="p-desc" name="description" defaultValue={product.description} rows={10} />
+                <Label htmlFor="p-desc">Full description</Label>
+                <p className="mb-2 text-xs text-ink/50">The longer description further down the product page.</p>
+                <RichTextEditor
+                  name="description"
+                  defaultValue={product.description}
+                  minHeight="14rem"
+                  ariaLabel="Full description"
+                />
               </div>
             </div>
           </AdminCard>

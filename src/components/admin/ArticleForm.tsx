@@ -2,6 +2,7 @@ import type { Article } from "@prisma/client";
 import { AdminCard } from "./ui";
 import { Button } from "@/components/ui/Button";
 import { Input, Label, Select, Textarea } from "@/components/ui/Input";
+import { RichTextEditor } from "./RichTextEditor";
 
 export function ArticleForm({ article, action }: { article?: Article; action: (formData: FormData) => Promise<void> }) {
   return (
@@ -22,8 +23,16 @@ export function ArticleForm({ article, action }: { article?: Article; action: (f
               <Textarea id="a-excerpt" name="excerpt" defaultValue={article?.excerpt ?? ""} rows={3} />
             </div>
             <div>
-              <Label htmlFor="a-content">Content (HTML)</Label>
-              <Textarea id="a-content" name="content" defaultValue={article?.content ?? ""} rows={14} />
+              <Label htmlFor="a-content">Content</Label>
+              <p className="mb-2 text-xs text-ink/50">
+                The body of the post. Use the buttons to format — no code needed.
+              </p>
+              <RichTextEditor
+                name="content"
+                defaultValue={article?.content ?? ""}
+                minHeight="18rem"
+                ariaLabel="Article content"
+              />
             </div>
           </div>
         </AdminCard>

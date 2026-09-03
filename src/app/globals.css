@@ -90,6 +90,54 @@ body {
   @apply my-6 rounded-2xl;
 }
 
+/* The editor converts <i> to <em>, which prose-migrated didn't cover. */
+.prose-migrated em {
+  @apply italic;
+}
+
+/* Admin rich-text editor: mirrors .prose-migrated so what the shop owner types
+   looks like what the storefront renders, rather than unstyled markup. */
+.prose-admin {
+  @apply text-sm leading-relaxed text-ink;
+}
+.prose-admin p {
+  @apply my-2;
+}
+.prose-admin strong {
+  @apply font-semibold;
+}
+.prose-admin em {
+  @apply italic;
+}
+.prose-admin ul {
+  @apply my-2 list-disc pl-6;
+}
+.prose-admin ol {
+  @apply my-2 list-decimal pl-6;
+}
+.prose-admin li {
+  @apply my-0.5;
+}
+.prose-admin a {
+  @apply text-kelp-700 underline underline-offset-2;
+}
+.prose-admin h2,
+.prose-admin h3 {
+  font-family: var(--font-display);
+  @apply mt-4 mb-2 font-semibold text-kelp-900;
+}
+.prose-admin h2 {
+  @apply text-lg;
+}
+.prose-admin h3 {
+  @apply text-base;
+}
+/* placeholder-ish: an empty editor should not collapse to nothing */
+.prose-admin p:only-child:empty::before {
+  content: "";
+  display: inline-block;
+}
+
 /* Accessible focus ring everywhere */
 :focus-visible {
   outline: 2px solid var(--color-gold-500);
