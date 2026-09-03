@@ -8,6 +8,7 @@ import { OrderStatus, ArticleKind } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin, destroySession } from "@/lib/auth";
 import { reconcileOrderWithYoco } from "@/lib/payments";
+import { saveImage, deleteImage } from "@/lib/media";
 
 function str(fd: FormData, key: string): string {
   return String(fd.get(key) ?? "").trim();
@@ -62,6 +63,116 @@ export async function updateProduct(id: string, formData: FormData) {
 
   revalidatePath("/", "layout"); // product data appears on home, shop, category and product pages
   redirect("/admin/products/?saved=1");
+}
+
+/**
+ * Delete a product.
+ *
+ * Order history survives this: OrderItem holds its own name and price snapshot
+ * and its product relation is SetNull, so past orders still read correctly for
+ * a product that no longer exists. Its images cascade away with it, and any
+ * files this admin uploaded for it are removed from storage too — migrated
+ * artwork under /images/ is left alone, since other products may share it.
+ */
+export async function deleteProduct(id: string) {
+  await requireAdmin();
+  const product = await prisma.product.findUnique({
+    where: { id },
+    select: { name: true, images: { select: { url: true } } },
+  });
+  if (!product) redirect("/admin/products/");
+
+  await Promise.all(product.images.map((img) => deleteImage(img.url)));
+  await prisma.product.delete({ where: { id } });
+
+  revalidatePath("/", "layout"); // the product appears on home, shop and category pages
+  redirect("/admin/products/?deleted=1");
+}
+
+// ---------- product images ----------
+
+export async function addProductImage(productId: string, formData: FormData) {
+  await requireAdmin();
+  const file = formData.get("image");
+  if (!(file instanceof File) || file.size === 0) {
+    redirect(`/admin/products/${productId}/?image=nofile`);
+  }
+
+  let url: string;
+  try {
+    ({ url } = await saveImage(file));
+  } catch (err) {
+    console.error("[admin] product image upload failed", err);
+    redirect(`/admin/products/${productId}/?image=failed`);
+  }
+
+  const last = await prisma.productImage.findFirst({
+    where: { productId },
+    orderBy: { sortOrder: "desc" },
+    select: { sortOrder: true },
+  });
+  await prisma.productImage.create({
+    data: {
+      productId,
+      url,
+      alt: str(formData, "alt"),
+      sortOrder: (last?.sortOrder ?? -1) + 1,
+    },
+  });
+
+  revalidatePath("/", "layout");
+  redirect(`/admin/products/${productId}/?image=added`);
+}
+
+export async function deleteProductImage(imageId: string) {
+  await requireAdmin();
+  const image = await prisma.productImage.findUnique({
+    where: { id: imageId },
+    select: { url: true, productId: true },
+  });
+  if (!image) redirect("/admin/products/");
+
+  await prisma.productImage.delete({ where: { id: imageId } });
+  // Only removes files this admin uploaded; a migrated /images/ path is shared
+  // artwork and stays put.
+  await deleteImage(image.url);
+
+  revalidatePath("/", "layout");
+  redirect(`/admin/products/${image.productId}/?image=removed`);
+}
+
+/** Move an image to the front — the first image is the one used everywhere else. */
+export async function makeProductImagePrimary(imageId: string) {
+  await requireAdmin();
+  const image = await prisma.productImage.findUnique({
+    where: { id: imageId },
+    select: { productId: true },
+  });
+  if (!image) redirect("/admin/products/");
+
+  const images = await prisma.productImage.findMany({
+    where: { productId: image.productId },
+    orderBy: { sortOrder: "asc" },
+    select: { id: true },
+  });
+  const reordered = [imageId, ...images.map((i) => i.id).filter((id) => id !== imageId)];
+  await prisma.$transaction(
+    reordered.map((id, index) => prisma.productImage.update({ where: { id }, data: { sortOrder: index } })),
+  );
+
+  revalidatePath("/", "layout");
+  redirect(`/admin/products/${image.productId}/?image=primary`);
+}
+
+export async function updateProductImageAlt(imageId: string, formData: FormData) {
+  await requireAdmin();
+  const image = await prisma.productImage.update({
+    where: { id: imageId },
+    data: { alt: str(formData, "alt") },
+    select: { productId: true },
+  });
+  revalidatePath("/", "layout");
+  redirect(`/admin/products/${image.productId}/?image=alt`);
 }
 
 // ---------- orders ----------

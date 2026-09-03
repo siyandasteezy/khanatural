@@ -1,9 +1,11 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithRef, ComponentPropsWithoutRef } from "react";
 
 const fieldClass =
   "w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-kelp-600";
 
-export function Input({ className = "", ...props }: ComponentPropsWithoutRef<"input">) {
+// ref is included so callers can read the value imperatively (React 19 passes
+// it straight through as a prop — no forwardRef needed)
+export function Input({ className = "", ...props }: ComponentPropsWithRef<"input">) {
   return <input className={`${fieldClass} ${className}`} {...props} />;
 }
 

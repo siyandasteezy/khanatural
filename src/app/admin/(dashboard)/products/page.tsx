@@ -5,8 +5,8 @@ import { formatZar } from "@/lib/money";
 import { AdminTable, AdminTitle, SavedNotice, tdClass } from "@/components/admin/ui";
 import { Badge } from "@/components/ui/Badge";
 
-export default async function AdminProductsPage({ searchParams }: { searchParams: Promise<{ saved?: string }> }) {
-  const { saved } = await searchParams;
+export default async function AdminProductsPage({ searchParams }: { searchParams: Promise<{ saved?: string; deleted?: string }> }) {
+  const { saved, deleted } = await searchParams;
   const products = await prisma.product.findMany({
     orderBy: { name: "asc" },
     include: { images: { orderBy: { sortOrder: "asc" }, take: 1 }, categories: true },
@@ -16,6 +16,7 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
     <>
       <AdminTitle title="Products" />
       <SavedNotice show={saved === "1"} text="Product saved." />
+      <SavedNotice show={deleted === "1"} text="Product deleted. Past orders that included it are unaffected." />
       <AdminTable head={["Product", "Category", "Price", "Stock", "Visibility", ""]}>
         {products.map((p) => (
           <tr key={p.id} className="hover:bg-sand-50">

@@ -25,9 +25,10 @@ export default async function AdminMediaPage() {
       <AdminTitle title="Media library" />
       <AdminCard className="mb-6">
         <p className="text-sm text-ink/70">
-          All images migrated from khanatural.com live in <code className="rounded bg-sand-100 px-1.5 py-0.5">public/images/</code>.
-          Reference them by path (e.g. <code className="rounded bg-sand-100 px-1.5 py-0.5">/images/brand/logo.png</code>) in
-          products and articles. Add new files to the same folders in the repository.
+          <strong>To change a product&rsquo;s photos, open that product and use the Images panel</strong> — you can upload
+          straight from your phone and they are resized automatically. This page is a reference of the artwork migrated
+          from khanatural.com, which you can point to by path (e.g.{" "}
+          <code className="rounded bg-sand-100 px-1.5 py-0.5">/images/brand/logo.png</code>) in an article cover image.
         </p>
       </AdminCard>
       {groups.map((g) => (

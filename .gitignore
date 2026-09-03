@@ -58,3 +58,6 @@ next-env.d.ts
 # Netlify local build output (netlify build / netlify dev)
 /.netlify/
 deno.lock
+
+# admin-uploaded media (dev only; Netlify uses Blobs)
+/public/uploads/media/

@@ -1,15 +1,31 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { updateProduct } from "@/app/admin/actions";
-import { AdminCard, AdminTitle } from "@/components/admin/ui";
+import { updateProduct, deleteProduct } from "@/app/admin/actions";
+import { AdminCard, AdminTitle, SavedNotice } from "@/components/admin/ui";
 import { Button } from "@/components/ui/Button";
 import { Input, Label, Textarea } from "@/components/ui/Input";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
+import { ProductImageManager } from "@/components/admin/ProductImageManager";
+import { DeleteProductButton } from "@/components/admin/DeleteProductButton";
 
-export default async function AdminProductEditPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+const IMAGE_NOTICE: Record<string, string> = {
+  added: "Image added.",
+  removed: "Image removed.",
+  primary: "Main image updated.",
+  alt: "Image description saved.",
+  nofile: "No file was chosen, so nothing was uploaded.",
+  failed: "That image couldn’t be uploaded. Please try another file.",
+};
+
+export default async function AdminProductEditPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ saved?: string; image?: string }>;
+}) {
+  const [{ id }, { saved, image }] = await Promise.all([params, searchParams]);
   const product = await prisma.product.findUnique({
     where: { id },
     include: { images: { orderBy: { sortOrder: "asc" } }, categories: true, tags: true },
@@ -17,6 +33,7 @@ export default async function AdminProductEditPage({ params }: { params: Promise
   if (!product) notFound();
 
   const action = updateProduct.bind(null, product.id);
+  const remove = deleteProduct.bind(null, product.id);
 
   return (
     <>
@@ -28,6 +45,8 @@ export default async function AdminProductEditPage({ params }: { params: Promise
           </Link>
         }
       />
+      <SavedNotice show={saved === "1"} text="Product saved." />
+      {image && <SavedNotice show text={IMAGE_NOTICE[image] ?? "Image updated."} />}
       <form action={action} className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <div className="space-y-6">
           <AdminCard>
@@ -134,21 +153,43 @@ export default async function AdminProductEditPage({ params }: { params: Promise
             </div>
           </AdminCard>
 
-          <AdminCard>
-            <h2 className="mb-4 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Images</h2>
-            <div className="grid grid-cols-3 gap-2">
-              {product.images.map((img) => (
-                <Image key={img.id} src={img.url} alt={img.alt} width={96} height={96} className="aspect-square w-full rounded-xl object-cover" />
-              ))}
-            </div>
-            <p className="mt-3 text-xs text-ink/50">Manage image files in the Media section.</p>
-          </AdminCard>
-
           <Button type="submit" size="lg" className="w-full">
             Save product
           </Button>
         </div>
       </form>
+
+      {/* Images sit outside the product <form>: uploading and removing are their
+          own actions that save immediately, and nesting forms is invalid HTML. */}
+      <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_320px]">
+        <div className="lg:order-2">
+          <AdminCard>
+            <h2 className="mb-1 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Images</h2>
+            <p className="mb-4 text-xs text-ink/50">
+              The first image is used on the shop grid and social previews. Changes here save straight away.
+            </p>
+            <ProductImageManager
+              productId={product.id}
+              images={product.images.map((i) => ({ id: i.id, url: i.url, alt: i.alt }))}
+            />
+          </AdminCard>
+        </div>
+
+        <div className="lg:order-1">
+          <AdminCard className="border-red-200 bg-red-50/40">
+            <h2 className="font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">
+              Delete this product
+            </h2>
+            <p className="mt-2 text-sm text-ink/70">
+              Removes “{product.name}” from the shop for good, along with its images. Past orders keep their record of it,
+              so your order history and totals stay correct.
+            </p>
+            <form action={remove} className="mt-4">
+              <DeleteProductButton name={product.name} />
+            </form>
+          </AdminCard>
+        </div>
+      </div>
     </>
   );
 }
