@@ -75,7 +75,7 @@ export default async function CategoryPage({ params }: Params) {
         {products.length === 0 ? (
           <p className="text-ink/60">No products in this range yet.</p>
         ) : (
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3">
             {products.map((p, i) => (
               <ProductCard key={p.id} product={p} priority={i < 4} />
             ))}

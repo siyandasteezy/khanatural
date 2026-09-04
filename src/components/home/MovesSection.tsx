@@ -6,13 +6,13 @@ export function MovesSection() {
   return (
     <section className="bg-sand-100 py-16 sm:py-24">
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[420px_1fr] lg:gap-16">
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-[2.5rem] shadow-xl">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,34rem)_1fr] lg:gap-16">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden lg:max-w-none rounded-[2.5rem] shadow-xl">
             <Image
               src="/images/shoot/honey-joy.jpg"
               alt="Laughing woman wearing a gold laurel crown, honey on her skin"
               fill
-              sizes="(max-width: 1024px) 90vw, 420px"
+              sizes="(max-width: 1024px) 92vw, 544px"
               className="object-cover"
             />
             <div aria-hidden className="absolute inset-0 rounded-[2.5rem] ring-1 ring-inset ring-kelp-950/10" />

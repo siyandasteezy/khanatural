@@ -39,14 +39,14 @@ export function EmagSection({ issue }: { issue: EmagIssue | null }) {
           </div>
         </div>
         {issue.coverImage && (
-          <div className="relative mx-auto w-full max-w-sm">
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-[28rem]">
             <div aria-hidden className="absolute -inset-4 rounded-[2rem] bg-gold-500/15 blur-xl" />
             <Image
               src={issue.coverImage}
               alt={`${issue.title} cover`}
               width={480}
               height={680}
-              sizes="(max-width: 1024px) 90vw, 480px"
+              sizes="(max-width: 1024px) 90vw, 448px"
               className="relative w-full rounded-3xl shadow-2xl shadow-kelp-950/50"
             />
           </div>

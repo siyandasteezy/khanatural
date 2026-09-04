@@ -22,7 +22,7 @@ export function BestSellers({ products }: { products: ProductCardData[] }) {
           </ButtonLink>
         ))}
       </div>
-      <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
         {products.map((p, i) => (
           <ProductCard key={p.id} product={p} priority={i < 4} />
         ))}

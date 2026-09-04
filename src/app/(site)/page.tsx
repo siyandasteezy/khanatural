@@ -37,7 +37,7 @@ export default async function HomePage() {
     prisma.product.findMany({
       where: { isPublished: true },
       orderBy: [{ inStock: "desc" }, { reviewCount: "desc" }, { name: "asc" }],
-      take: 8,
+      take: 6, // three-up grid, so six fills two clean rows
       include: { images: { orderBy: { sortOrder: "asc" }, take: 1 } },
     }),
     prisma.testimonial.findMany({ where: { isPublished: true }, orderBy: { sortOrder: "asc" } }),

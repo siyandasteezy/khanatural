@@ -31,7 +31,7 @@ export function FeaturedProduct({ product }: { product: FeaturedProductData | nu
     <section className="bg-sand-100 py-16 sm:py-24">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="relative mx-auto w-full max-w-md">
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             {/* warm halo so the photograph lifts off the cream band */}
             <div aria-hidden className="absolute -inset-6 rounded-[3rem] bg-gold-500/15 blur-2xl" />
             {image && (
@@ -40,7 +40,7 @@ export function FeaturedProduct({ product }: { product: FeaturedProductData | nu
                 alt={image.alt || product.name}
                 width={900}
                 height={1200}
-                sizes="(max-width: 1024px) 90vw, 480px"
+                sizes="(max-width: 1024px) 92vw, 576px"
                 className="relative aspect-[3/4] w-full rounded-[2rem] object-cover shadow-2xl shadow-kelp-950/25"
               />
             )}

@@ -11,7 +11,7 @@ export function BrandCampaign() {
   return (
     <section className="relative overflow-hidden bg-kelp-950 text-sand-50">
       <div className="grid lg:grid-cols-2">
-        <div className="relative min-h-[26rem] lg:min-h-[38rem]">
+        <div className="relative min-h-[30rem] lg:min-h-[46rem]">
           <Image
             src="/images/brand/khabo.jpg"
             alt="Khanatural founder campaign photograph"

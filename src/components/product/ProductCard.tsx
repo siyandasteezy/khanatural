@@ -29,7 +29,7 @@ export function ProductCard({ product, priority = false }: { product: ProductCar
             alt={image.alt}
             fill
             priority={priority}
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            sizes="(max-width: 640px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : null}
