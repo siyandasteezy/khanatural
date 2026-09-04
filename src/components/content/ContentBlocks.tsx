@@ -8,6 +8,10 @@ export type ContentBlock = {
   src?: string;
   alt?: string;
   localSrc?: string;
+  /** Intrinsic size, when known. Lets a layout honour the real aspect ratio
+   *  instead of cropping the frame to fit a fixed box. */
+  width?: number;
+  height?: number;
 };
 
 function TextWithBreaks({ text }: { text: string }) {

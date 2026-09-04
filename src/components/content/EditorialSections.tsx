@@ -132,17 +132,25 @@ function SectionImages({
   if (!first) return null;
   const src = first.localSrc ?? first.src!;
 
+  // A block that knows its own size is rendered at that aspect, so nothing is
+  // cropped. Migrated images carry no dimensions, so they keep the portrait-ish
+  // box they were laid out in and fill it.
+  const intrinsic = first.width && first.height ? { width: first.width, height: first.height } : null;
+
   return (
     <div className="relative">
       <div aria-hidden className="absolute -inset-5 rounded-[3rem] bg-gold-500/10 blur-2xl" />
       <Image
         src={src}
         alt={first.alt || fallbackAlt}
-        width={900}
-        height={1100}
+        width={intrinsic?.width ?? 900}
+        height={intrinsic?.height ?? 1100}
         priority={priority}
-        sizes="(max-width: 1024px) 92vw, 520px"
-        className="relative w-full rounded-[2rem] object-cover shadow-2xl shadow-kelp-950/20"
+        // the editorial column is half of the 1280 container less the gap
+        sizes="(max-width: 1024px) 92vw, 620px"
+        className={`relative w-full rounded-[2rem] shadow-2xl shadow-kelp-950/20 ${
+          intrinsic ? "h-auto" : "object-cover"
+        }`}
       />
       {rest.length > 0 && (
         <div className="mt-4 grid grid-cols-2 gap-4">

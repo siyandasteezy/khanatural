@@ -26,14 +26,10 @@
     },
     {
       "type": "img",
-      "src": "https://khanatural.com/wp-content/uploads/2025/08/DSC07918.png",
-      "alt": "",
-      "localSrc": "/images/content/our-brand-2-30a574.png"
-    },
-    {
-      "type": "img",
-      "localSrc": "/images/shoot/honey-joy.jpg",
-      "alt": "Laughing woman wearing a gold laurel crown with KhaNatural honey on her skin"
+      "localSrc": "/images/shoot/our-brand-founder.jpg",
+      "alt": "Khanatural founders laughing together, holding a jar of KhaNatural Shea Butter",
+      "width": 1400,
+      "height": 2100
     },
     {
       "type": "signature",
@@ -44,12 +40,6 @@
     {
       "type": "p",
       "text": "She’s Khanatural Brand’s Founder, an award winning International Actress and Founder of Khabonina Foundation. See her acting career work on the site link below.  Through the foundation, she works with township schools for social impact."
-    },
-    {
-      "type": "img",
-      "src": "https://khanatural.com/wp-content/uploads/2025/11/DSC09265-scaled.jpg",
-      "alt": "",
-      "localSrc": "/images/content/our-brand-4-0f9e9f.jpg"
     },
     {
       "type": "h2",
