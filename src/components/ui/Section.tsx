@@ -10,6 +10,8 @@ type SectionProps = {
   className?: string;
   children: ReactNode;
   id?: string;
+  /** Decorative layer painted behind the content, inside the section's bounds. */
+  backdrop?: ReactNode;
 };
 
 const tones = {
@@ -18,11 +20,25 @@ const tones = {
   kelp: "bg-kelp-900 text-sand-50",
 };
 
-export function Section({ eyebrow, title, lead, align = "center", tone = "sand", className = "", children, id }: SectionProps) {
+export function Section({
+  eyebrow,
+  title,
+  lead,
+  align = "center",
+  tone = "sand",
+  className = "",
+  children,
+  id,
+  backdrop,
+}: SectionProps) {
   const dark = tone === "kelp";
   return (
-    <section id={id} className={`py-16 sm:py-24 ${tones[tone]} ${className}`}>
-      <Container>
+    <section
+      id={id}
+      className={`py-16 sm:py-24 ${tones[tone]} ${className} ${backdrop ? "relative overflow-hidden" : ""}`}
+    >
+      {backdrop}
+      <Container className={backdrop ? "relative" : ""}>
         {(eyebrow || title || lead) && (
           <div className={`mb-10 sm:mb-14 max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
             {eyebrow && (

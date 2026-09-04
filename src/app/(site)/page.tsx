@@ -63,7 +63,14 @@ export default async function HomePage() {
       <EmagSection
         issue={
           emag
-            ? { title: emag.title, slug: emag.slug, content: emag.content, coverImage: emag.coverImage, downloadUrl: emag.downloadUrl }
+            ? {
+                title: emag.title,
+                slug: emag.slug,
+                content: emag.content,
+                coverImage: emag.coverImage,
+                downloadUrl: emag.downloadUrl,
+                pageCount: emag.pageCount, // drives the open-spread backdrop
+              }
             : null
         }
       />
