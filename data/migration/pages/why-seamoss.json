@@ -4,9 +4,10 @@
   "blocks": [
     {
       "type": "img",
-      "src": "https://khanatural.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-06-18-at-15.08.39.jpeg",
-      "alt": "",
-      "localSrc": "/images/content/why-seamoss-1-e23455.jpeg"
+      "localSrc": "/images/shoot/why-seamoss-gel.jpg",
+      "alt": "A jar of KhaNatural organic wild-crafted Sea Moss Gel on a stone plinth",
+      "width": 2000,
+      "height": 1125
     },
     {
       "type": "h2",
