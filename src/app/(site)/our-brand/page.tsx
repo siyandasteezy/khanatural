@@ -39,7 +39,6 @@ export default async function OurBrandPage() {
         lead="Founded by award-winning actress Khabonina Qubeka — a South African wellness range built on wild-crafted sea moss and honest ingredients."
         image="/images/shoot/page-brand-grooming.jpg"
         imagePosition="center"
-        scrim="dark"
       />
       <EditorialSections blocks={page.blocks} />
       <ClosingCta
