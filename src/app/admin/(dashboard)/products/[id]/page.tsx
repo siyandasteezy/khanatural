@@ -47,8 +47,13 @@ export default async function AdminProductEditPage({
       />
       <SavedNotice show={saved === "1"} text="Product saved." />
       {image && <SavedNotice show text={IMAGE_NOTICE[image] ?? "Image updated."} />}
-      <form action={action} className="grid gap-6 lg:grid-cols-[1fr_320px]">
-        <div className="space-y-6">
+      {/* One grid holds the whole page. The product form is only the left
+          column: the pricing and availability controls sit in the sidebar and
+          are tied back to it with form="product-form", which is what lets the
+          Images panel — whose upload and remove are their own server actions,
+          so it cannot be nested inside a form — sit in the sidebar too. */}
+      <div className="grid items-start gap-6 lg:grid-cols-[1fr_320px]">
+        <form id="product-form" action={action} className="space-y-6">
           <AdminCard>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
@@ -107,7 +112,7 @@ export default async function AdminProductEditPage({
               </div>
             </div>
           </AdminCard>
-        </div>
+        </form>
 
         <div className="space-y-6">
           <AdminCard>
@@ -117,6 +122,7 @@ export default async function AdminProductEditPage({
                 <Label htmlFor="p-regular">Regular price (R)</Label>
                 <Input
                   id="p-regular"
+                  form="product-form"
                   name="regularPrice"
                   defaultValue={(product.regularPriceCents / 100).toFixed(2)}
                   inputMode="decimal"
@@ -127,13 +133,14 @@ export default async function AdminProductEditPage({
                 <Label htmlFor="p-sale">Sale price (R)</Label>
                 <Input
                   id="p-sale"
+                  form="product-form"
                   name="salePrice"
                   defaultValue={product.salePriceCents ? (product.salePriceCents / 100).toFixed(2) : ""}
                   inputMode="decimal"
                 />
               </div>
               <label className="flex items-center gap-2 text-sm font-semibold text-kelp-900">
-                <input type="checkbox" name="onSale" defaultChecked={product.onSale} className="h-4 w-4 accent-kelp-700" />
+                <input type="checkbox" form="product-form" name="onSale" defaultChecked={product.onSale} className="h-4 w-4 accent-kelp-700" />
                 On sale
               </label>
             </div>
@@ -143,26 +150,20 @@ export default async function AdminProductEditPage({
             <h2 className="mb-4 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Availability</h2>
             <div className="space-y-3">
               <label className="flex items-center gap-2 text-sm font-semibold text-kelp-900">
-                <input type="checkbox" name="inStock" defaultChecked={product.inStock} className="h-4 w-4 accent-kelp-700" />
+                <input type="checkbox" form="product-form" name="inStock" defaultChecked={product.inStock} className="h-4 w-4 accent-kelp-700" />
                 In stock
               </label>
               <label className="flex items-center gap-2 text-sm font-semibold text-kelp-900">
-                <input type="checkbox" name="isPublished" defaultChecked={product.isPublished} className="h-4 w-4 accent-kelp-700" />
+                <input type="checkbox" form="product-form" name="isPublished" defaultChecked={product.isPublished} className="h-4 w-4 accent-kelp-700" />
                 Published on site
               </label>
             </div>
           </AdminCard>
 
-          <Button type="submit" size="lg" className="w-full">
+          <Button type="submit" form="product-form" size="lg" className="w-full">
             Save product
           </Button>
-        </div>
-      </form>
 
-      {/* Images sit outside the product <form>: uploading and removing are their
-          own actions that save immediately, and nesting forms is invalid HTML. */}
-      <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_320px]">
-        <div className="lg:order-2">
           <AdminCard>
             <h2 className="mb-1 font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">Images</h2>
             <p className="mb-4 text-xs text-ink/50">
@@ -175,7 +176,9 @@ export default async function AdminProductEditPage({
           </AdminCard>
         </div>
 
-        <div className="lg:order-1">
+        {/* Destructive action last, and under the main column rather than the
+            sidebar, so it is nowhere near the Save button. */}
+        <div className="lg:col-start-1">
           <AdminCard className="border-red-200 bg-red-50/40">
             <h2 className="font-[family-name:var(--font-display)] text-lg font-semibold text-kelp-900">
               Delete this product
