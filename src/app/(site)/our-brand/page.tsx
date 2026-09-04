@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPage } from "@/lib/pages";
 import { buildMetadata, breadcrumbJsonLd, jsonLd } from "@/lib/seo";
-import { PageHero } from "@/components/layout/PageHero";
+import { PageBanner } from "@/components/layout/PageHero";
 import { EditorialSections } from "@/components/content/EditorialSections";
 import { ClosingCta } from "@/components/content/ClosingCta";
 
@@ -33,14 +33,11 @@ export default async function OurBrandPage() {
           ),
         }}
       />
-      <PageHero
-        eyebrow="Rooted in realness"
-        title="Our Brand"
-        lead="Founded by award-winning actress Khabonina Qubeka — a South African wellness range built on wild-crafted sea moss and honest ingredients."
-        image="/images/shoot/page-brand-grooming.jpg"
-        imagePosition="center"
-      />
-      <EditorialSections blocks={page.blocks} />
+      {/* No hero copy here: the page opens on the photograph and goes straight
+          into "Our Founder", which carries the page's <h1>. The line the hero
+          used to show now stands at the top of that section instead. */}
+      <PageBanner image="/images/shoot/page-brand-grooming.jpg" imagePosition="center" />
+      <EditorialSections blocks={page.blocks} firstHeadingAsH1 />
       <ClosingCta
         eyebrow="Join the movement"
         title="Nurture your body, mind and soul"

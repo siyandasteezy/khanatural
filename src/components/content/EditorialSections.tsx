@@ -50,16 +50,20 @@ function groupSections(blocks: ContentBlock[]): Section[] {
   return sections;
 }
 
-function SectionCopy({ section }: { section: Section }) {
+function SectionCopy({ section, asH1 = false }: { section: Section; asH1?: boolean }) {
+  // Pages that drop the hero copy have no other h1, so their first section
+  // heading becomes it — the page keeps exactly one, and the outline stays
+  // correct for search engines and screen readers.
+  const Heading = asH1 ? "h1" : "h2";
   return (
     <div>
       {section.heading && (
-        <h2
+        <Heading
           id={section.id}
           className="font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight text-kelp-900 sm:text-4xl"
         >
           {section.heading}
-        </h2>
+        </Heading>
       )}
       {section.kicker && (
         <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-gold-600">{section.kicker}</p>
@@ -176,22 +180,54 @@ function SectionImages({
  * with imagery become two-column splits (flipping side each time), text-only
  * sections become a centred column. Copy is rendered verbatim.
  */
-export function EditorialSections({ blocks }: { blocks: ContentBlock[] }) {
+export function EditorialSections({
+  blocks,
+  /** promote the first section heading to the page <h1> (for pages with no hero copy) */
+  firstHeadingAsH1 = false,
+}: {
+  blocks: ContentBlock[];
+  firstHeadingAsH1?: boolean;
+}) {
   const sections = groupSections(blocks);
   let splitIndex = 0;
+  const h1SectionId = firstHeadingAsH1 ? sections.find((s) => s.heading)?.id : undefined;
 
   return (
     <>
       {sections.map((section, i) => {
         const hasImages = section.images.length > 0;
+        const hasCopy = Boolean(section.heading) || section.body.length > 0;
         const tone = i % 2 === 1 ? "bg-sand-100" : "bg-sand-50";
+
+        // An image with no words alongside it: both migrated pages open with
+        // one. Splitting it two-up leaves half the row empty, which reads as a
+        // layout fault — especially now that it is the first thing on the page.
+        // Give it the full width instead, so it reads as a deliberate plate.
+        if (hasImages && !hasCopy) {
+          const img = section.images[0];
+          return (
+            <section key={section.id} className={`${tone} pb-4 pt-10 sm:pt-14`}>
+              <Container>
+                <Image
+                  src={img.localSrc ?? img.src!}
+                  alt={img.alt || ""}
+                  width={img.width ?? 1600}
+                  height={img.height ?? 900}
+                  priority={i === 0}
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  className="aspect-[16/9] w-full rounded-[2rem] object-cover shadow-xl shadow-kelp-950/10"
+                />
+              </Container>
+            </section>
+          );
+        }
 
         if (!hasImages) {
           return (
             <section key={section.id} className={`${tone} py-14 sm:py-20`}>
               <Container>
                 <div className="mx-auto max-w-3xl">
-                  <SectionCopy section={section} />
+                  <SectionCopy section={section} asH1={section.id === h1SectionId} />
                 </div>
               </Container>
             </section>
@@ -211,7 +247,7 @@ export function EditorialSections({ blocks }: { blocks: ContentBlock[] }) {
                   />
                 </div>
                 <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
-                  <SectionCopy section={section} />
+                  <SectionCopy section={section} asH1={section.id === h1SectionId} />
                 </div>
               </div>
             </Container>

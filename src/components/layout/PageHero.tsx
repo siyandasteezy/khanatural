@@ -41,23 +41,34 @@ export function PageHero({
 
   return (
     <>
-      {/* The banner. Sized generously and pulled under the header so the
-          photograph starts at the very top of the page. */}
-      <div className="relative -mt-[116px] h-[46vh] min-h-[17rem] w-full overflow-hidden bg-sand-100 sm:h-[52vh] lg:h-[58vh] lg:max-h-[34rem]">
-        <Image
-          src={image}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: imagePosition }}
-        />
-      </div>
+      <PageBanner image={image} imagePosition={imagePosition} />
       <Container className="pb-4 pt-10 sm:pt-14">
         <Copy eyebrow={eyebrow} title={title} lead={lead} tone="light" />
       </Container>
     </>
+  );
+}
+
+/**
+ * The photograph on its own, for pages whose opening heading belongs to the
+ * content rather than to a hero — Our Brand leads straight into "Our Founder".
+ *
+ * Sized generously and pulled under the header so the picture starts at the
+ * very top of the page.
+ */
+export function PageBanner({ image, imagePosition = "center" }: { image: string; imagePosition?: string }) {
+  return (
+    <div className="relative -mt-[116px] h-[46vh] min-h-[17rem] w-full overflow-hidden bg-sand-100 sm:h-[52vh] lg:h-[58vh] lg:max-h-[34rem]">
+      <Image
+        src={image}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+        style={{ objectPosition: imagePosition }}
+      />
+    </div>
   );
 }
 
