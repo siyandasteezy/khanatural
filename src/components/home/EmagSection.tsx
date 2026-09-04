@@ -15,23 +15,28 @@ type EmagIssue = {
 /**
  * The section sits on an open spread from the issue it is advertising.
  *
- * The ingest already renders every page of every issue, so pages two and three
- * — the first facing pair — are used directly. Nothing is hand-made, so the
+ * The ingest already renders every page of every issue, so pages four and five
+ * — the first feature spread — are used directly. Nothing is hand-made, so the
  * backdrop follows whichever issue is current without anyone maintaining it.
  *
+ * Four and five rather than the contents spread at two and three: a feature
+ * opener carries the issue's strongest photography, and the contents page
+ * carries the masthead contact block, which would put the phone number that was
+ * deliberately removed from the site back onto the home page at legible size.
+ *
  * The spread is tilted back and shadowed so it reads as lying on a surface
- * rather than pasted flat, and held at low opacity behind a slight blur: enough
- * to be legibly a magazine, not enough to compete with the copy over it.
- * Measured against the whitest part of a page at the thinnest point of the
- * scrim over the copy: heading 11.9:1, body 8.0:1, eyebrow 7.6:1.
+ * rather than pasted flat. It runs at near-full strength: what was burying it
+ * was a scrim across the whole section, when only the copy column needs one.
+ * Measured against the whitest part of a page, under the scrim where the copy
+ * sits: heading 12.1:1, body 8.1:1, eyebrow 7.8:1.
  */
 function SpreadBackdrop({ slug }: { slug: string }) {
   const page = (n: number) => `/emag/${slug}/p${String(n).padStart(3, "0")}.webp`;
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0">
       <div className="absolute inset-0 flex items-center justify-center [perspective:1400px]">
-        <div className="flex w-[132%] max-w-none opacity-[0.42] blur-[2px] [transform:rotateX(14deg)_scale(1.04)] sm:w-[112%] lg:w-[92%]">
-          {[2, 3].map((n) => (
+        <div className="flex w-[132%] max-w-none opacity-[0.85] blur-[1px] [transform:rotateX(14deg)_scale(1.04)] sm:w-[112%] lg:w-[92%]">
+          {[4, 5].map((n) => (
             <Image
               key={n}
               src={page(n)}
@@ -44,9 +49,25 @@ function SpreadBackdrop({ slug }: { slug: string }) {
           ))}
         </div>
       </div>
-      {/* keeps the copy side readable and settles the spread into the dark */}
-      <div className="absolute inset-0 bg-gradient-to-r from-kelp-900 via-kelp-900/75 to-kelp-900/45" />
-      <div className="absolute inset-0 bg-gradient-to-b from-kelp-900 via-transparent to-kelp-900" />
+      {/* The scrim covers the copy column and then gets out of the way, rather
+          than dimming the whole section — which is what was burying the spread.
+          Past 72% the pages are at full strength, and the right half carries no
+          text to protect. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(29,29,26,0.97) 0%, rgba(29,29,26,0.88) 45%, rgba(29,29,26,0) 72%)",
+        }}
+      />
+      {/* just enough at the edges for the section to meet its neighbours */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(29,29,26,0.92) 0%, rgba(29,29,26,0) 15%, rgba(29,29,26,0) 85%, rgba(29,29,26,0.92) 100%)",
+        }}
+      />
     </div>
   );
 }
@@ -54,7 +75,7 @@ function SpreadBackdrop({ slug }: { slug: string }) {
 export function EmagSection({ issue }: { issue: EmagIssue | null }) {
   if (!issue) return null;
   // an issue uploaded through the admin has a PDF but no rendered pages
-  const hasSpread = (issue.pageCount ?? 0) >= 3;
+  const hasSpread = (issue.pageCount ?? 0) >= 5;
   return (
     <Section
       tone="kelp"
