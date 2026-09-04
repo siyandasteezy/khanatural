@@ -37,7 +37,14 @@ export default async function OurBrandPage() {
           into "Our Founder", which carries the page's <h1>. The line the hero
           used to show now stands at the top of that section instead. */}
       <PageBanner image="/images/shoot/page-brand-grooming.jpg" imagePosition="center" />
-      <EditorialSections blocks={page.blocks} firstHeadingAsH1 />
+      {/* The founder portrait was shot on a warm terracotta seamless, so the
+          section takes that colour and the photograph meets the page instead of
+          sitting on it as a cut-out. */}
+      <EditorialSections
+        blocks={page.blocks}
+        firstHeadingAsH1
+        sectionBackgrounds={{ "our-founder": "#e3a871" }}
+      />
       <ClosingCta
         eyebrow="Join the movement"
         title="Nurture your body, mind and soul"

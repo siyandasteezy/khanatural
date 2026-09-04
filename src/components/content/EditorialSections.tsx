@@ -50,7 +50,16 @@ function groupSections(blocks: ContentBlock[]): Section[] {
   return sections;
 }
 
-function SectionCopy({ section, asH1 = false }: { section: Section; asH1?: boolean }) {
+function SectionCopy({
+  section,
+  asH1 = false,
+  onAccent = false,
+}: {
+  section: Section;
+  asH1?: boolean;
+  /** section sits on a coloured ground, not the page ground */
+  onAccent?: boolean;
+}) {
   // Pages that drop the hero copy have no other h1, so their first section
   // heading becomes it — the page keeps exactly one, and the outline stays
   // correct for search engines and screen readers.
@@ -66,7 +75,14 @@ function SectionCopy({ section, asH1 = false }: { section: Section; asH1?: boole
         </Heading>
       )}
       {section.kicker && (
-        <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-gold-600">{section.kicker}</p>
+        <p
+          className={`mt-2 text-sm font-bold uppercase tracking-[0.18em] ${
+            // gold reads at only 2.54:1 on the accent; kelp-800 gets it to 6.84:1
+            onAccent ? "text-kelp-800" : "text-gold-600"
+          }`}
+        >
+          {section.kicker}
+        </p>
       )}
       <div className="mt-4">
         {section.body.map((b, i) => {
@@ -90,7 +106,7 @@ function SectionCopy({ section, asH1 = false }: { section: Section; asH1?: boole
           return <RichText key={i} text={b.text ?? ""} />;
         })}
       </div>
-      {section.signature && <Signature block={section.signature} />}
+      {section.signature && <Signature block={section.signature} onAccent={onAccent} />}
     </div>
   );
 }
@@ -102,11 +118,11 @@ function SectionCopy({ section, asH1 = false }: { section: Section; asH1?: boole
  * square tile, which is what made it look blurry. Rendered small, at its own
  * aspect ratio, it reads as a signature rather than as a broken image.
  */
-function Signature({ block }: { block: ContentBlock }) {
+function Signature({ block, onAccent = false }: { block: ContentBlock; onAccent?: boolean }) {
   const src = block.localSrc ?? block.src;
   if (!src) return null;
   return (
-    <figure className="mt-8 border-t border-sand-300/70 pt-6">
+    <figure className={`mt-8 border-t pt-6 ${onAccent ? "border-kelp-950/40" : "border-sand-300/70"}`}>
       <Image
         src={src}
         alt={block.alt || "Founder's signature"}
@@ -115,7 +131,12 @@ function Signature({ block }: { block: ContentBlock }) {
         sizes="180px"
         className="h-auto w-[180px] max-w-full opacity-90"
       />
-      <figcaption className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">
+      <figcaption
+        className={`mt-2 text-xs font-semibold uppercase tracking-[0.18em] ${
+          // ink/50 falls to 2.69:1 on the accent; ink/80 restores 5.47:1
+          onAccent ? "text-ink/80" : "text-ink/50"
+        }`}
+      >
         Founder, Khanatural
       </figcaption>
     </figure>
@@ -184,9 +205,13 @@ export function EditorialSections({
   blocks,
   /** promote the first section heading to the page <h1> (for pages with no hero copy) */
   firstHeadingAsH1 = false,
+  /** per-section ground colour, keyed by the slug of its heading — used to let a
+   *  section meet the backdrop of the photograph inside it */
+  sectionBackgrounds,
 }: {
   blocks: ContentBlock[];
   firstHeadingAsH1?: boolean;
+  sectionBackgrounds?: Record<string, string>;
 }) {
   const sections = groupSections(blocks);
   let splitIndex = 0;
@@ -197,7 +222,9 @@ export function EditorialSections({
       {sections.map((section, i) => {
         const hasImages = section.images.length > 0;
         const hasCopy = Boolean(section.heading) || section.body.length > 0;
-        const tone = i % 2 === 1 ? "bg-sand-100" : "bg-sand-50";
+        const accent = sectionBackgrounds?.[section.id];
+        const tone = accent ? "" : i % 2 === 1 ? "bg-sand-100" : "bg-sand-50";
+        const accentStyle = accent ? { backgroundColor: accent } : undefined;
 
         // An image with no words alongside it: both migrated pages open with
         // one. Splitting it two-up leaves half the row empty, which reads as a
@@ -224,10 +251,10 @@ export function EditorialSections({
 
         if (!hasImages) {
           return (
-            <section key={section.id} className={`${tone} py-14 sm:py-20`}>
+            <section key={section.id} className={`${tone} py-14 sm:py-20`} style={accentStyle}>
               <Container>
                 <div className="mx-auto max-w-3xl">
-                  <SectionCopy section={section} asH1={section.id === h1SectionId} />
+                  <SectionCopy section={section} asH1={section.id === h1SectionId} onAccent={Boolean(accent)} />
                 </div>
               </Container>
             </section>
@@ -236,7 +263,7 @@ export function EditorialSections({
 
         const imageFirst = splitIndex++ % 2 === 0;
         return (
-          <section key={section.id} className={`${tone} py-14 sm:py-20`}>
+          <section key={section.id} className={`${tone} py-14 sm:py-20`} style={accentStyle}>
             <Container>
               <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
                 <div className={imageFirst ? "lg:order-1" : "lg:order-2"}>
@@ -247,7 +274,7 @@ export function EditorialSections({
                   />
                 </div>
                 <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
-                  <SectionCopy section={section} asH1={section.id === h1SectionId} />
+                  <SectionCopy section={section} asH1={section.id === h1SectionId} onAccent={Boolean(accent)} />
                 </div>
               </div>
             </Container>
