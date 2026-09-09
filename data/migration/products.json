@@ -130,6 +130,10 @@
     ],
     "images": [
       {
+        "alt": "Woman holding KhaNatural Coco Avocado Butter beside a fresh avocado and coconut",
+        "localSrc": "/images/products/coco-avocado-butter-held.jpg"
+      },
+      {
         "wpId": 12447,
         "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.39.jpeg",
         "alt": "Coco Avocado Butter by KhaNatural.",
@@ -140,12 +144,6 @@
         "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.45.58.jpeg",
         "alt": "KhaNatural Coco Avocado Butter",
         "localSrc": "/images/products/coco-avocado-butter-2-9ff2d6.jpeg"
-      },
-      {
-        "wpId": 12447,
-        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-13-at-20.46.39.jpeg",
-        "alt": "Coco Avocado Butter by KhaNatural.",
-        "localSrc": "/images/products/coco-avocado-butter-1-5410a7.jpeg"
       }
     ]
   },
@@ -449,28 +447,14 @@
     ],
     "images": [
       {
-        "wpId": 12439,
-        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48.jpeg",
-        "alt": "KhaNatural Honey – Super Food from South Africa",
-        "localSrc": "/images/products/khanatural-honey-super-food-1-511ed4.jpeg"
-      },
-      {
-        "wpId": 12422,
-        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.44-e1778531377807.jpeg",
-        "alt": "KhaNatural Honey – Super Food",
-        "localSrc": "/images/products/khanatural-honey-super-food-2-24d833.jpeg"
+        "alt": "Three jars of KhaNatural raw honey with a wooden dipper",
+        "localSrc": "/images/products/khanatural-honey-jars.jpg"
       },
       {
         "wpId": 12277,
         "src": "https://khanatural.com/wp-content/uploads/2025/11/khahoney1.jpeg",
         "alt": "100% natural raw pure honey from Renosterveld Fynbos, South Africa",
         "localSrc": "/images/products/khanatural-honey-super-food-3-3941dc.jpeg"
-      },
-      {
-        "wpId": 12439,
-        "src": "https://khanatural.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-08-at-13.32.48.jpeg",
-        "alt": "KhaNatural Honey – Super Food from South Africa",
-        "localSrc": "/images/products/khanatural-honey-super-food-1-511ed4.jpeg"
       },
       {
         "wpId": 12278,
@@ -1110,10 +1094,8 @@
         "localSrc": "/images/products/white-flower-infused-tumeric-soap-3-afa184.jpg"
       },
       {
-        "wpId": 6667,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/Tumeric-Soap_2.jpg",
-        "alt": "WHITE FLOWER INFUSED TUMERIC SOAP",
-        "localSrc": "/images/products/white-flower-infused-tumeric-soap-1-e452ba.jpg"
+        "alt": "Customer holding a bar of KhaNatural White Flower Infused Turmeric Soap",
+        "localSrc": "/images/products/turmeric-soap-held.jpg"
       }
     ]
   },
@@ -1141,28 +1123,26 @@
     "tags": [],
     "images": [
       {
-        "wpId": 12002,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/D22.jpg",
-        "alt": "ALL NATURAL SCRUB",
-        "localSrc": "/images/products/all-natural-scrub-1-ed2c7f.jpg"
+        "alt": "KhaNatural All Natural Scrub, 250g tub resting on beach sand",
+        "localSrc": "/images/products/all-natural-scrub-sand.jpg"
+      },
+      {
+        "alt": "KhaNatural All Natural Scrub tub washed by the incoming tide",
+        "localSrc": "/images/products/all-natural-scrub-surf.jpg"
+      },
+      {
+        "alt": "Hand holding the All Natural Scrub tub, scrub worked into the skin",
+        "localSrc": "/images/products/all-natural-scrub-in-use.jpg"
+      },
+      {
+        "alt": "Woman applying KhaNatural All Natural Scrub to her leg on the rocks",
+        "localSrc": "/images/products/all-natural-scrub-applying.jpg"
       },
       {
         "wpId": 11975,
         "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08116-scaled.webp",
         "alt": "ALL NATURAL SCRUB",
         "localSrc": "/images/products/all-natural-scrub-2-0b7c2a.webp"
-      },
-      {
-        "wpId": 11977,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08730-scaled.webp",
-        "alt": "ALL NATURAL SCRUB",
-        "localSrc": "/images/products/all-natural-scrub-3-005135.webp"
-      },
-      {
-        "wpId": 11911,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08057_compressed-scaled.webp",
-        "alt": "ALL NATURAL SCRUB",
-        "localSrc": "/images/products/all-natural-scrub-4-13f6eb.webp"
       }
     ]
   },
@@ -1226,34 +1206,26 @@
     "tags": [],
     "images": [
       {
-        "wpId": 11985,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/xgg.jpg",
-        "alt": "SEAMOSS LOTION",
-        "localSrc": "/images/products/seamoss-lotion-1-f91532.jpg"
+        "alt": "KhaNatural Sea Moss Lotion, 250g tub among coastal dune plants",
+        "localSrc": "/images/products/seamoss-lotion-dune-front.jpg"
+      },
+      {
+        "alt": "KhaNatural Sea Moss Lotion tub in the dune vegetation, angled label view",
+        "localSrc": "/images/products/seamoss-lotion-dune-angle.jpg"
+      },
+      {
+        "alt": "KhaNatural Sea Moss Lotion on the sand with three travel-size tubs behind",
+        "localSrc": "/images/products/seamoss-lotion-sand-trio.jpg"
+      },
+      {
+        "alt": "Sea Moss Lotion held against sunlit skin on the rocks",
+        "localSrc": "/images/products/seamoss-lotion-in-use.jpg"
       },
       {
         "wpId": 11980,
         "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08142-scaled.jpg",
         "alt": "SEAMOSS LOTION",
         "localSrc": "/images/products/seamoss-lotion-2-15ca8d.jpg"
-      },
-      {
-        "wpId": 11981,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08176-scaled.jpg",
-        "alt": "SEAMOSS LOTION",
-        "localSrc": "/images/products/seamoss-lotion-3-ac0333.jpg"
-      },
-      {
-        "wpId": 11979,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08137-scaled.jpg",
-        "alt": "SEAMOSS LOTION",
-        "localSrc": "/images/products/seamoss-lotion-4-01666a.jpg"
-      },
-      {
-        "wpId": 11982,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08205-scaled.jpg",
-        "alt": "SEAMOSS LOTION",
-        "localSrc": "/images/products/seamoss-lotion-5-2d1cf3.jpg"
       }
     ]
   },
@@ -1297,34 +1269,18 @@
     ],
     "images": [
       {
+        "alt": "KhaNatural Reviving Facial Oil, both bottle sizes on dark coastal rock",
+        "localSrc": "/images/products/reviving-facial-oil-rock.jpg"
+      },
+      {
+        "alt": "KhaNatural Reviving Facial Oil bottles nestled in silver dune foliage",
+        "localSrc": "/images/products/reviving-facial-oil-dune.jpg"
+      },
+      {
         "wpId": 12003,
         "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC92.jpg",
         "alt": "REVIVING FACIAL OIL",
         "localSrc": "/images/products/reviving-facial-oil-1-a5e1f0.jpg"
-      },
-      {
-        "wpId": 11918,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08105_compressed-scaled.webp",
-        "alt": "REVIVING FACIAL OIL",
-        "localSrc": "/images/products/reviving-facial-oil-2-74c1d7.webp"
-      },
-      {
-        "wpId": 11900,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC07705_compressed-scaled.webp",
-        "alt": "REVIVING FACIAL OIL",
-        "localSrc": "/images/products/reviving-facial-oil-3-2a3b29.webp"
-      },
-      {
-        "wpId": 11986,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08105_compressed-scaled.webp",
-        "alt": "REVIVING FACIAL OIL",
-        "localSrc": "/images/products/reviving-facial-oil-4-0dc115.webp"
-      },
-      {
-        "wpId": 11914,
-        "src": "https://khanatural.com/wp-content/uploads/2025/05/DSC08072_compressed-scaled.webp",
-        "alt": "REVIVING FACIAL OIL",
-        "localSrc": "/images/products/reviving-facial-oil-5-c81765.webp"
       },
       {
         "wpId": 12251,
@@ -1374,34 +1330,24 @@
     ],
     "images": [
       {
-        "wpId": 11997,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DS222.jpg",
-        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
-        "localSrc": "/images/products/black-elderberry-capsules-1-f08ad0.jpg"
+        "alt": "KhaNatural Black Elderberry capsules on a barnacled rock above the shore",
+        "localSrc": "/images/products/black-elderberry-rock-portrait.jpg"
       },
       {
-        "wpId": 11999,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08782-1-scaled.jpg",
-        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
-        "localSrc": "/images/products/black-elderberry-capsules-2-7f87a8.jpg"
+        "alt": "Black Elderberry vegan capsules tipped into an open palm",
+        "localSrc": "/images/products/black-elderberry-capsules-palm.jpg"
       },
       {
-        "wpId": 11998,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08996222.jpg",
-        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
-        "localSrc": "/images/products/black-elderberry-capsules-3-cedbd0.jpg"
+        "alt": "Woman in a sun hat holding the KhaNatural Black Elderberry bottle at the beach",
+        "localSrc": "/images/products/black-elderberry-held.jpg"
       },
       {
-        "wpId": 11994,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08782-scaled.jpg",
-        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
-        "localSrc": "/images/products/black-elderberry-capsules-4-507e3e.jpg"
+        "alt": "Black Elderberry capsules on the rocks with the surf behind",
+        "localSrc": "/images/products/black-elderberry-rock-shore.jpg"
       },
       {
-        "wpId": 11995,
-        "src": "https://khanatural.com/wp-content/uploads/2024/10/DSC08796-scaled.jpg",
-        "alt": "BLACK ELDERBERRY SUPPLEMENTS",
-        "localSrc": "/images/products/black-elderberry-capsules-5-1fc038.jpg"
+        "alt": "KhaNatural Black Elderberry bottle on the shoreline",
+        "localSrc": "/images/products/black-elderberry-shore-wide.jpg"
       }
     ]
   },

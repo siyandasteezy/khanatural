@@ -3,9 +3,12 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 /**
- * Full-bleed editorial band featuring the brand's own campaign photograph
- * (carried over from the previous site). Copy is the existing brand mission
- * statement, verbatim.
+ * Full-bleed editorial band featuring the brand's own campaign photograph.
+ * Copy is the existing brand mission statement, verbatim.
+ *
+ * The photograph is portrait, which is what this half-panel wants: the
+ * WordPress frame it replaced was landscape at 1536x1043 and had to be cropped
+ * hard to fill a 46rem column, throwing away most of the shot.
  */
 export function BrandCampaign() {
   return (
@@ -13,11 +16,11 @@ export function BrandCampaign() {
       <div className="grid lg:grid-cols-2">
         <div className="relative min-h-[30rem] lg:min-h-[46rem]">
           <Image
-            src="/images/brand/khabo.jpg"
-            alt="Khanatural founder campaign photograph"
+            src="/images/shoot/couple-robes.jpg"
+            alt="Khanatural campaign photograph — a couple in printed robes"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-[center_20%]"
+            className="object-cover object-[center_25%]"
           />
           {/* soften the photo edge into the copy panel */}
           <div

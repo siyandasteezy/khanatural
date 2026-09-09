@@ -13,7 +13,8 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Meet Khabonina Qubeka — award-winning South African actress and founder of Khanatural, the wild-crafted sea moss range rooted in realness.",
   path: "/our-brand/",
-  image: "/images/brand/khabo.jpg",
+  // the founder portrait the page itself opens on, rather than a stray frame
+  image: "/images/shoot/our-brand-founder.jpg",
 });
 
 export default async function OurBrandPage() {
@@ -51,7 +52,7 @@ export default async function OurBrandPage() {
         lead="Explore the range Khabonina built — for ladies, for men, and everyone in between."
         primary={{ label: "Shop the range", href: "/shop/" }}
         secondary={{ label: "Why seamoss?", href: "/why-seamoss/" }}
-        image="/images/brand/khabo.jpg"
+        image="/images/shoot/beach-bag-leap.jpg"
       />
     </>
   );

@@ -54,7 +54,14 @@ export default async function CategoryPage({ params }: Params) {
           ),
         }}
       />
-      <PageHero eyebrow="Shop by range" title={category.name} lead={category.description || undefined} image="/images/shoot/page-shop.jpg" />
+      {/* The range on its plinth, rather than repeating /shop/'s own hero on
+          every category page a visitor clicks through to. */}
+      <PageHero
+        eyebrow="Shop by range"
+        title={category.name}
+        lead={category.description || undefined}
+        image="/images/shoot/range-studio-seated.jpg"
+      />
       <Container className="py-12 sm:py-16">
         <nav aria-label="Product categories" className="mb-10 flex flex-wrap gap-3">
           <ButtonLink href="/shop/" variant="outline" size="sm">

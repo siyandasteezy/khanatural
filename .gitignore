@@ -61,3 +61,6 @@ deno.lock
 
 # admin-uploaded media (dev only; Netlify uses Blobs)
 /public/uploads/media/
+
+# Campaign originals — web exports go in public/images/ via scripts/export-newimages.py
+/newimages/
