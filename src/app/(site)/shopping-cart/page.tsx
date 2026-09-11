@@ -14,7 +14,10 @@ export const metadata: Metadata = buildMetadata({
 export default function ShoppingCartPage() {
   return (
     <>
-      <PageHero title="Shopping Cart" />
+      {/* The crop is set on the bag rather than the model: this band is only
+          ~26% of the frame's height, and on the cart page the KhaNatural bag
+          is the subject. */}
+      <PageHero title="Shopping Cart" image="/images/shoot/beach-bag-stride.jpg" imagePosition="center 40%" />
       <Container className="py-12 sm:py-16">
         <CartContents />
       </Container>

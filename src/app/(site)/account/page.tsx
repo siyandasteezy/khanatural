@@ -15,7 +15,10 @@ export const metadata: Metadata = buildMetadata({
 export default function AccountPage() {
   return (
     <>
-      <PageHero title="Account" />
+      {/* Cropped to hold the face and the plinth of products together — this
+          page tells a returning customer to go and order again, so the range
+          has to be legible, and a lower crop loses both to the costume. */}
+      <PageHero title="Account" image="/images/shoot/range-studio-pose.jpg" imagePosition="center 54%" />
       <Container className="py-12 sm:py-16">
         <div className="mx-auto max-w-xl rounded-3xl bg-white p-10 text-center shadow-sm ring-1 ring-sand-200">
           <p className="font-[family-name:var(--font-display)] text-xl font-semibold text-kelp-900">

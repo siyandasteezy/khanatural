@@ -65,6 +65,9 @@ export default async function CheckoutSuccessPage({
     <>
       {/* the basket has served its purpose once Yoco has the order */}
       <ClearCartOnMount />
+      {/* The photograph is deliberately withheld when the payment failed: a
+          celebratory frame over "Payment not completed" would read as mockery.
+          That branch keeps the plain charcoal band. */}
       <PageHero
         title={failed ? "Payment not completed" : "Thank you"}
         lead={
@@ -72,6 +75,8 @@ export default async function CheckoutSuccessPage({
             ? "We couldn’t confirm a payment for this order."
             : `Order #${order.orderNumber} has been received.`
         }
+        image={failed ? undefined : "/images/shoot/beach-bag-run.jpg"}
+        imagePosition="center 25%"
       />
       <Container className="py-12 sm:py-16">
         <div className="mx-auto max-w-xl rounded-3xl bg-white p-8 shadow-sm ring-1 ring-sand-200 sm:p-10">

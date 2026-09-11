@@ -72,30 +72,20 @@ MANIFEST = [
     # under "Join the movement / Shop the range" on Our Brand, in place of the
     # other WordPress frame that was still in the code
     ("DSC09335.jpg", SHOOT / "beach-bag-leap.jpg", WIDE_PX),
+    # --- the checkout funnel, which had no photography at all ---------------
+    # The bag frames go where a bag is the literal subject of the page.
+    ("DSC09343.jpg", SHOOT / "beach-bag-stride.jpg", WIDE_PX),
+    ("DSC09346.jpg", SHOOT / "beach-bag-run.jpg", WIDE_PX),
+    # the range, for the shop landing and the account page
+    ("DSC04997.jpg", SHOOT / "range-studio-reach.jpg", WIDE_PX),
+    ("DSC04998.jpg", SHOOT / "range-studio-pose.jpg", WIDE_PX),
+    # skin, under Why Seamoss' closing call to action
+    ("KGZ_36341717425145264.jpg", SHOOT / "skin-close.jpg", WIDE_PX),
 ]
 
-# Not exported, for two different reasons.
-#
-# DSC09278 is behind-the-scenes: the photographer is in the frame.
-#
-# The rest are good frames with nowhere to go YET. Every WordPress image on the
-# site has now been replaced, and the only slots left hold photography from the
-# earlier shoots that the client has already signed off — so putting these in
-# would mean overwriting approved artwork, not sweeping old artwork. Six frames,
-# two of them alternates from takes already used above:
-#
-#   DSC04997 / DSC04998  the range plinth, two more poses
-#   DSC09343 / DSC09346  more of the model with the KhaNatural bag on the rocks
-#   KGZ_3634             close-up skin and neck
-#
-# Say where they should go and they are a line each.
-HELD = [
-    "DSC04997.jpg",
-    "DSC04998.jpg",
-    "DSC09343.jpg",
-    "DSC09346.jpg",
-    "KGZ_36341717425145264.jpg",
-]
+# DSC09278 is the only frame deliberately left out: the photographer is in
+# shot, so it is a behind-the-scenes record rather than campaign photography.
+HELD = ["DSC09278.jpg"]
 
 
 def main() -> int:

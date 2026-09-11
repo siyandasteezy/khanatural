@@ -7,10 +7,13 @@ export function MovesSection() {
     <section className="bg-sand-100 py-16 sm:py-24">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,34rem)_1fr] lg:gap-16">
+          {/* A dance photograph for the dance section — this slot used to hold
+              a honey shot, which still stands on Our Brand where it belongs.
+              The frame is 2:3 against a 3:4 box, so almost nothing is cropped. */}
           <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden lg:max-w-none rounded-[2.5rem] shadow-xl">
             <Image
-              src="/images/shoot/honey-joy.jpg"
-              alt="Laughing woman wearing a gold laurel crown, honey on her skin"
+              src="/images/shoot/range-studio-reach.jpg"
+              alt="Dancer in a standing split beside the KhaNatural range"
               fill
               sizes="(max-width: 1024px) 92vw, 544px"
               className="object-cover"
