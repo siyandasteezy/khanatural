@@ -26,6 +26,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "newimages"
+STUDIO_SRC = ROOT / "images"  # May 2026 studio originals, 4480x6720
 PRODUCTS = ROOT / "public" / "images" / "products"
 SHOOT = ROOT / "public" / "images" / "shoot"
 
@@ -87,22 +88,48 @@ MANIFEST = [
 # shot, so it is a behind-the-scenes record rather than campaign photography.
 HELD = ["DSC09278.jpg"]
 
+# Re-exports from the May 2026 studio originals in images/, not newimages/.
+#
+# Both of these already existed as web files, but at 1466px and 1200px wide —
+# fine for the thumbnail-ish slots they were built for, thin for the home page
+# hero, which is full-bleed and runs to 48rem tall. The originals are 4480px, so
+# this is purely a resolution fix; the frame and crop are unchanged. Verified as
+# the same photographs by pixel comparison (mean difference 0.3 and 0.4).
+#
+# Each pair is (source file, destination, long-edge cap) as above.
+STUDIO_MANIFEST = [
+    ("Khanatural-shoot-1520.jpg", SHOOT / "hero-goddess.jpg", WIDE_PX),
+    ("Khanatural-shoot-1470.jpg", SHOOT / "natural-crown.jpg", WIDE_PX),
+]
 
-def main() -> int:
-    force = "--force" in sys.argv
-    missing = [name for name, _, _ in MANIFEST if not (SRC / name).exists()]
+
+def export(manifest, src_dir: Path, force: bool, upgrade_only: bool = False) -> int:
+    """
+    Write every entry in `manifest`, returning the bytes written.
+
+    `upgrade_only` re-exports a destination that already exists but is smaller
+    than the source can produce. That is what makes the studio re-exports
+    idempotent: run twice and the second run skips, because by then the file on
+    disk is already the full size.
+    """
+    missing = [name for name, _, _ in manifest if not (src_dir / name).exists()]
     if missing:
-        print(f"missing {len(missing)} source file(s) in {SRC}:")
-        for m in missing:
-            print(f"  {m}")
-        return 1
+        raise FileNotFoundError(f"{len(missing)} source file(s) missing in {src_dir}: {', '.join(missing)}")
 
     total = 0
-    for name, dest, cap in MANIFEST:
+    for name, dest, cap in manifest:
         if dest.exists() and not force:
-            print(f"  skip  {dest.relative_to(ROOT)} (exists)")
-            continue
-        with Image.open(SRC / name) as im:
+            if not upgrade_only:
+                print(f"  skip  {dest.relative_to(ROOT)} (exists)")
+                continue
+            with Image.open(dest) as existing:
+                with Image.open(src_dir / name) as source:
+                    target = min(cap, max(source.size))
+                if max(existing.size) >= target:
+                    print(f"  skip  {dest.relative_to(ROOT)} (already {existing.size[0]}x{existing.size[1]})")
+                    continue
+
+        with Image.open(src_dir / name) as im:
             im = ImageOps.exif_transpose(im).convert("RGB")
             before = im.size
             im.thumbnail((cap, cap), Image.LANCZOS)
@@ -113,8 +140,20 @@ def main() -> int:
         kb = dest.stat().st_size / 1024
         total += dest.stat().st_size
         print(f"  ok    {dest.relative_to(ROOT)}  {before[0]}x{before[1]} -> {im.size[0]}x{im.size[1]}  {kb:.0f}KB")
+    return total
 
-    print(f"\n{len(MANIFEST)} exports, {total / 1e6:.1f} MB written")
+
+def main() -> int:
+    force = "--force" in sys.argv
+    try:
+        total = export(MANIFEST, SRC, force)
+        print("\nstudio re-exports (images/):")
+        total += export(STUDIO_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
+    except FileNotFoundError as e:
+        print(e)
+        return 1
+
+    print(f"\n{len(MANIFEST) + len(STUDIO_MANIFEST)} exports, {total / 1e6:.1f} MB written")
     return 0
 
 

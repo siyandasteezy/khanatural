@@ -1,30 +1,43 @@
-import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { HeroSlides, type HeroSlide } from "./HeroSlides";
 
 /**
- * Founder hero on shoot frame 1520 (portrait 2:3).
+ * Mobile stacks the hero: the photograph is a full-bleed banner up top, the
+ * copy sits on solid charcoal beneath — clean contrast, whole image shown.
+ * Desktop goes full-bleed overlay: the photograph fills the section edge to
+ * edge and the copy rides a left-weighted gradient that clears by 60%.
+ * Measured behind the desktop text: headline 9.7:1, body 7.4:1 (WCAG AA).
  *
- * Mobile stacks it: the portrait is a full-bleed banner up top (uncropped
- * through crown and face), the copy sits on solid charcoal beneath — clean
- * contrast, whole image shown. Desktop goes full-bleed overlay: the image
- * fills the section edge to edge and the copy rides a left-weighted gradient
- * that clears by 60%, leaving the crown, honey and face untouched. Measured
- * behind the desktop text: headline 9.7:1, body 7.4:1 (WCAG AA).
+ * Every frame here has to survive that gradient, which means the subject has
+ * to sit right of centre — a photograph with its subject on the left loses it
+ * to the scrim. All three were checked against the real gradient before being
+ * chosen, and they rotate through three different registers: studio gold, the
+ * coast, and the ingredients.
  */
+const SLIDES: HeroSlide[] = [
+  {
+    src: "/images/shoot/hero-goddess.jpg",
+    alt: "Founder Khabonina Qubeka wearing a gold laurel crown as honey is drizzled over her, with the KhaHoney range",
+    position: "object-[center_20%] lg:object-[center_25%]",
+  },
+  {
+    src: "/images/shoot/beach-bag-leap.jpg",
+    alt: "A customer leaping between rocks on the beach with a KhaNatural shopping bag",
+    position: "object-[center_28%] lg:object-[center_32%]",
+  },
+  {
+    src: "/images/shoot/natural-crown.jpg",
+    alt: "A woman with a bowl of fresh produce, the ingredients behind the KhaNatural range",
+    position: "object-[center_20%] lg:object-[center_22%]",
+  },
+];
 export function Hero() {
   return (
     <section className="relative -mt-[116px] bg-kelp-950 text-sand-50 lg:flex lg:min-h-[48rem] lg:flex-col lg:justify-end lg:overflow-hidden lg:pt-[116px]">
       {/* Photograph — a banner on mobile, a full-bleed fill on desktop */}
       <div className="relative h-[62vh] min-h-[24rem] pt-[116px] lg:absolute lg:inset-0 lg:h-auto lg:min-h-0 lg:pt-0">
-        <Image
-          src="/images/shoot/hero-goddess.jpg"
-          alt="Founder Khabonina Qubeka wearing a gold laurel crown as honey is drizzled over her, with the KhaHoney range"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_20%] lg:object-[center_25%]"
-        />
+        <HeroSlides slides={SLIDES} />
         {/* desktop-only left lift, off the face */}
         <div
           aria-hidden
