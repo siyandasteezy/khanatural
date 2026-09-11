@@ -11,9 +11,9 @@ import { HeroSlides, type HeroSlide } from "./HeroSlides";
  *
  * Every frame here has to survive that gradient, which means the subject has
  * to sit right of centre — a photograph with its subject on the left loses it
- * to the scrim. All three were checked against the real gradient before being
- * chosen, and they rotate through three different registers: studio gold, the
- * coast, and the ingredients.
+ * to the scrim. All three were composited behind the real gradient before being
+ * chosen, and they rotate through three registers: the honey, the range, and
+ * the ingredients.
  */
 const SLIDES: HeroSlide[] = [
   {
@@ -22,9 +22,14 @@ const SLIDES: HeroSlide[] = [
     position: "object-[center_20%] lg:object-[center_25%]",
   },
   {
-    src: "/images/shoot/beach-bag-leap.jpg",
-    alt: "A customer leaping between rocks on the beach with a KhaNatural shopping bag",
-    position: "object-[center_28%] lg:object-[center_32%]",
+    src: "/images/shoot/range-studio-seated.jpg",
+    alt: "Woman seated on a studio plinth with the KhaNatural range beside her",
+    // Mobile has barely any overflow, so it shows the whole seated pose,
+    // products included. Desktop sees only a third of this frame's height —
+    // not enough for both the face and the plinth — and the translucent header
+    // covers the top 116px on top of that, so it is cropped high to keep her
+    // face clear of the chrome. The face wins; the products carry other slots.
+    position: "object-[center_20%] lg:object-[center_8%]",
   },
   {
     src: "/images/shoot/natural-crown.jpg",
@@ -32,6 +37,7 @@ const SLIDES: HeroSlide[] = [
     position: "object-[center_20%] lg:object-[center_22%]",
   },
 ];
+
 export function Hero() {
   return (
     <section className="relative -mt-[116px] bg-kelp-950 text-sand-50 lg:flex lg:min-h-[48rem] lg:flex-col lg:justify-end lg:overflow-hidden lg:pt-[116px]">
