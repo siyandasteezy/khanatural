@@ -102,56 +102,54 @@ HELD = ["DSC09278.jpg"]
 STUDIO_MANIFEST = [
     ("Khanatural-shoot-1520.jpg", SHOOT / "hero-goddess.jpg", WIDE_PX),
     ("Khanatural-shoot-1470.jpg", SHOOT / "natural-crown.jpg", WIDE_PX),
+    # The Our Brand banner, and the one entry that is not capped at WIDE_PX.
+    # It ships WHOLE rather than as the letterbox strip it used to be, so that
+    # the banner itself does the cropping and mobile — where the band is nearly
+    # square — can show the man's face instead of just the products in his
+    # hands. That makes width, not the long edge, the thing that has to be big
+    # enough: capping an upright 2:3 frame at 3000 would leave only 2000px
+    # across for a band that is 1400 CSS px wide.
+    ("Khanatural-shoot-1346.jpg", SHOOT / "page-brand-grooming.jpg", 3600),
 ]
 
-# Same idea, but for a frame that is used as a letterbox strip rather than whole.
-#
-# The Our Brand banner had been cut from "Khanatural-shoot-1346 copy.jpg", a
-# 4420x1178 slice someone exported by hand. Going back to the uncropped frame
-# means re-cutting that slice, so the box is recorded here rather than eyeballed:
-# it was recovered by normalised cross-correlation of the hand-cut strip against
-# the full frame, matching at 0.999 and stable across four search scales.
-#
-# Entries carry a fourth element, the crop box in the SOURCE's own pixels.
-CROP_MANIFEST = [
-    ("Khanatural-shoot-1346.jpg", SHOOT / "page-brand-grooming.jpg", 3600, (0, 2904, 4420, 4082)),
-]
+
+def expected_size(source_size: tuple[int, int], cap: int) -> tuple[int, int]:
+    """What thumbnail((cap, cap)) will produce for a source of this size."""
+    w, h = source_size
+    scale = min(cap / w, cap / h, 1.0)
+    return max(1, round(w * scale)), max(1, round(h * scale))
 
 
 def export(manifest, src_dir: Path, force: bool, upgrade_only: bool = False) -> int:
     """
     Write every entry in `manifest`, returning the bytes written.
 
-    `upgrade_only` re-exports a destination that already exists but is smaller
-    than the source can produce. That is what makes the studio re-exports
-    idempotent: run twice and the second run skips, because by then the file on
-    disk is already the full size.
+    `upgrade_only` re-exports whenever the file on disk is not what this
+    manifest would produce now — which covers a raised cap, and also a change of
+    shape. The two are not the same check: replacing a 3600x959 letterbox with a
+    3600-capped portrait leaves the long edge at 3600, so comparing only the
+    larger dimension would call the stale file current and skip it.
     """
     missing = [entry[0] for entry in manifest if not (src_dir / entry[0]).exists()]
     if missing:
         raise FileNotFoundError(f"{len(missing)} source file(s) missing in {src_dir}: {', '.join(missing)}")
 
     total = 0
-    for entry in manifest:
-        name, dest, cap = entry[0], entry[1], entry[2]
-        box = entry[3] if len(entry) > 3 else None
-
+    for name, dest, cap in manifest:
         if dest.exists() and not force:
             if not upgrade_only:
                 print(f"  skip  {dest.relative_to(ROOT)} (exists)")
                 continue
             with Image.open(dest) as existing:
                 with Image.open(src_dir / name) as source:
-                    usable = (box[2] - box[0], box[3] - box[1]) if box else source.size
-                    target = min(cap, max(usable))
-                if max(existing.size) >= target:
+                    want = expected_size(source.size, cap)
+                # a pixel of slack: Pillow's own rounding is not ours
+                if all(abs(a - b) <= 1 for a, b in zip(existing.size, want)):
                     print(f"  skip  {dest.relative_to(ROOT)} (already {existing.size[0]}x{existing.size[1]})")
                     continue
 
         with Image.open(src_dir / name) as im:
             im = ImageOps.exif_transpose(im).convert("RGB")
-            if box:
-                im = im.crop(box)
             before = im.size
             im.thumbnail((cap, cap), Image.LANCZOS)
             dest.parent.mkdir(parents=True, exist_ok=True)
@@ -173,13 +171,11 @@ def main() -> int:
         total = export(MANIFEST, SRC, force, upgrade_only=True)
         print("\nstudio re-exports (images/):")
         total += export(STUDIO_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
-        print("\nstudio crops (images/):")
-        total += export(CROP_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
     except FileNotFoundError as e:
         print(e)
         return 1
 
-    print(f"\n{len(MANIFEST) + len(STUDIO_MANIFEST) + len(CROP_MANIFEST)} exports, {total / 1e6:.1f} MB written")
+    print(f"\n{len(MANIFEST) + len(STUDIO_MANIFEST)} exports, {total / 1e6:.1f} MB written")
     return 0
 
 

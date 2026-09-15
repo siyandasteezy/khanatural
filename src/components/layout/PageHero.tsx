@@ -56,7 +56,23 @@ export function PageHero({
  * Sized generously and pulled under the header so the picture starts at the
  * very top of the page.
  */
-export function PageBanner({ image, imagePosition = "center" }: { image: string; imagePosition?: string }) {
+export function PageBanner({
+  image,
+  imagePosition = "center",
+  positionClass,
+}: {
+  image: string;
+  imagePosition?: string;
+  /**
+   * Tailwind object-position utilities, for a photograph that needs a different
+   * part of itself at different widths. This band is a wide letterbox on a
+   * desktop and nearly square on a phone, so an upright frame can show a
+   * quarter of its height in one and two thirds of it in the other — one fixed
+   * position cannot serve both. Takes precedence over `imagePosition`, which
+   * stays for the pages that only need one.
+   */
+  positionClass?: string;
+}) {
   return (
     <div className="relative -mt-[116px] h-[46vh] min-h-[17rem] w-full overflow-hidden bg-sand-100 sm:h-[52vh] lg:h-[58vh] lg:max-h-[34rem]">
       <Image
@@ -65,8 +81,8 @@ export function PageBanner({ image, imagePosition = "center" }: { image: string;
         fill
         priority
         sizes="100vw"
-        className="object-cover"
-        style={{ objectPosition: imagePosition }}
+        className={`object-cover ${positionClass ?? ""}`}
+        style={positionClass ? undefined : { objectPosition: imagePosition }}
       />
     </div>
   );

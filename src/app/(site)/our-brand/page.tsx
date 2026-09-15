@@ -37,7 +37,19 @@ export default async function OurBrandPage() {
       {/* No hero copy here: the page opens on the photograph and goes straight
           into "Our Founder", which carries the page's <h1>. The line the hero
           used to show now stands at the top of that section instead. */}
-      <PageBanner image="/images/shoot/page-brand-grooming.jpg" imagePosition="center" />
+      {/* The whole upright frame, cropped by the band rather than before it.
+          Desktop shows a quarter of its height, so it is positioned on the
+          products in his hands — the framing this banner has always had. The
+          phone band is nearly square and shows two thirds, so it starts at the
+          top and his face comes with them.
+
+          The middle step is not decoration: at tablet widths the band shows
+          only the top 43-46% of the frame, which stops just as the products
+          begin, so object-top there would cut them in half. */}
+      <PageBanner
+        image="/images/shoot/page-brand-grooming.jpg"
+        positionClass="object-top sm:object-[center_35%] lg:object-[center_49%]"
+      />
       {/* The founder portrait was shot on a warm terracotta seamless, so the
           section takes that colour and the photograph meets the page instead of
           sitting on it as a cut-out. */}
