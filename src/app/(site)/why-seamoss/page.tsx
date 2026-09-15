@@ -35,15 +35,15 @@ export default async function WhySeamossPage() {
           ),
         }}
       />
-      {/* Skin, not another jar: the page already shows the gel twice below, and
-          the hero is the one place to lead with what seamoss is FOR. Cropped to
-          the eyes, because this band keeps only about a quarter of the frame. */}
+      {/* Cropped low so the tub's front label clears the translucent header,
+          which covers the top 116px of this band — centred, the type sits
+          under the chrome and the product stops being readable. */}
       <PageHero
         eyebrow="The science and the story"
         title="Why Seamoss"
         lead="92 of the 102 minerals your body needs, wild-crafted from the ocean — and everything you need to know about using it."
-        image="/images/shoot/skin-close.jpg"
-        imagePosition="center 22%"
+        image="/images/products/seamoss-lotion-dune-angle.jpg"
+        imagePosition="center 75%"
       />
       <EditorialSections blocks={page.blocks} />
       <ClosingCta

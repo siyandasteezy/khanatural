@@ -43,7 +43,9 @@ MANIFEST = [
     ("DSC08556.jpg", PRODUCTS / "all-natural-scrub-applying.jpg", PRODUCT_PX),
     # ---- Sea Moss Lotion ---------------------------------------------------
     ("DSC07720.jpg", PRODUCTS / "seamoss-lotion-dune-front.jpg", PRODUCT_PX),
-    ("DSC07723.jpg", PRODUCTS / "seamoss-lotion-dune-angle.jpg", PRODUCT_PX),
+    # WIDE, not PRODUCT: this one also carries the Why Seamoss hero, which is a
+    # full-bleed band at sizes="100vw" rather than a square gallery tile
+    ("DSC07723.jpg", PRODUCTS / "seamoss-lotion-dune-angle.jpg", WIDE_PX),
     ("DSC08066.jpg", PRODUCTS / "seamoss-lotion-sand-trio.jpg", PRODUCT_PX),
     ("DSC08320.jpg", PRODUCTS / "seamoss-lotion-in-use.jpg", PRODUCT_PX),
     # ---- Reviving Facial Oil ----------------------------------------------
@@ -146,7 +148,10 @@ def export(manifest, src_dir: Path, force: bool, upgrade_only: bool = False) -> 
 def main() -> int:
     force = "--force" in sys.argv
     try:
-        total = export(MANIFEST, SRC, force)
+        # upgrade_only so that raising an entry's cap — because the image has
+        # been given a bigger job somewhere — takes effect without --force, and
+        # without re-encoding everything that is already the right size
+        total = export(MANIFEST, SRC, force, upgrade_only=True)
         print("\nstudio re-exports (images/):")
         total += export(STUDIO_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
     except FileNotFoundError as e:
