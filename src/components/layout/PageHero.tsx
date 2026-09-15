@@ -19,6 +19,7 @@ export function PageHero({
   lead,
   image,
   imagePosition = "center",
+  positionClass,
 }: {
   eyebrow?: string;
   title: string;
@@ -26,6 +27,8 @@ export function PageHero({
   image?: string;
   /** which part of the frame to keep when the band crops it */
   imagePosition?: string;
+  /** per-breakpoint alternative to `imagePosition` — see PageBanner */
+  positionClass?: string;
 }) {
   if (!image) {
     return (
@@ -41,7 +44,7 @@ export function PageHero({
 
   return (
     <>
-      <PageBanner image={image} imagePosition={imagePosition} />
+      <PageBanner image={image} imagePosition={imagePosition} positionClass={positionClass} />
       <Container className="pb-4 pt-10 sm:pt-14">
         <Copy eyebrow={eyebrow} title={title} lead={lead} tone="light" />
       </Container>

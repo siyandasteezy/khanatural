@@ -110,6 +110,10 @@ STUDIO_MANIFEST = [
     # enough: capping an upright 2:3 frame at 3000 would leave only 2000px
     # across for a band that is 1400 CSS px wide.
     ("Khanatural-shoot-1346.jpg", SHOOT / "page-brand-grooming.jpg", 3600),
+    # The shop hero, same treatment and same reason. Its hand-cut strip was the
+    # bottom quarter of the frame (68.9%-92.4% of the height, located the same
+    # way), which is the tub and nothing else.
+    ("Khanatural-shoot-1487.jpg", SHOOT / "page-shop.jpg", 3600),
 ]
 
 
