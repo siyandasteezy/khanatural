@@ -114,6 +114,10 @@ STUDIO_MANIFEST = [
     # bottom quarter of the frame (68.9%-92.4% of the height, located the same
     # way), which is the tub and nothing else.
     ("Khanatural-shoot-1487.jpg", SHOOT / "page-shop.jpg", 3600),
+    # The Contact Us hero. Unlike the two above this was never a hand-cut strip
+    # — it was already the whole frame, just at 1200px, which was fine for the
+    # 3:4 tile it used to sit in on the home page and thin for a full-bleed band.
+    ("Khanatural-shoot-1543.jpg", SHOOT / "honey-joy.jpg", 3600),
 ]
 
 

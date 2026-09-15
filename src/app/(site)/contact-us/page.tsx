@@ -36,7 +36,19 @@ export default async function ContactPage() {
 
   return (
     <>
-      <PageHero eyebrow="We’d love to hear from you" title="Contact Us" image="/images/shoot/page-contact.jpg" />
+      {/* A face, and a laughing one, under "We'd love to hear from you" — the
+          frame this page used to open on was a tray of beard products, and the
+          same photograph already opens Our Brand.
+
+          Desktop sits on the smile, with her eyes just clear of the translucent
+          header. Phones show two thirds of the frame, so they lift to bring the
+          laurel crown in above her. */}
+      <PageHero
+        eyebrow="We’d love to hear from you"
+        title="Contact Us"
+        image="/images/shoot/honey-joy.jpg"
+        positionClass="object-[center_15%] sm:object-[center_45%]"
+      />
       <Container className="py-12 sm:py-16">
         <ul className="grid gap-4 sm:grid-cols-2">
           {contactCards.map((c) => (
