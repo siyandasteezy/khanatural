@@ -104,6 +104,19 @@ STUDIO_MANIFEST = [
     ("Khanatural-shoot-1470.jpg", SHOOT / "natural-crown.jpg", WIDE_PX),
 ]
 
+# Same idea, but for a frame that is used as a letterbox strip rather than whole.
+#
+# The Our Brand banner had been cut from "Khanatural-shoot-1346 copy.jpg", a
+# 4420x1178 slice someone exported by hand. Going back to the uncropped frame
+# means re-cutting that slice, so the box is recorded here rather than eyeballed:
+# it was recovered by normalised cross-correlation of the hand-cut strip against
+# the full frame, matching at 0.999 and stable across four search scales.
+#
+# Entries carry a fourth element, the crop box in the SOURCE's own pixels.
+CROP_MANIFEST = [
+    ("Khanatural-shoot-1346.jpg", SHOOT / "page-brand-grooming.jpg", 3600, (0, 2904, 4420, 4082)),
+]
+
 
 def export(manifest, src_dir: Path, force: bool, upgrade_only: bool = False) -> int:
     """
@@ -114,25 +127,31 @@ def export(manifest, src_dir: Path, force: bool, upgrade_only: bool = False) -> 
     idempotent: run twice and the second run skips, because by then the file on
     disk is already the full size.
     """
-    missing = [name for name, _, _ in manifest if not (src_dir / name).exists()]
+    missing = [entry[0] for entry in manifest if not (src_dir / entry[0]).exists()]
     if missing:
         raise FileNotFoundError(f"{len(missing)} source file(s) missing in {src_dir}: {', '.join(missing)}")
 
     total = 0
-    for name, dest, cap in manifest:
+    for entry in manifest:
+        name, dest, cap = entry[0], entry[1], entry[2]
+        box = entry[3] if len(entry) > 3 else None
+
         if dest.exists() and not force:
             if not upgrade_only:
                 print(f"  skip  {dest.relative_to(ROOT)} (exists)")
                 continue
             with Image.open(dest) as existing:
                 with Image.open(src_dir / name) as source:
-                    target = min(cap, max(source.size))
+                    usable = (box[2] - box[0], box[3] - box[1]) if box else source.size
+                    target = min(cap, max(usable))
                 if max(existing.size) >= target:
                     print(f"  skip  {dest.relative_to(ROOT)} (already {existing.size[0]}x{existing.size[1]})")
                     continue
 
         with Image.open(src_dir / name) as im:
             im = ImageOps.exif_transpose(im).convert("RGB")
+            if box:
+                im = im.crop(box)
             before = im.size
             im.thumbnail((cap, cap), Image.LANCZOS)
             dest.parent.mkdir(parents=True, exist_ok=True)
@@ -154,11 +173,13 @@ def main() -> int:
         total = export(MANIFEST, SRC, force, upgrade_only=True)
         print("\nstudio re-exports (images/):")
         total += export(STUDIO_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
+        print("\nstudio crops (images/):")
+        total += export(CROP_MANIFEST, STUDIO_SRC, force, upgrade_only=True)
     except FileNotFoundError as e:
         print(e)
         return 1
 
-    print(f"\n{len(MANIFEST) + len(STUDIO_MANIFEST)} exports, {total / 1e6:.1f} MB written")
+    print(f"\n{len(MANIFEST) + len(STUDIO_MANIFEST) + len(CROP_MANIFEST)} exports, {total / 1e6:.1f} MB written")
     return 0
 
 
